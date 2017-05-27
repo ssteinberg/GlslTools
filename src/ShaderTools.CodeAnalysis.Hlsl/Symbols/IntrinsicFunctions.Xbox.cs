@@ -10,7 +10,7 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
         private static IEnumerable<FunctionSymbol> CreateXboxFunctions()
         {
             var allFunctions = new List<FunctionSymbol>();
-
+            /*
             allFunctions.AddRange(Create2(
                 "__XB_PackF32ToSNORM16",
                 "Converts a pair of 32-bit floats to a 32-bit packed pair of 16-bit signed, normalized values. Translates to GCN's v_cvt_pknorm_i16_f32.",
@@ -760,7 +760,7 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
                 new[] { IntrinsicTypes.Uint2 },
                 "mask", "64-bit mask to perform thread-wise selection",
                 "value", "Select value.x if mask-bit is 0, else value.y.",
-                overrideReturnTypes: new[] { IntrinsicTypes.Uint }));
+                overrideReturnTypes: new[] { IntrinsicTypes.Uint }));*/
 
             return allFunctions;
         }

@@ -1,3 +1,10 @@
+Adaptation of "HLSL Tools" to GLSL. 
+All credit for the original work goes to Tim Jones.
+
+Original readme follows.
+
+
+
 # HLSL Tools for Visual Studio
 
 [![Join the chat at https://gitter.im/tgjones/HlslTools](https://badges.gitter.im/tgjones/HlslTools.svg)](https://gitter.im/tgjones/HlslTools)

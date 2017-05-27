@@ -136,7 +136,7 @@
     <value>Spacing</value>
   </data>
   <data name="140" xml:space="preserve">
-    <value>HLSL Editor</value>
+    <value>GLSL Editor</value>
   </data>
   <data name="150" xml:space="preserve">
     <value>ShaderLab Editor</value>

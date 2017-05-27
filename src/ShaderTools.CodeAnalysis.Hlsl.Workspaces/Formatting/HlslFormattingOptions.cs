@@ -4,7 +4,7 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Formatting
 {
     internal static class HlslFormattingOptions
     {
-        private const string RegistryPath = LocalUserProfileStorageLocation.RootRegistryPath + @"TextEditor\HLSL\Specific\";
+        private const string RegistryPath = LocalUserProfileStorageLocation.RootRegistryPath + @"TextEditor\GLSL\Specific\";
 
         // Newline options
 

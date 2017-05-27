@@ -188,15 +188,10 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Parser
         {
             switch (kind)
             {
-                case SyntaxKind.CBufferKeyword:
                 case SyntaxKind.ClassKeyword:
                 case SyntaxKind.InterfaceKeyword:
                 case SyntaxKind.NamespaceKeyword:
                 case SyntaxKind.StructKeyword:
-                case SyntaxKind.TBufferKeyword:
-                case SyntaxKind.TechniqueKeyword:
-                case SyntaxKind.Technique10Keyword:
-                case SyntaxKind.Technique11Keyword:
                     return true;
 
                 default:

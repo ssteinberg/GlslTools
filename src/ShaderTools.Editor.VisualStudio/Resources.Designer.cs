@@ -115,7 +115,7 @@ namespace ShaderTools.Editor.VisualStudio {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HLSL Editor.
+        ///   Looks up a localized string similar to GLSL Editor.
         /// </summary>
         internal static string _140 {
             get {

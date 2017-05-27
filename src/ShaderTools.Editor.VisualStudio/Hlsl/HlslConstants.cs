@@ -2,16 +2,15 @@
 {
     internal static class HlslConstants
     {
-        public const string LanguageName = "HLSL";
-        public const string ContentTypeName = "HLSL";
+        public const string LanguageName = "GLSL";
+        public const string ContentTypeName = "GLSL";
 
-        public const string FileExtension1 = ".hlsl";
-        public const string FileExtension2 = ".hlsli";
-        public const string FileExtension3 = ".fx";
-        public const string FileExtension4 = ".fxh";
-        public const string FileExtension5 = ".vsh";
-        public const string FileExtension6 = ".psh";
-        public const string FileExtension7 = ".cginc";
-        public const string FileExtension8 = ".compute";
+        public const string FileExtension1 = ".vert";
+        public const string FileExtension2 = ".frag";
+        public const string FileExtension3 = ".geom";
+        public const string FileExtension4 = ".comp";
+        public const string FileExtension5 = ".tes";
+        public const string FileExtension6 = ".tcs";
+        public const string FileExtension7 = ".glsl";
     }
 }

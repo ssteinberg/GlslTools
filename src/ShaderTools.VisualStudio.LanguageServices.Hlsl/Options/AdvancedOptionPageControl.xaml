@@ -30,7 +30,7 @@
             <GroupBox Header="IntelliSense">
                 <StackPanel>
                     <CheckBox x:Name="EnableIntelliSenseCheckBox" Content="Enable _IntelliSense" />
-                    <TextBlock Text="Disabling IntelliSense will disable all HLSL IntelliSense features, including Quick Info, Signature Help, Statement Completion, Go To Definition, Reference Highlighting, and Semantic Highlighting."
+                    <TextBlock Text="Disabling IntelliSense will disable all GLSL IntelliSense features, including Quick Info, Signature Help, Statement Completion, Go To Definition, Reference Highlighting, and Semantic Highlighting."
                                TextWrapping="Wrap" Margin="0 0 0 2" />
                 </StackPanel>
             </GroupBox>

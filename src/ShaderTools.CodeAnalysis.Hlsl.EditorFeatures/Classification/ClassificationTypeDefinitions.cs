@@ -24,7 +24,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public PunctuationFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Punctuation";
+                DisplayName = "GLSL Punctuation";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.Punctuation);
             }
         }
@@ -44,7 +44,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public SemanticFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Semantic";
+                DisplayName = "GLSL Semantic";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.Semantic);
             }
         }
@@ -64,7 +64,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public PackOffsetFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Pack Offset";
+                DisplayName = "GLSL Pack Offset";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.PackOffset);
             }
         }
@@ -84,7 +84,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public RegisterLocationFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Register Location";
+                DisplayName = "GLSL Register Location";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.RegisterLocation);
             }
         }
@@ -104,7 +104,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public NamespaceIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Namespace Identifier";
+                DisplayName = "GLSL Namespace Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.NamespaceIdentifier);
             }
         }
@@ -124,7 +124,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public GlobalVariableIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Global Variable Identifier";
+                DisplayName = "GLSL Global Variable Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.GlobalVariableIdentifier);
             }
         }
@@ -144,7 +144,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public FieldIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Field Identifier";
+                DisplayName = "GLSL Field Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.FieldIdentifier);
             }
         }
@@ -164,7 +164,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public LocalVariableIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Local Variable Identifier";
+                DisplayName = "GLSL Local Variable Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.LocalVariableIdentifier);
             }
         }
@@ -184,7 +184,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public ConstantBufferVariableIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Constant Buffer Variable Identifier";
+                DisplayName = "GLSL Constant Buffer Variable Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.ConstantBufferVariableIdentifier);
             }
         }
@@ -204,7 +204,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public ParameterIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Parameter Variable Identifier";
+                DisplayName = "GLSL Parameter Variable Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.ParameterIdentifier);
             }
         }
@@ -224,7 +224,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public FunctionIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Function Identifier";
+                DisplayName = "GLSL Function Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.FunctionIdentifier);
             }
         }
@@ -244,7 +244,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public MethodIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Method Identifier";
+                DisplayName = "GLSL Method Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.MethodIdentifier);
             }
         }
@@ -264,7 +264,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public ClassIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Class Identifier";
+                DisplayName = "GLSL Class Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.ClassIdentifier);
             }
         }
@@ -284,7 +284,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public StructIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Struct Identifier";
+                DisplayName = "GLSL Struct Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.StructIdentifier);
             }
         }
@@ -304,7 +304,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public InterfaceIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Interface Identifier";
+                DisplayName = "GLSL Interface Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.InterfaceIdentifier);
             }
         }
@@ -324,7 +324,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Hlsl.Classification
             [ImportingConstructor]
             public ConstantBufferIdentifierFormat(IClassificationColorManager colorManager)
             {
-                DisplayName = "HLSL Constant Buffer Identifier";
+                DisplayName = "GLSL Constant Buffer Identifier";
                 ForegroundColor = colorManager.GetDefaultColor(HlslClassificationTypeNames.ConstantBufferIdentifier);
             }
         }

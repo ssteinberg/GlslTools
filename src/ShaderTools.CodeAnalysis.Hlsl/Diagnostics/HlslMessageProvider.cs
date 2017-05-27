@@ -9,7 +9,7 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Diagnostics
 
         private HlslMessageProvider() { }
 
-        public override string CodePrefix { get; } = "HLSL";
+        public override string CodePrefix { get; } = "GLSL";
 
         public override string GetMessageFormat(int code)
         {

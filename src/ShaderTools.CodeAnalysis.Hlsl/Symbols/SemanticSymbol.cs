@@ -29,14 +29,14 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
                     usageString += "\n- Vertex shader input";
                 if (Usages.HasFlag(SemanticUsages.VertexShaderOutput))
                     usageString += "\n- Vertex shader output";
-                if (Usages.HasFlag(SemanticUsages.HullShaderInput))
-                    usageString += "\n- Hull shader input";
-                if (Usages.HasFlag(SemanticUsages.HullShaderOutput))
-                    usageString += "\n- Hull shader output";
-                if (Usages.HasFlag(SemanticUsages.DomainShaderInput))
-                    usageString += "\n- Domain shader input";
-                if (Usages.HasFlag(SemanticUsages.DomainShaderOutput))
-                    usageString += "\n- Domain shader output";
+                if (Usages.HasFlag(SemanticUsages.TessControlShaderInput))
+                    usageString += "\n- Tessellation control shader input";
+                if (Usages.HasFlag(SemanticUsages.TessControlShaderOutput))
+                    usageString += "\n- Tessellation control shader output";
+                if (Usages.HasFlag(SemanticUsages.TessEvalShaderInput))
+                    usageString += "\n- Tessellation evaluation shader input";
+                if (Usages.HasFlag(SemanticUsages.TessEvalShaderOutput))
+                    usageString += "\n- Tessellation evaluation shader output";
                 if (Usages.HasFlag(SemanticUsages.GeometryShaderInput))
                     usageString += "\n- Geometry shader input";
                 if (Usages.HasFlag(SemanticUsages.GeometryShaderOutput))

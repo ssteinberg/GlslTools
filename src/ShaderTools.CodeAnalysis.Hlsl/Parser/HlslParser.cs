@@ -338,15 +338,6 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Parser
                     case SyntaxKind.NamespaceKeyword:
                         declarations.Add(ParseNamespace());
                         break;
-                    case SyntaxKind.CBufferKeyword:
-                    case SyntaxKind.TBufferKeyword:
-                        declarations.Add(ParseConstantBuffer());
-                        break;
-                    case SyntaxKind.TechniqueKeyword:
-                    case SyntaxKind.Technique10Keyword:
-                    case SyntaxKind.Technique11Keyword:
-                        declarations.Add(ParseTechnique());
-                        break;
                     case SyntaxKind.SemiToken:
                         declarations.Add(new EmptyStatementSyntax(new List<AttributeSyntax>(), NextToken()));
                         break;

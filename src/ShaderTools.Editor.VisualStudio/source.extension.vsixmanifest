@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="7def6c01-a05e-42e6-953d-3fdea1891737" Version="1.1" Language="en-US" Publisher="Tim Jones" />
-    <DisplayName>HLSL Tools for Visual Studio</DisplayName>
-    <Description xml:space="preserve">Enhanced support for editing HLSL in Visual Studio</Description>
-    <MoreInfo>https://github.com/tgjones/HlslTools</MoreInfo>
+    <Identity Id="05002c97-2be5-4ccb-8d07-751f755d10ff" Version="1.1" Language="en-US" Publisher="Shlomi Steinberg" />
+    <DisplayName>GLSL Tools for Visual Studio</DisplayName>
+    <Description xml:space="preserve">All credit to HLSLTools by Tim Jones. </Description>
+    <MoreInfo>https://github.com/ssteinberg/HlslTools</MoreInfo>
     <License>Resources\LICENSE</License>
-    <ReleaseNotes>https://github.com/tgjones/HlslTools/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\icon.png</Icon>
     <PreviewImage>Resources\preview.png</PreviewImage>
-    <Tags>HLSL, shader, Direct3D</Tags>
+    <Tags>GLSL</Tags>
   </Metadata>
   <Installation InstalledByMsi="false">
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="14.0" />

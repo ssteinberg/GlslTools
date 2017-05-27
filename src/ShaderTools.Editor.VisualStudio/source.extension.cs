@@ -7,12 +7,12 @@ namespace ShaderTools.Editor.VisualStudio
 {
     static class Vsix
     {
-        public const string Id = "7def6c01-a05e-42e6-953d-3fdea1891737";
-        public const string Name = "HLSL Tools for Visual Studio";
-        public const string Description = @"Enhanced support for editing HLSL in Visual Studio";
+        public const string Id = "05002c97-2be5-4ccb-8d07-751f755d10ff";
+        public const string Name = "GLSL Tools for Visual Studio";
+        public const string Description = @"Enhanced support for editing GLSL in Visual Studio";
         public const string Language = "en-US";
         public const string Version = "1.1";
-        public const string Author = "Tim Jones";
-        public const string Tags = "HLSL, shader, Direct3D";
+        public const string Author = "Shlomi Steinberg";
+        public const string Tags = "GLSL";
     }
 }

@@ -7,11 +7,11 @@ using Microsoft.VisualStudio.Shell;
 using ShaderTools.Editor.VisualStudio.Hlsl;
 using ShaderTools.VisualStudio.LanguageServices;
 
-[assembly: AssemblyTitle("HLSL Tools for Visual Studio")]
+[assembly: AssemblyTitle("GLSL Tools for Visual Studio")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tim Jones")]
-[assembly: AssemblyProduct("HLSL Tools for Visual Studio")]
+[assembly: AssemblyProduct("GLSL Tools for Visual Studio")]
 [assembly: AssemblyCopyright("Copyright © 2015-2017 Tim Jones")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]   

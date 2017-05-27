@@ -95,22 +95,10 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Binding
                     return new BoundScalarType(IntrinsicTypes.Int);
                 case ScalarType.Uint:
                     return new BoundScalarType(IntrinsicTypes.Uint);
-                case ScalarType.Half:
-                    return new BoundScalarType(IntrinsicTypes.Half);
                 case ScalarType.Float:
                     return new BoundScalarType(IntrinsicTypes.Float);
                 case ScalarType.Double:
                     return new BoundScalarType(IntrinsicTypes.Double);
-                case ScalarType.Min16Float:
-                    return new BoundScalarType(IntrinsicTypes.Min16Float);
-                case ScalarType.Min10Float:
-                    return new BoundScalarType(IntrinsicTypes.Min10Float);
-                case ScalarType.Min16Int:
-                    return new BoundScalarType(IntrinsicTypes.Min16Int);
-                case ScalarType.Min12Int:
-                    return new BoundScalarType(IntrinsicTypes.Min12Int);
-                case ScalarType.Min16Uint:
-                    return new BoundScalarType(IntrinsicTypes.Min16Uint);
                 case ScalarType.String:
                     return new BoundScalarType(IntrinsicTypes.String);
                 default:
@@ -160,121 +148,221 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Binding
 
         private IntrinsicObjectTypeSymbol BindObjectType(PredefinedObjectTypeSyntax node)
         {
-            if (node.ObjectTypeToken.ContextualKind == SyntaxKind.ConstantBufferKeyword)
-            {
-                var valueTypeSyntax = (TypeSyntax) node.TemplateArgumentList.Arguments[0];
-                var valueType = Bind(valueTypeSyntax, x => BindType(x, null));
-                return IntrinsicTypes.CreateConstantBufferType(valueType.TypeSymbol);
-            }
-
             var predefinedObjectType = SyntaxFacts.GetPredefinedObjectType(node.ObjectTypeToken.Kind);
             switch (predefinedObjectType)
             {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.Texture1D:
-                case PredefinedObjectType.Texture1DArray:
-                case PredefinedObjectType.Texture2D:
-                case PredefinedObjectType.Texture2DArray:
-                case PredefinedObjectType.Texture3D:
-                case PredefinedObjectType.TextureCube:
-                case PredefinedObjectType.TextureCubeArray:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    {
-                        TypeSymbol valueType;
-                        ScalarType scalarType;
-                        GetTextureValueAndScalarType(node, out valueType, out scalarType);
-                        return IntrinsicTypes.CreateTextureType(predefinedObjectType, valueType, scalarType);
-                    }
-                case PredefinedObjectType.RWBuffer:
-                case PredefinedObjectType.RasterizerOrderedBuffer:
-                case PredefinedObjectType.RWTexture1D:
-                case PredefinedObjectType.RWTexture1DArray:
-                case PredefinedObjectType.RWTexture2D:
-                case PredefinedObjectType.RWTexture2DArray:
-                case PredefinedObjectType.RWTexture3D:
-                case PredefinedObjectType.RasterizerOrderedTexture1D:
-                case PredefinedObjectType.RasterizerOrderedTexture1DArray:
-                case PredefinedObjectType.RasterizerOrderedTexture2D:
-                case PredefinedObjectType.RasterizerOrderedTexture2DArray:
-                case PredefinedObjectType.RasterizerOrderedTexture3D:
-                    {
-                        TypeSymbol valueType;
-                        ScalarType scalarType;
-                        GetTextureValueAndScalarType(node, out valueType, out scalarType);
-                        return IntrinsicTypes.CreateRWTextureType(predefinedObjectType, valueType, scalarType);
-                    }
-                case PredefinedObjectType.AppendStructuredBuffer:
-                case PredefinedObjectType.ConsumeStructuredBuffer:
-                case PredefinedObjectType.StructuredBuffer:
-                case PredefinedObjectType.RWStructuredBuffer:
-                case PredefinedObjectType.RasterizerOrderedStructuredBuffer:
-                case PredefinedObjectType.InputPatch:
-                case PredefinedObjectType.OutputPatch:
-                case PredefinedObjectType.PointStream:
-                case PredefinedObjectType.LineStream:
-                case PredefinedObjectType.TriangleStream:
-                    {
-                        var valueTypeSyntax = (TypeSyntax) node.TemplateArgumentList.Arguments[0];
-                        var valueType = Bind(valueTypeSyntax, x => BindType(x, null)).TypeSymbol;
-                        switch (predefinedObjectType)
-                        {
-                            case PredefinedObjectType.AppendStructuredBuffer:
-                                return IntrinsicTypes.CreateAppendStructuredBufferType(valueType);
-                            case PredefinedObjectType.ConsumeStructuredBuffer:
-                                return IntrinsicTypes.CreateConsumeStructuredBufferType(valueType);
-                            case PredefinedObjectType.StructuredBuffer:
-                                return IntrinsicTypes.CreateStructuredBufferType(valueType);
-                            case PredefinedObjectType.RWStructuredBuffer:
-                                return IntrinsicTypes.CreateRWStructuredBufferType(valueType);
-                            case PredefinedObjectType.RasterizerOrderedStructuredBuffer:
-                                return IntrinsicTypes.CreateRasterizerOrderedStructuredBufferType(valueType);
-                            case PredefinedObjectType.InputPatch:
-                                return IntrinsicTypes.CreateInputPatchType(valueType);
-                            case PredefinedObjectType.OutputPatch:
-                                return IntrinsicTypes.CreateOutputPatchType(valueType);
-                            case PredefinedObjectType.PointStream:
-                            case PredefinedObjectType.LineStream:
-                            case PredefinedObjectType.TriangleStream:
-                                return IntrinsicTypes.CreateStreamOutputType(predefinedObjectType, valueType);
-                            default:
-                                throw new ArgumentOutOfRangeException();
-                        }
-                    }
-                case PredefinedObjectType.ByteAddressBuffer:
-                    return IntrinsicTypes.ByteAddressBuffer;
-                case PredefinedObjectType.BlendState:
-                    return IntrinsicTypes.BlendState;
-                case PredefinedObjectType.DepthStencilState:
-                    return IntrinsicTypes.DepthStencilState;
-                case PredefinedObjectType.RasterizerState:
-                    return IntrinsicTypes.RasterizerState;
-                case PredefinedObjectType.RasterizerOrderedByteAddressBuffer:
-                    return IntrinsicTypes.RasterizerOrderedByteAddressBuffer;
-                case PredefinedObjectType.RWByteAddressBuffer:
-                    return IntrinsicTypes.RWByteAddressBuffer;
-                case PredefinedObjectType.Sampler:
-                    return IntrinsicTypes.Sampler;
-                case PredefinedObjectType.Sampler1D:
-                    return IntrinsicTypes.Sampler1D;
-                case PredefinedObjectType.Sampler2D:
-                    return IntrinsicTypes.Sampler2D;
-                case PredefinedObjectType.Sampler3D:
-                    return IntrinsicTypes.Sampler3D;
-                case PredefinedObjectType.SamplerCube:
-                    return IntrinsicTypes.SamplerCube;
-                case PredefinedObjectType.SamplerState:
-                    return IntrinsicTypes.SamplerState;
-                case PredefinedObjectType.SamplerComparisonState:
-                    return IntrinsicTypes.SamplerComparisonState;
-                case PredefinedObjectType.Texture:
-                    return IntrinsicTypes.LegacyTexture;
-                case PredefinedObjectType.GeometryShader:
-                    return IntrinsicTypes.GeometryShader;
-                case PredefinedObjectType.PixelShader:
-                    return IntrinsicTypes.PixelShader;
-                case PredefinedObjectType.VertexShader:
-                    return IntrinsicTypes.VertexShader;
+                case PredefinedObjectType.texture1D:
+                    return IntrinsicTypes.texture1D;
+                case PredefinedObjectType.itexture1D:
+                    return IntrinsicTypes.itexture1D;
+                case PredefinedObjectType.utexture1D:
+                    return IntrinsicTypes.utexture1D;
+                case PredefinedObjectType.image1D:
+                    return IntrinsicTypes.image1D;
+                case PredefinedObjectType.iimage1D:
+                    return IntrinsicTypes.iimage1D;
+                case PredefinedObjectType.uimage1D:
+                    return IntrinsicTypes.uimage1D;
+                case PredefinedObjectType.texture1DArray:
+                    return IntrinsicTypes.texture1DArray;
+                case PredefinedObjectType.itexture1DArray:
+                    return IntrinsicTypes.itexture1DArray;
+                case PredefinedObjectType.utexture1DArray:
+                    return IntrinsicTypes.utexture1DArray;
+                case PredefinedObjectType.image1DArray:
+                    return IntrinsicTypes.image1DArray;
+                case PredefinedObjectType.iimage1DArray:
+                    return IntrinsicTypes.iimage1DArray;
+                case PredefinedObjectType.uimage1DArray:
+                    return IntrinsicTypes.uimage1DArray;
+                case PredefinedObjectType.texture2D:
+                    return IntrinsicTypes.texture2D;
+                case PredefinedObjectType.itexture2D:
+                    return IntrinsicTypes.itexture2D;
+                case PredefinedObjectType.utexture2D:
+                    return IntrinsicTypes.utexture2D;
+                case PredefinedObjectType.image2D:
+                    return IntrinsicTypes.image2D;
+                case PredefinedObjectType.iimage2D:
+                    return IntrinsicTypes.iimage2D;
+                case PredefinedObjectType.uimage2D:
+                    return IntrinsicTypes.uimage2D;
+                case PredefinedObjectType.image2DRect:
+                    return IntrinsicTypes.image2DRect;
+                case PredefinedObjectType.iimage2DRect:
+                    return IntrinsicTypes.iimage2DRect;
+                case PredefinedObjectType.uimage2DRect:
+                    return IntrinsicTypes.uimage2DRect;
+                case PredefinedObjectType.subpassInput:
+                    return IntrinsicTypes.subpassInput;
+                case PredefinedObjectType.subpassInputMS:
+                    return IntrinsicTypes.subpassInputMS;
+                case PredefinedObjectType.isubpassInput:
+                    return IntrinsicTypes.isubpassInput;
+                case PredefinedObjectType.isubpassInputMS:
+                    return IntrinsicTypes.isubpassInputMS;
+                case PredefinedObjectType.usubpassInput:
+                    return IntrinsicTypes.usubpassInput;
+                case PredefinedObjectType.usubpassInputMS:
+                    return IntrinsicTypes.usubpassInputMS;
+                case PredefinedObjectType.texture2DArray:
+                    return IntrinsicTypes.texture2DArray;
+                case PredefinedObjectType.itexture2DArray:
+                    return IntrinsicTypes.itexture2DArray;
+                case PredefinedObjectType.utexture2DArray:
+                    return IntrinsicTypes.utexture2DArray;
+                case PredefinedObjectType.image2DArray:
+                    return IntrinsicTypes.image2DArray;
+                case PredefinedObjectType.iimage2DArray:
+                    return IntrinsicTypes.iimage2DArray;
+                case PredefinedObjectType.uimage2DArray:
+                    return IntrinsicTypes.uimage2DArray;
+                case PredefinedObjectType.texture2DMS:
+                    return IntrinsicTypes.texture2DMS;
+                case PredefinedObjectType.itexture2DMS:
+                    return IntrinsicTypes.itexture2DMS;
+                case PredefinedObjectType.utexture2DMS:
+                    return IntrinsicTypes.utexture2DMS;
+                case PredefinedObjectType.image2DMS:
+                    return IntrinsicTypes.image2DMS;
+                case PredefinedObjectType.iimage2DMS:
+                    return IntrinsicTypes.iimage2DMS;
+                case PredefinedObjectType.uimage2DMS:
+                    return IntrinsicTypes.uimage2DMS;
+                case PredefinedObjectType.texture2DMSArray:
+                    return IntrinsicTypes.texture2DMSArray;
+                case PredefinedObjectType.itexture2DMSArray:
+                    return IntrinsicTypes.itexture2DMSArray;
+                case PredefinedObjectType.utexture2DMSArray:
+                    return IntrinsicTypes.utexture2DMSArray;
+                case PredefinedObjectType.image2DMSArray:
+                    return IntrinsicTypes.image2DMSArray;
+                case PredefinedObjectType.iimage2DMSArray:
+                    return IntrinsicTypes.iimage2DMSArray;
+                case PredefinedObjectType.uimage2DMSArray:
+                    return IntrinsicTypes.uimage2DMSArray;
+                case PredefinedObjectType.texture3D:
+                    return IntrinsicTypes.texture3D;
+                case PredefinedObjectType.itexture3D:
+                    return IntrinsicTypes.itexture3D;
+                case PredefinedObjectType.utexture3D:
+                    return IntrinsicTypes.utexture3D;
+                case PredefinedObjectType.image3D:
+                    return IntrinsicTypes.image3D;
+                case PredefinedObjectType.iimage3D:
+                    return IntrinsicTypes.iimage3D;
+                case PredefinedObjectType.uimage3D:
+                    return IntrinsicTypes.uimage3D;
+                case PredefinedObjectType.textureCube:
+                    return IntrinsicTypes.textureCube;
+                case PredefinedObjectType.itextureCube:
+                    return IntrinsicTypes.itextureCube;
+                case PredefinedObjectType.utextureCube:
+                    return IntrinsicTypes.utextureCube;
+                case PredefinedObjectType.imageCube:
+                    return IntrinsicTypes.imageCube;
+                case PredefinedObjectType.iimageCube:
+                    return IntrinsicTypes.iimageCube;
+                case PredefinedObjectType.uimageCube:
+                    return IntrinsicTypes.uimageCube;
+                case PredefinedObjectType.textureCubeArray:
+                    return IntrinsicTypes.textureCubeArray;
+                case PredefinedObjectType.itextureCubeArray:
+                    return IntrinsicTypes.itextureCubeArray;
+                case PredefinedObjectType.utextureCubeArray:
+                    return IntrinsicTypes.utextureCubeArray;
+                case PredefinedObjectType.imageCubeArray:
+                    return IntrinsicTypes.imageCubeArray;
+                case PredefinedObjectType.iimageCubeArray:
+                    return IntrinsicTypes.iimageCubeArray;
+                case PredefinedObjectType.uimageCubeArray:
+                    return IntrinsicTypes.uimageCubeArray;
+                case PredefinedObjectType.sampler:
+                    return IntrinsicTypes.sampler;
+                case PredefinedObjectType.samplerShadow:
+                    return IntrinsicTypes.samplerShadow;
+                case PredefinedObjectType.samplerBuffer:
+                    return IntrinsicTypes.samplerBuffer;
+                case PredefinedObjectType.isamplerBuffer:
+                    return IntrinsicTypes.isamplerBuffer;
+                case PredefinedObjectType.usamplerBuffer:
+                    return IntrinsicTypes.usamplerBuffer;
+                case PredefinedObjectType.sampler1D:
+                    return IntrinsicTypes.sampler1D;
+                case PredefinedObjectType.sampler1DArray:
+                    return IntrinsicTypes.sampler1DArray;
+                case PredefinedObjectType.sampler1DShadow:
+                    return IntrinsicTypes.sampler1DShadow;
+                case PredefinedObjectType.sampler1DArrayShadow:
+                    return IntrinsicTypes.sampler1DArrayShadow;
+                case PredefinedObjectType.isampler1D:
+                    return IntrinsicTypes.isampler1D;
+                case PredefinedObjectType.isampler1DArray:
+                    return IntrinsicTypes.isampler1DArray;
+                case PredefinedObjectType.usampler1D:
+                    return IntrinsicTypes.usampler1D;
+                case PredefinedObjectType.usampler1DArray:
+                    return IntrinsicTypes.usampler1DArray;
+                case PredefinedObjectType.sampler2D:
+                    return IntrinsicTypes.sampler2D;
+                case PredefinedObjectType.sampler2DArray:
+                    return IntrinsicTypes.sampler2DArray;
+                case PredefinedObjectType.sampler2DShadow:
+                    return IntrinsicTypes.sampler2DShadow;
+                case PredefinedObjectType.sampler2DArrayShadow:
+                    return IntrinsicTypes.sampler2DArrayShadow;
+                case PredefinedObjectType.sampler2DRect:
+                    return IntrinsicTypes.sampler2DRect;
+                case PredefinedObjectType.sampler2DRectShadow:
+                    return IntrinsicTypes.sampler2DRectShadow;
+                case PredefinedObjectType.sampler2DMS:
+                    return IntrinsicTypes.sampler2DMS;
+                case PredefinedObjectType.sampler2DMSArray:
+                    return IntrinsicTypes.sampler2DMSArray;
+                case PredefinedObjectType.isampler2D:
+                    return IntrinsicTypes.isampler2D;
+                case PredefinedObjectType.isampler2DArray:
+                    return IntrinsicTypes.isampler2DArray;
+                case PredefinedObjectType.isampler2DRect:
+                    return IntrinsicTypes.isampler2DRect;
+                case PredefinedObjectType.isampler2DMS:
+                    return IntrinsicTypes.isampler2DMS;
+                case PredefinedObjectType.isampler2DMSArray:
+                    return IntrinsicTypes.isampler2DMSArray;
+                case PredefinedObjectType.usampler2D:
+                    return IntrinsicTypes.usampler2D;
+                case PredefinedObjectType.usampler2DArray:
+                    return IntrinsicTypes.usampler2DArray;
+                case PredefinedObjectType.usampler2DRect:
+                    return IntrinsicTypes.usampler2DRect;
+                case PredefinedObjectType.usampler2DMS:
+                    return IntrinsicTypes.usampler2DMS;
+                case PredefinedObjectType.usampler2DMSArray:
+                    return IntrinsicTypes.usampler2DMSArray;
+                case PredefinedObjectType.sampler3D:
+                    return IntrinsicTypes.sampler3D;
+                case PredefinedObjectType.isampler3D:
+                    return IntrinsicTypes.isampler3D;
+                case PredefinedObjectType.usampler3D:
+                    return IntrinsicTypes.usampler3D;
+                case PredefinedObjectType.samplerCube:
+                    return IntrinsicTypes.samplerCube;
+                case PredefinedObjectType.samplerCubeArray:
+                    return IntrinsicTypes.samplerCubeArray;
+                case PredefinedObjectType.samplerCubeShadow:
+                    return IntrinsicTypes.samplerCubeShadow;
+                case PredefinedObjectType.samplerCubeArrayShadow:
+                    return IntrinsicTypes.samplerCubeArrayShadow;
+                case PredefinedObjectType.isamplerCube:
+                    return IntrinsicTypes.isamplerCube;
+                case PredefinedObjectType.isamplerCubeArray:
+                    return IntrinsicTypes.isamplerCubeArray;
+                case PredefinedObjectType.usamplerCube:
+                    return IntrinsicTypes.usamplerCube;
+                case PredefinedObjectType.usamplerCubeArray:
+                    return IntrinsicTypes.usamplerCubeArray;
+                case PredefinedObjectType.buffer:
+                    return IntrinsicTypes.buffer;
                 default:
                     throw new InvalidOperationException(predefinedObjectType.ToString());
             }

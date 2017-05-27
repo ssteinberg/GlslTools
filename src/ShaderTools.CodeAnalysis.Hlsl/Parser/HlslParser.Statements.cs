@@ -255,16 +255,9 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Parser
             InitializerSyntax initializer = null;
             if (Current.Kind == SyntaxKind.EqualsToken)
             {
-                if (Lookahead.Kind == SyntaxKind.SamplerStateLegacyKeyword)
-                {
-                    initializer = ParseSamplerStateInitializer();
-                }
-                else
-                {
-                    var equals = NextToken();
-                    var init = ParseVariableInitializer();
-                    initializer = new EqualsValueClauseSyntax(equals, init);
-                }
+                var equals = NextToken();
+                var init = ParseVariableInitializer();
+                initializer = new EqualsValueClauseSyntax(equals, init);
             }
             else if (Current.Kind == SyntaxKind.OpenBraceToken)
             {
@@ -275,15 +268,6 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Parser
             }
 
             return new VariableDeclaratorSyntax(name, arrayRankSpecifiers, qualifiers, annotations, initializer);
-        }
-
-        private SamplerStateInitializerSyntax ParseSamplerStateInitializer()
-        {
-            var equals = Match(SyntaxKind.EqualsToken);
-            var samplerState = Match(SyntaxKind.SamplerStateLegacyKeyword);
-            var stateInitializer = ParseStateInitializer();
-
-            return new SamplerStateInitializerSyntax(equals, samplerState, stateInitializer);
         }
 
         private StateArrayInitializerSyntax ParseStateArrayInitializer()

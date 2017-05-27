@@ -14,14 +14,8 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
         public static readonly IntrinsicScalarTypeSymbol Bool;
         public static readonly IntrinsicScalarTypeSymbol Int;
         public static readonly IntrinsicScalarTypeSymbol Uint;
-        public static readonly IntrinsicScalarTypeSymbol Half;
         public static readonly IntrinsicScalarTypeSymbol Float;
         public static readonly IntrinsicScalarTypeSymbol Double;
-        public static readonly IntrinsicScalarTypeSymbol Min16Float;
-        public static readonly IntrinsicScalarTypeSymbol Min10Float;
-        public static readonly IntrinsicScalarTypeSymbol Min16Int;
-        public static readonly IntrinsicScalarTypeSymbol Min12Int;
-        public static readonly IntrinsicScalarTypeSymbol Min16Uint;
 
         public static readonly IntrinsicVectorTypeSymbol Bool1;
         public static readonly IntrinsicVectorTypeSymbol Bool2;
@@ -38,11 +32,6 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
         public static readonly IntrinsicVectorTypeSymbol Uint3;
         public static readonly IntrinsicVectorTypeSymbol Uint4;
 
-        public static readonly IntrinsicVectorTypeSymbol Half1;
-        public static readonly IntrinsicVectorTypeSymbol Half2;
-        public static readonly IntrinsicVectorTypeSymbol Half3;
-        public static readonly IntrinsicVectorTypeSymbol Half4;
-
         public static readonly IntrinsicVectorTypeSymbol Float1;
         public static readonly IntrinsicVectorTypeSymbol Float2;
         public static readonly IntrinsicVectorTypeSymbol Float3;
@@ -53,278 +42,206 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
         public static readonly IntrinsicVectorTypeSymbol Double3;
         public static readonly IntrinsicVectorTypeSymbol Double4;
 
-        public static readonly IntrinsicVectorTypeSymbol Min16Float1;
-        public static readonly IntrinsicVectorTypeSymbol Min16Float2;
-        public static readonly IntrinsicVectorTypeSymbol Min16Float3;
-        public static readonly IntrinsicVectorTypeSymbol Min16Float4;
-
-        public static readonly IntrinsicVectorTypeSymbol Min10Float1;
-        public static readonly IntrinsicVectorTypeSymbol Min10Float2;
-        public static readonly IntrinsicVectorTypeSymbol Min10Float3;
-        public static readonly IntrinsicVectorTypeSymbol Min10Float4;
-
-        public static readonly IntrinsicVectorTypeSymbol Min16Int1;
-        public static readonly IntrinsicVectorTypeSymbol Min16Int2;
-        public static readonly IntrinsicVectorTypeSymbol Min16Int3;
-        public static readonly IntrinsicVectorTypeSymbol Min16Int4;
-
-        public static readonly IntrinsicVectorTypeSymbol Min12Int1;
-        public static readonly IntrinsicVectorTypeSymbol Min12Int2;
-        public static readonly IntrinsicVectorTypeSymbol Min12Int3;
-        public static readonly IntrinsicVectorTypeSymbol Min12Int4;
-
-        public static readonly IntrinsicVectorTypeSymbol Min16Uint1;
-        public static readonly IntrinsicVectorTypeSymbol Min16Uint2;
-        public static readonly IntrinsicVectorTypeSymbol Min16Uint3;
-        public static readonly IntrinsicVectorTypeSymbol Min16Uint4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Bool1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Bool1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Bool1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Bool1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Bool2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Bool2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Bool2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Bool2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Bool3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Bool3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Bool3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Bool3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Bool4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Bool4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Bool4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Bool4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Int1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Int1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Int1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Int1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Int2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Int2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Int2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Int2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Int3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Int3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Int3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Int3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Int4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Int4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Int4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Int4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Uint1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Uint1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Uint1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Uint1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Uint2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Uint2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Uint2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Uint2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Uint3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Uint3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Uint3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Uint3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Uint4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Uint4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Uint4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Uint4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Half1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Half1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Half1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Half1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Half2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Half2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Half2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Half2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Half3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Half3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Half3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Half3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Half4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Half4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Half4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Half4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Float1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Float1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Float1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Float1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Float2x1;
         public static readonly IntrinsicMatrixTypeSymbol Float2x2;
         public static readonly IntrinsicMatrixTypeSymbol Float2x3;
         public static readonly IntrinsicMatrixTypeSymbol Float2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Float3x1;
         public static readonly IntrinsicMatrixTypeSymbol Float3x2;
         public static readonly IntrinsicMatrixTypeSymbol Float3x3;
         public static readonly IntrinsicMatrixTypeSymbol Float3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Float4x1;
         public static readonly IntrinsicMatrixTypeSymbol Float4x2;
         public static readonly IntrinsicMatrixTypeSymbol Float4x3;
         public static readonly IntrinsicMatrixTypeSymbol Float4x4;
 
-        public static readonly IntrinsicMatrixTypeSymbol Double1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Double1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Double1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Double1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Double2x1;
+        public static readonly IntrinsicMatrixTypeSymbol FloatMat2;
+        public static readonly IntrinsicMatrixTypeSymbol FloatMat3;
+        public static readonly IntrinsicMatrixTypeSymbol FloatMat4;
+
         public static readonly IntrinsicMatrixTypeSymbol Double2x2;
         public static readonly IntrinsicMatrixTypeSymbol Double2x3;
         public static readonly IntrinsicMatrixTypeSymbol Double2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Double3x1;
         public static readonly IntrinsicMatrixTypeSymbol Double3x2;
         public static readonly IntrinsicMatrixTypeSymbol Double3x3;
         public static readonly IntrinsicMatrixTypeSymbol Double3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Double4x1;
         public static readonly IntrinsicMatrixTypeSymbol Double4x2;
         public static readonly IntrinsicMatrixTypeSymbol Double4x3;
         public static readonly IntrinsicMatrixTypeSymbol Double4x4;
 
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Float4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min10Float4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Int4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min12Int4x4;
-
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint1x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint1x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint1x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint1x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint2x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint2x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint2x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint2x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint3x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint3x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint3x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint3x4;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint4x1;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint4x2;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint4x3;
-        public static readonly IntrinsicMatrixTypeSymbol Min16Uint4x4;
+        public static readonly IntrinsicMatrixTypeSymbol DoubleMat2;
+        public static readonly IntrinsicMatrixTypeSymbol DoubleMat3;
+        public static readonly IntrinsicMatrixTypeSymbol DoubleMat4;
 
         public static readonly IntrinsicScalarTypeSymbol[] AllScalarTypes;
 
         public static readonly IntrinsicVectorTypeSymbol[] AllBoolVectorTypes;
         public static readonly IntrinsicVectorTypeSymbol[] AllIntVectorTypes;
         public static readonly IntrinsicVectorTypeSymbol[] AllUintVectorTypes;
-        public static readonly IntrinsicVectorTypeSymbol[] AllHalfVectorTypes;
         public static readonly IntrinsicVectorTypeSymbol[] AllFloatVectorTypes;
         public static readonly IntrinsicVectorTypeSymbol[] AllDoubleVectorTypes;
-        public static readonly IntrinsicVectorTypeSymbol[] AllMin16FloatVectorTypes;
-        public static readonly IntrinsicVectorTypeSymbol[] AllMin10FloatVectorTypes;
-        public static readonly IntrinsicVectorTypeSymbol[] AllMin16IntVectorTypes;
-        public static readonly IntrinsicVectorTypeSymbol[] AllMin12IntVectorTypes;
-        public static readonly IntrinsicVectorTypeSymbol[] AllMin16UintVectorTypes;
+        public static readonly IntrinsicVectorTypeSymbol[] AllFloatDoubleVectorTypes;
         public static readonly IntrinsicVectorTypeSymbol[] AllVectorTypes;
 
-        public static readonly IntrinsicMatrixTypeSymbol[] AllBoolMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllIntMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllUintMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllHalfMatrixTypes;
         public static readonly IntrinsicMatrixTypeSymbol[] AllFloatMatrixTypes;
+        public static readonly IntrinsicMatrixTypeSymbol[] AllFloatSquareMatrixTypes;
         public static readonly IntrinsicMatrixTypeSymbol[] AllDoubleMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllMin16FloatMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllMin10FloatMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllMin16IntMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllMin12IntMatrixTypes;
-        public static readonly IntrinsicMatrixTypeSymbol[] AllMin16UintMatrixTypes;
+        public static readonly IntrinsicMatrixTypeSymbol[] AllDoubleSquareMatrixTypes;
         public static readonly IntrinsicMatrixTypeSymbol[] AllMatrixTypes;
 
         public static readonly IntrinsicNumericTypeSymbol[] AllBoolTypes;
         public static readonly IntrinsicNumericTypeSymbol[] AllIntTypes;
         public static readonly IntrinsicNumericTypeSymbol[] AllUintTypes;
-        public static readonly IntrinsicNumericTypeSymbol[] AllHalfTypes;
         public static readonly IntrinsicNumericTypeSymbol[] AllFloatTypes;
         public static readonly IntrinsicNumericTypeSymbol[] AllDoubleTypes;
-        public static readonly IntrinsicNumericTypeSymbol[] AllMin16FloatTypes;
-        public static readonly IntrinsicNumericTypeSymbol[] AllMin10FloatTypes;
-        public static readonly IntrinsicNumericTypeSymbol[] AllMin16IntTypes;
-        public static readonly IntrinsicNumericTypeSymbol[] AllMin12IntTypes;
-        public static readonly IntrinsicNumericTypeSymbol[] AllMin16UintTypes;
 
         public static readonly IntrinsicNumericTypeSymbol[] AllIntegralTypes;
         public static readonly IntrinsicNumericTypeSymbol[] AllNumericNonBoolTypes;
         public static readonly IntrinsicNumericTypeSymbol[] AllNumericTypes;
 
-        public static readonly IntrinsicObjectTypeSymbol Sampler;
-        public static readonly IntrinsicObjectTypeSymbol Sampler1D;
-        public static readonly IntrinsicObjectTypeSymbol Sampler2D;
-        public static readonly IntrinsicObjectTypeSymbol Sampler3D;
-        public static readonly IntrinsicObjectTypeSymbol SamplerCube;
-        public static readonly IntrinsicObjectTypeSymbol SamplerState;
-        public static readonly IntrinsicObjectTypeSymbol SamplerComparisonState;
-        public static readonly IntrinsicObjectTypeSymbol LegacyTexture;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage1DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage1DArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage2DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage2DArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage2DRectTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage2DMSTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage2DMSArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImage3DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImageCubeTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllImageCubeArrayTypes;
 
-        public static readonly IntrinsicObjectTypeSymbol BlendState;
-        public static readonly IntrinsicObjectTypeSymbol DepthStencilState;
-        public static readonly IntrinsicObjectTypeSymbol RasterizerState;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTexture1DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTexture1DArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTexture2DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTexture2DArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTexture2DMSTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTexture2DMSArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTexture3DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTextureCubeTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllTextureCubeArrayTypes;
 
-        public static readonly IntrinsicObjectTypeSymbol GeometryShader;
-        public static readonly IntrinsicObjectTypeSymbol PixelShader;
-        public static readonly IntrinsicObjectTypeSymbol VertexShader;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler1DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler1DArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler2DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler2DArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler2DRectTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler2DMSTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler2DMSArrayTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSampler3DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSamplerCubeTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSamplerCubeArrayTypes;
+
+        public static readonly IntrinsicObjectTypeSymbol[] AllSamplerWithSize1DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSamplerWithSize2DTypes;
+        public static readonly IntrinsicObjectTypeSymbol[] AllSamplerWithSize3DTypes;
+
+        public static readonly IntrinsicObjectTypeSymbol[] AllSamplerTypes;
+
+        public static readonly IntrinsicObjectTypeSymbol texture1D;
+        public static readonly IntrinsicObjectTypeSymbol itexture1D;
+        public static readonly IntrinsicObjectTypeSymbol utexture1D;
+        public static readonly IntrinsicObjectTypeSymbol image1D;
+        public static readonly IntrinsicObjectTypeSymbol iimage1D;
+        public static readonly IntrinsicObjectTypeSymbol uimage1D;
+        public static readonly IntrinsicObjectTypeSymbol texture1DArray;
+        public static readonly IntrinsicObjectTypeSymbol itexture1DArray;
+        public static readonly IntrinsicObjectTypeSymbol utexture1DArray;
+        public static readonly IntrinsicObjectTypeSymbol image1DArray;
+        public static readonly IntrinsicObjectTypeSymbol iimage1DArray;
+        public static readonly IntrinsicObjectTypeSymbol uimage1DArray;
+        public static readonly IntrinsicObjectTypeSymbol texture2D;
+        public static readonly IntrinsicObjectTypeSymbol itexture2D;
+        public static readonly IntrinsicObjectTypeSymbol utexture2D;
+        public static readonly IntrinsicObjectTypeSymbol image2D;
+        public static readonly IntrinsicObjectTypeSymbol iimage2D;
+        public static readonly IntrinsicObjectTypeSymbol uimage2D;
+        public static readonly IntrinsicObjectTypeSymbol image2DRect;
+        public static readonly IntrinsicObjectTypeSymbol iimage2DRect;
+        public static readonly IntrinsicObjectTypeSymbol uimage2DRect;
+        public static readonly IntrinsicObjectTypeSymbol subpassInput;
+        public static readonly IntrinsicObjectTypeSymbol subpassInputMS;
+        public static readonly IntrinsicObjectTypeSymbol isubpassInput;
+        public static readonly IntrinsicObjectTypeSymbol isubpassInputMS;
+        public static readonly IntrinsicObjectTypeSymbol usubpassInput;
+        public static readonly IntrinsicObjectTypeSymbol usubpassInputMS;
+        public static readonly IntrinsicObjectTypeSymbol texture2DArray;
+        public static readonly IntrinsicObjectTypeSymbol itexture2DArray;
+        public static readonly IntrinsicObjectTypeSymbol utexture2DArray;
+        public static readonly IntrinsicObjectTypeSymbol image2DArray;
+        public static readonly IntrinsicObjectTypeSymbol iimage2DArray;
+        public static readonly IntrinsicObjectTypeSymbol uimage2DArray;
+        public static readonly IntrinsicObjectTypeSymbol texture2DMS;
+        public static readonly IntrinsicObjectTypeSymbol itexture2DMS;
+        public static readonly IntrinsicObjectTypeSymbol utexture2DMS;
+        public static readonly IntrinsicObjectTypeSymbol image2DMS;
+        public static readonly IntrinsicObjectTypeSymbol iimage2DMS;
+        public static readonly IntrinsicObjectTypeSymbol uimage2DMS;
+        public static readonly IntrinsicObjectTypeSymbol texture2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol itexture2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol utexture2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol image2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol iimage2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol uimage2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol texture3D;
+        public static readonly IntrinsicObjectTypeSymbol itexture3D;
+        public static readonly IntrinsicObjectTypeSymbol utexture3D;
+        public static readonly IntrinsicObjectTypeSymbol image3D;
+        public static readonly IntrinsicObjectTypeSymbol iimage3D;
+        public static readonly IntrinsicObjectTypeSymbol uimage3D;
+        public static readonly IntrinsicObjectTypeSymbol textureCube;
+        public static readonly IntrinsicObjectTypeSymbol itextureCube;
+        public static readonly IntrinsicObjectTypeSymbol utextureCube;
+        public static readonly IntrinsicObjectTypeSymbol imageCube;
+        public static readonly IntrinsicObjectTypeSymbol iimageCube;
+        public static readonly IntrinsicObjectTypeSymbol uimageCube;
+        public static readonly IntrinsicObjectTypeSymbol textureCubeArray;
+        public static readonly IntrinsicObjectTypeSymbol itextureCubeArray;
+        public static readonly IntrinsicObjectTypeSymbol utextureCubeArray;
+        public static readonly IntrinsicObjectTypeSymbol imageCubeArray;
+        public static readonly IntrinsicObjectTypeSymbol iimageCubeArray;
+        public static readonly IntrinsicObjectTypeSymbol uimageCubeArray;
+
+        public static readonly IntrinsicObjectTypeSymbol sampler;
+        public static readonly IntrinsicObjectTypeSymbol samplerShadow;
+        public static readonly IntrinsicObjectTypeSymbol samplerBuffer;
+        public static readonly IntrinsicObjectTypeSymbol isamplerBuffer;
+        public static readonly IntrinsicObjectTypeSymbol usamplerBuffer;
+        public static readonly IntrinsicObjectTypeSymbol sampler1D;
+        public static readonly IntrinsicObjectTypeSymbol sampler1DArray;
+        public static readonly IntrinsicObjectTypeSymbol sampler1DShadow;
+        public static readonly IntrinsicObjectTypeSymbol sampler1DArrayShadow;
+        public static readonly IntrinsicObjectTypeSymbol isampler1D;
+        public static readonly IntrinsicObjectTypeSymbol isampler1DArray;
+        public static readonly IntrinsicObjectTypeSymbol usampler1D;
+        public static readonly IntrinsicObjectTypeSymbol usampler1DArray;
+        public static readonly IntrinsicObjectTypeSymbol sampler2D;
+        public static readonly IntrinsicObjectTypeSymbol sampler2DArray;
+        public static readonly IntrinsicObjectTypeSymbol sampler2DShadow;
+        public static readonly IntrinsicObjectTypeSymbol sampler2DArrayShadow;
+        public static readonly IntrinsicObjectTypeSymbol sampler2DRect;
+        public static readonly IntrinsicObjectTypeSymbol sampler2DRectShadow;
+        public static readonly IntrinsicObjectTypeSymbol sampler2DMS;
+        public static readonly IntrinsicObjectTypeSymbol sampler2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol isampler2D;
+        public static readonly IntrinsicObjectTypeSymbol isampler2DArray;
+        public static readonly IntrinsicObjectTypeSymbol isampler2DRect;
+        public static readonly IntrinsicObjectTypeSymbol isampler2DMS;
+        public static readonly IntrinsicObjectTypeSymbol isampler2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol usampler2D;
+        public static readonly IntrinsicObjectTypeSymbol usampler2DArray;
+        public static readonly IntrinsicObjectTypeSymbol usampler2DRect;
+        public static readonly IntrinsicObjectTypeSymbol usampler2DMS;
+        public static readonly IntrinsicObjectTypeSymbol usampler2DMSArray;
+        public static readonly IntrinsicObjectTypeSymbol sampler3D;
+        public static readonly IntrinsicObjectTypeSymbol isampler3D;
+        public static readonly IntrinsicObjectTypeSymbol usampler3D;
+        public static readonly IntrinsicObjectTypeSymbol samplerCube;
+        public static readonly IntrinsicObjectTypeSymbol samplerCubeArray;
+        public static readonly IntrinsicObjectTypeSymbol samplerCubeShadow;
+        public static readonly IntrinsicObjectTypeSymbol samplerCubeArrayShadow;
+        public static readonly IntrinsicObjectTypeSymbol isamplerCube;
+        public static readonly IntrinsicObjectTypeSymbol isamplerCubeArray;
+        public static readonly IntrinsicObjectTypeSymbol usamplerCube;
+        public static readonly IntrinsicObjectTypeSymbol usamplerCubeArray;
+
+        public static readonly IntrinsicObjectTypeSymbol buffer;
 
         public static readonly TypeSymbol[] AllTypes;
 
@@ -336,14 +253,8 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
             Bool = new IntrinsicScalarTypeSymbol("bool", "Represents a boolean value.", ScalarType.Bool);
             Int = new IntrinsicScalarTypeSymbol("int", "Represents a 32-bit signed integer value.", ScalarType.Int);
             Uint = new IntrinsicScalarTypeSymbol("uint", "Represents a 32-bit unsigned integer value.", ScalarType.Uint);
-            Half = new IntrinsicScalarTypeSymbol("half", "Represents a 16-bit floating point value.", ScalarType.Half);
             Float = new IntrinsicScalarTypeSymbol("float", "Represents a 32-bit floating point value.", ScalarType.Float);
             Double = new IntrinsicScalarTypeSymbol("double", "Represents a 64-bit floating point value.", ScalarType.Double);
-            Min16Float = new IntrinsicScalarTypeSymbol("min16float", "Represents a minimum 16-bit floating point value.", ScalarType.Min16Float);
-            Min10Float = new IntrinsicScalarTypeSymbol("min10float", "Represents a minimum 10-bit floating point value.", ScalarType.Min10Float);
-            Min16Int = new IntrinsicScalarTypeSymbol("min16int", "Represents a minimum 16-bit signed integer value.", ScalarType.Min16Int);
-            Min12Int = new IntrinsicScalarTypeSymbol("min12int", "Represents a minimum 12-bit signed integer value.", ScalarType.Min12Int);
-            Min16Uint = new IntrinsicScalarTypeSymbol("min16uint", "Represents a minimum 16-bit unsigned integer value.", ScalarType.Min16Uint);
 
             // Vector types.
             Bool1 = new IntrinsicVectorTypeSymbol("bool1", "Represents a vector containing 1 boolean component.", ScalarType.Bool, 1);
@@ -358,10 +269,6 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
             Uint2 = new IntrinsicVectorTypeSymbol("uint2", "Represents a vector containing 2 unsigned integer components.", ScalarType.Uint, 2);
             Uint3 = new IntrinsicVectorTypeSymbol("uint3", "Represents a vector containing 3 unsigned integer components.", ScalarType.Uint, 3);
             Uint4 = new IntrinsicVectorTypeSymbol("uint4", "Represents a vector containing 4 unsigned integer components.", ScalarType.Uint, 4);
-            Half1 = new IntrinsicVectorTypeSymbol("half1", "Represents a vector containing 1 floating point component.", ScalarType.Half, 1);
-            Half2 = new IntrinsicVectorTypeSymbol("half2", "Represents a vector containing 2 floating point components.", ScalarType.Half, 2);
-            Half3 = new IntrinsicVectorTypeSymbol("half3", "Represents a vector containing 3 floating point components.", ScalarType.Half, 3);
-            Half4 = new IntrinsicVectorTypeSymbol("half4", "Represents a vector containing 4 floating point components.", ScalarType.Half, 4);
             Float1 = new IntrinsicVectorTypeSymbol("float1", "Represents a vector containing 1 floating point component.", ScalarType.Float, 1);
             Float2 = new IntrinsicVectorTypeSymbol("float2", "Represents a vector containing 2 floating point components.", ScalarType.Float, 2);
             Float3 = new IntrinsicVectorTypeSymbol("float3", "Represents a vector containing 3 floating point components.", ScalarType.Float, 3);
@@ -370,38 +277,12 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
             Double2 = new IntrinsicVectorTypeSymbol("double2", "Represents a vector containing 2 floating point components.", ScalarType.Double, 2);
             Double3 = new IntrinsicVectorTypeSymbol("double3", "Represents a vector containing 3 floating point components.", ScalarType.Double, 3);
             Double4 = new IntrinsicVectorTypeSymbol("double4", "Represents a vector containing 4 floating point components.", ScalarType.Double, 4);
-            Min16Float1 = new IntrinsicVectorTypeSymbol("min16float1", "Represents a vector containing 1 floating point component.", ScalarType.Min16Float, 1);
-            Min16Float2 = new IntrinsicVectorTypeSymbol("min16float2", "Represents a vector containing 2 floating point components.", ScalarType.Min16Float, 2);
-            Min16Float3 = new IntrinsicVectorTypeSymbol("min16float3", "Represents a vector containing 3 floating point components.", ScalarType.Min16Float, 3);
-            Min16Float4 = new IntrinsicVectorTypeSymbol("min16float4", "Represents a vector containing 4 floating point components.", ScalarType.Min16Float, 4);
-            Min10Float1 = new IntrinsicVectorTypeSymbol("min10float1", "Represents a vector containing 1 floating point component.", ScalarType.Min10Float, 1);
-            Min10Float2 = new IntrinsicVectorTypeSymbol("min10float2", "Represents a vector containing 2 floating point components.", ScalarType.Min10Float, 2);
-            Min10Float3 = new IntrinsicVectorTypeSymbol("min10float3", "Represents a vector containing 3 floating point components.", ScalarType.Min10Float, 3);
-            Min10Float4 = new IntrinsicVectorTypeSymbol("min10float4", "Represents a vector containing 4 floating point components.", ScalarType.Min10Float, 4);
-            Min16Int1 = new IntrinsicVectorTypeSymbol("min16int1", "Represents a vector containing 1 signed integer component.", ScalarType.Min16Int, 1);
-            Min16Int2 = new IntrinsicVectorTypeSymbol("min16int2", "Represents a vector containing 2 signed integer components.", ScalarType.Min16Int, 2);
-            Min16Int3 = new IntrinsicVectorTypeSymbol("min16int3", "Represents a vector containing 3 signed integer components.", ScalarType.Min16Int, 3);
-            Min16Int4 = new IntrinsicVectorTypeSymbol("min16int4", "Represents a vector containing 4 signed integer components.", ScalarType.Min16Int, 4);
-            Min12Int1 = new IntrinsicVectorTypeSymbol("min12int1", "Represents a vector containing 1 signed integer component.", ScalarType.Min12Int, 1);
-            Min12Int2 = new IntrinsicVectorTypeSymbol("min12int2", "Represents a vector containing 2 signed integer components.", ScalarType.Min12Int, 2);
-            Min12Int3 = new IntrinsicVectorTypeSymbol("min12int3", "Represents a vector containing 3 signed integer components.", ScalarType.Min12Int, 3);
-            Min12Int4 = new IntrinsicVectorTypeSymbol("min12int4", "Represents a vector containing 4 signed integer components.", ScalarType.Min12Int, 4);
-            Min16Uint1 = new IntrinsicVectorTypeSymbol("min16uint1", "Represents a vector containing 1 unsigned integer component.", ScalarType.Min16Uint, 1);
-            Min16Uint2 = new IntrinsicVectorTypeSymbol("min16uint2", "Represents a vector containing 2 unsigned integer components.", ScalarType.Min16Uint, 2);
-            Min16Uint3 = new IntrinsicVectorTypeSymbol("min16uint3", "Represents a vector containing 3 unsigned integer components.", ScalarType.Min16Uint, 3);
-            Min16Uint4 = new IntrinsicVectorTypeSymbol("min16uint4", "Represents a vector containing 4 unsigned integer components.", ScalarType.Min16Uint, 4);
 
             Bool.AddMembers(CreateScalarTypeFields(1, Bool, Bool1, Bool2, Bool3, Bool4));
             Int.AddMembers(CreateScalarTypeFields(1, Int, Int1, Int2, Int3, Int4));
             Uint.AddMembers(CreateScalarTypeFields(1, Uint, Uint1, Uint2, Uint3, Uint4));
-            Half.AddMembers(CreateScalarTypeFields(1, Half, Half1, Half2, Half3, Half4));
             Float.AddMembers(CreateScalarTypeFields(1, Float, Float1, Float2, Float3, Float4));
             Double.AddMembers(CreateScalarTypeFields(1, Double, Double1, Double2, Double3, Double4));
-            Min16Float.AddMembers(CreateScalarTypeFields(1, Min16Float, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min10Float.AddMembers(CreateScalarTypeFields(1, Min10Float, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min16Int.AddMembers(CreateScalarTypeFields(1, Min16Int, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min12Int.AddMembers(CreateScalarTypeFields(1, Min12Int, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min16Uint.AddMembers(CreateScalarTypeFields(1, Min16Uint, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
 
             Bool1.AddMembers(CreateVectorTypeFields(1, Bool1, Bool, Bool1, Bool2, Bool3, Bool4));
             Bool2.AddMembers(CreateVectorTypeFields(2, Bool2, Bool, Bool1, Bool2, Bool3, Bool4));
@@ -415,10 +296,6 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
             Uint2.AddMembers(CreateVectorTypeFields(2, Uint2, Uint, Uint1, Uint2, Uint3, Uint4));
             Uint3.AddMembers(CreateVectorTypeFields(3, Uint3, Uint, Uint1, Uint2, Uint3, Uint4));
             Uint4.AddMembers(CreateVectorTypeFields(4, Uint4, Uint, Uint1, Uint2, Uint3, Uint4));
-            Half1.AddMembers(CreateVectorTypeFields(1, Half1, Half, Half1, Half2, Half3, Half4));
-            Half2.AddMembers(CreateVectorTypeFields(2, Half2, Half, Half1, Half2, Half3, Half4));
-            Half3.AddMembers(CreateVectorTypeFields(3, Half3, Half, Half1, Half2, Half3, Half4));
-            Half4.AddMembers(CreateVectorTypeFields(4, Half4, Half, Half1, Half2, Half3, Half4));
             Float1.AddMembers(CreateVectorTypeFields(1, Float1, Float, Float1, Float2, Float3, Float4));
             Float2.AddMembers(CreateVectorTypeFields(2, Float2, Float, Float1, Float2, Float3, Float4));
             Float3.AddMembers(CreateVectorTypeFields(3, Float3, Float, Float1, Float2, Float3, Float4));
@@ -427,395 +304,65 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
             Double2.AddMembers(CreateVectorTypeFields(2, Double2, Double, Double1, Double2, Double3, Double4));
             Double3.AddMembers(CreateVectorTypeFields(3, Double3, Double, Double1, Double2, Double3, Double4));
             Double4.AddMembers(CreateVectorTypeFields(4, Double4, Double, Double1, Double2, Double3, Double4));
-            Min16Float1.AddMembers(CreateVectorTypeFields(1, Min16Float1, Min16Float, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float2.AddMembers(CreateVectorTypeFields(2, Min16Float2, Min16Float, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float3.AddMembers(CreateVectorTypeFields(3, Min16Float3, Min16Float, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float4.AddMembers(CreateVectorTypeFields(4, Min16Float4, Min16Float, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min10Float1.AddMembers(CreateVectorTypeFields(1, Min10Float1, Min10Float, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float2.AddMembers(CreateVectorTypeFields(2, Min10Float2, Min10Float, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float3.AddMembers(CreateVectorTypeFields(3, Min10Float3, Min10Float, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float4.AddMembers(CreateVectorTypeFields(4, Min10Float4, Min10Float, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min16Int1.AddMembers(CreateVectorTypeFields(1, Min16Int1, Min16Int, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int2.AddMembers(CreateVectorTypeFields(2, Min16Int2, Min16Int, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int3.AddMembers(CreateVectorTypeFields(3, Min16Int3, Min16Int, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int4.AddMembers(CreateVectorTypeFields(4, Min16Int4, Min16Int, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min12Int1.AddMembers(CreateVectorTypeFields(1, Min12Int1, Min12Int, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int2.AddMembers(CreateVectorTypeFields(2, Min12Int2, Min12Int, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int3.AddMembers(CreateVectorTypeFields(3, Min12Int3, Min12Int, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int4.AddMembers(CreateVectorTypeFields(4, Min12Int4, Min12Int, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min16Uint1.AddMembers(CreateVectorTypeFields(1, Min16Uint1, Min16Uint, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint2.AddMembers(CreateVectorTypeFields(2, Min16Uint2, Min16Uint, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint3.AddMembers(CreateVectorTypeFields(3, Min16Uint3, Min16Uint, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint4.AddMembers(CreateVectorTypeFields(4, Min16Uint4, Min16Uint, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
 
             // Matrix types.
-            Bool1x1 = new IntrinsicMatrixTypeSymbol("bool1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Bool, 1, 1);
-            Bool1x2 = new IntrinsicMatrixTypeSymbol("bool1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Bool, 1, 2);
-            Bool1x3 = new IntrinsicMatrixTypeSymbol("bool1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Bool, 1, 3);
-            Bool1x4 = new IntrinsicMatrixTypeSymbol("bool1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Bool, 1, 4);
-            Bool2x1 = new IntrinsicMatrixTypeSymbol("bool2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Bool, 2, 1);
-            Bool2x2 = new IntrinsicMatrixTypeSymbol("bool2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Bool, 2, 2);
-            Bool2x3 = new IntrinsicMatrixTypeSymbol("bool2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Bool, 2, 3);
-            Bool2x4 = new IntrinsicMatrixTypeSymbol("bool2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Bool, 2, 4);
-            Bool3x1 = new IntrinsicMatrixTypeSymbol("bool3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Bool, 3, 1);
-            Bool3x2 = new IntrinsicMatrixTypeSymbol("bool3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Bool, 3, 2);
-            Bool3x3 = new IntrinsicMatrixTypeSymbol("bool3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Bool, 3, 3);
-            Bool3x4 = new IntrinsicMatrixTypeSymbol("bool3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Bool, 3, 4);
-            Bool4x1 = new IntrinsicMatrixTypeSymbol("bool4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Bool, 4, 1);
-            Bool4x2 = new IntrinsicMatrixTypeSymbol("bool4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Bool, 4, 2);
-            Bool4x3 = new IntrinsicMatrixTypeSymbol("bool4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Bool, 4, 3);
-            Bool4x4 = new IntrinsicMatrixTypeSymbol("bool4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Bool, 4, 4);
-            Int1x1 = new IntrinsicMatrixTypeSymbol("int1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Int, 1, 1);
-            Int1x2 = new IntrinsicMatrixTypeSymbol("int1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Int, 1, 2);
-            Int1x3 = new IntrinsicMatrixTypeSymbol("int1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Int, 1, 3);
-            Int1x4 = new IntrinsicMatrixTypeSymbol("int1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Int, 1, 4);
-            Int2x1 = new IntrinsicMatrixTypeSymbol("int2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Int, 2, 1);
-            Int2x2 = new IntrinsicMatrixTypeSymbol("int2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Int, 2, 2);
-            Int2x3 = new IntrinsicMatrixTypeSymbol("int2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Int, 2, 3);
-            Int2x4 = new IntrinsicMatrixTypeSymbol("int2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Int, 2, 4);
-            Int3x1 = new IntrinsicMatrixTypeSymbol("int3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Int, 3, 1);
-            Int3x2 = new IntrinsicMatrixTypeSymbol("int3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Int, 3, 2);
-            Int3x3 = new IntrinsicMatrixTypeSymbol("int3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Int, 3, 3);
-            Int3x4 = new IntrinsicMatrixTypeSymbol("int3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Int, 3, 4);
-            Int4x1 = new IntrinsicMatrixTypeSymbol("int4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Int, 4, 1);
-            Int4x2 = new IntrinsicMatrixTypeSymbol("int4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Int, 4, 2);
-            Int4x3 = new IntrinsicMatrixTypeSymbol("int4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Int, 4, 3);
-            Int4x4 = new IntrinsicMatrixTypeSymbol("int4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Int, 4, 4);
-            Uint1x1 = new IntrinsicMatrixTypeSymbol("uint1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Uint, 1, 1);
-            Uint1x2 = new IntrinsicMatrixTypeSymbol("uint1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Uint, 1, 2);
-            Uint1x3 = new IntrinsicMatrixTypeSymbol("uint1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Uint, 1, 3);
-            Uint1x4 = new IntrinsicMatrixTypeSymbol("uint1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Uint, 1, 4);
-            Uint2x1 = new IntrinsicMatrixTypeSymbol("uint2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Uint, 2, 1);
-            Uint2x2 = new IntrinsicMatrixTypeSymbol("uint2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Uint, 2, 2);
-            Uint2x3 = new IntrinsicMatrixTypeSymbol("uint2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Uint, 2, 3);
-            Uint2x4 = new IntrinsicMatrixTypeSymbol("uint2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Uint, 2, 4);
-            Uint3x1 = new IntrinsicMatrixTypeSymbol("uint3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Uint, 3, 1);
-            Uint3x2 = new IntrinsicMatrixTypeSymbol("uint3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Uint, 3, 2);
-            Uint3x3 = new IntrinsicMatrixTypeSymbol("uint3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Uint, 3, 3);
-            Uint3x4 = new IntrinsicMatrixTypeSymbol("uint3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Uint, 3, 4);
-            Uint4x1 = new IntrinsicMatrixTypeSymbol("uint4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Uint, 4, 1);
-            Uint4x2 = new IntrinsicMatrixTypeSymbol("uint4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Uint, 4, 2);
-            Uint4x3 = new IntrinsicMatrixTypeSymbol("uint4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Uint, 4, 3);
-            Uint4x4 = new IntrinsicMatrixTypeSymbol("uint4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Uint, 4, 4);
-            Half1x1 = new IntrinsicMatrixTypeSymbol("half1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Half, 1, 1);
-            Half1x2 = new IntrinsicMatrixTypeSymbol("half1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Half, 1, 2);
-            Half1x3 = new IntrinsicMatrixTypeSymbol("half1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Half, 1, 3);
-            Half1x4 = new IntrinsicMatrixTypeSymbol("half1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Half, 1, 4);
-            Half2x1 = new IntrinsicMatrixTypeSymbol("half2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Half, 2, 1);
-            Half2x2 = new IntrinsicMatrixTypeSymbol("half2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Half, 2, 2);
-            Half2x3 = new IntrinsicMatrixTypeSymbol("half2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Half, 2, 3);
-            Half2x4 = new IntrinsicMatrixTypeSymbol("half2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Half, 2, 4);
-            Half3x1 = new IntrinsicMatrixTypeSymbol("half3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Half, 3, 1);
-            Half3x2 = new IntrinsicMatrixTypeSymbol("half3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Half, 3, 2);
-            Half3x3 = new IntrinsicMatrixTypeSymbol("half3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Half, 3, 3);
-            Half3x4 = new IntrinsicMatrixTypeSymbol("half3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Half, 3, 4);
-            Half4x1 = new IntrinsicMatrixTypeSymbol("half4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Half, 4, 1);
-            Half4x2 = new IntrinsicMatrixTypeSymbol("half4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Half, 4, 2);
-            Half4x3 = new IntrinsicMatrixTypeSymbol("half4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Half, 4, 3);
-            Half4x4 = new IntrinsicMatrixTypeSymbol("half4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Half, 4, 4);
-            Float1x1 = new IntrinsicMatrixTypeSymbol("float1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Float, 1, 1);
-            Float1x2 = new IntrinsicMatrixTypeSymbol("float1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Float, 1, 2);
-            Float1x3 = new IntrinsicMatrixTypeSymbol("float1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Float, 1, 3);
-            Float1x4 = new IntrinsicMatrixTypeSymbol("float1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Float, 1, 4);
-            Float2x1 = new IntrinsicMatrixTypeSymbol("float2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Float, 2, 1);
-            Float2x2 = new IntrinsicMatrixTypeSymbol("float2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Float, 2, 2);
-            Float2x3 = new IntrinsicMatrixTypeSymbol("float2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Float, 2, 3);
-            Float2x4 = new IntrinsicMatrixTypeSymbol("float2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Float, 2, 4);
-            Float3x1 = new IntrinsicMatrixTypeSymbol("float3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Float, 3, 1);
-            Float3x2 = new IntrinsicMatrixTypeSymbol("float3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Float, 3, 2);
-            Float3x3 = new IntrinsicMatrixTypeSymbol("float3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Float, 3, 3);
-            Float3x4 = new IntrinsicMatrixTypeSymbol("float3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Float, 3, 4);
-            Float4x1 = new IntrinsicMatrixTypeSymbol("float4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Float, 4, 1);
-            Float4x2 = new IntrinsicMatrixTypeSymbol("float4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Float, 4, 2);
-            Float4x3 = new IntrinsicMatrixTypeSymbol("float4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Float, 4, 3);
-            Float4x4 = new IntrinsicMatrixTypeSymbol("float4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Float, 4, 4);
-            Double1x1 = new IntrinsicMatrixTypeSymbol("double1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Double, 1, 1);
-            Double1x2 = new IntrinsicMatrixTypeSymbol("double1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Double, 1, 2);
-            Double1x3 = new IntrinsicMatrixTypeSymbol("double1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Double, 1, 3);
-            Double1x4 = new IntrinsicMatrixTypeSymbol("double1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Double, 1, 4);
-            Double2x1 = new IntrinsicMatrixTypeSymbol("double2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Double, 2, 1);
-            Double2x2 = new IntrinsicMatrixTypeSymbol("double2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Double, 2, 2);
-            Double2x3 = new IntrinsicMatrixTypeSymbol("double2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Double, 2, 3);
-            Double2x4 = new IntrinsicMatrixTypeSymbol("double2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Double, 2, 4);
-            Double3x1 = new IntrinsicMatrixTypeSymbol("double3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Double, 3, 1);
-            Double3x2 = new IntrinsicMatrixTypeSymbol("double3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Double, 3, 2);
-            Double3x3 = new IntrinsicMatrixTypeSymbol("double3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Double, 3, 3);
-            Double3x4 = new IntrinsicMatrixTypeSymbol("double3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Double, 3, 4);
-            Double4x1 = new IntrinsicMatrixTypeSymbol("double4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Double, 4, 1);
-            Double4x2 = new IntrinsicMatrixTypeSymbol("double4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Double, 4, 2);
-            Double4x3 = new IntrinsicMatrixTypeSymbol("double4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Double, 4, 3);
-            Double4x4 = new IntrinsicMatrixTypeSymbol("double4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Double, 4, 4);
-            Min16Float1x1 = new IntrinsicMatrixTypeSymbol("min16float1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Min16Float, 1, 1);
-            Min16Float1x2 = new IntrinsicMatrixTypeSymbol("min16float1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Min16Float, 1, 2);
-            Min16Float1x3 = new IntrinsicMatrixTypeSymbol("min16float1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Min16Float, 1, 3);
-            Min16Float1x4 = new IntrinsicMatrixTypeSymbol("min16float1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Min16Float, 1, 4);
-            Min16Float2x1 = new IntrinsicMatrixTypeSymbol("min16float2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Min16Float, 2, 1);
-            Min16Float2x2 = new IntrinsicMatrixTypeSymbol("min16float2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Min16Float, 2, 2);
-            Min16Float2x3 = new IntrinsicMatrixTypeSymbol("min16float2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Min16Float, 2, 3);
-            Min16Float2x4 = new IntrinsicMatrixTypeSymbol("min16float2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Min16Float, 2, 4);
-            Min16Float3x1 = new IntrinsicMatrixTypeSymbol("min16float3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Min16Float, 3, 1);
-            Min16Float3x2 = new IntrinsicMatrixTypeSymbol("min16float3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Min16Float, 3, 2);
-            Min16Float3x3 = new IntrinsicMatrixTypeSymbol("min16float3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Min16Float, 3, 3);
-            Min16Float3x4 = new IntrinsicMatrixTypeSymbol("min16float3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Min16Float, 3, 4);
-            Min16Float4x1 = new IntrinsicMatrixTypeSymbol("min16float4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Min16Float, 4, 1);
-            Min16Float4x2 = new IntrinsicMatrixTypeSymbol("min16float4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Min16Float, 4, 2);
-            Min16Float4x3 = new IntrinsicMatrixTypeSymbol("min16float4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Min16Float, 4, 3);
-            Min16Float4x4 = new IntrinsicMatrixTypeSymbol("min16float4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Min16Float, 4, 4);
-            Min10Float1x1 = new IntrinsicMatrixTypeSymbol("min10float1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Min10Float, 1, 1);
-            Min10Float1x2 = new IntrinsicMatrixTypeSymbol("min10float1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Min10Float, 1, 2);
-            Min10Float1x3 = new IntrinsicMatrixTypeSymbol("min10float1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Min10Float, 1, 3);
-            Min10Float1x4 = new IntrinsicMatrixTypeSymbol("min10float1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Min10Float, 1, 4);
-            Min10Float2x1 = new IntrinsicMatrixTypeSymbol("min10float2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Min10Float, 2, 1);
-            Min10Float2x2 = new IntrinsicMatrixTypeSymbol("min10float2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Min10Float, 2, 2);
-            Min10Float2x3 = new IntrinsicMatrixTypeSymbol("min10float2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Min10Float, 2, 3);
-            Min10Float2x4 = new IntrinsicMatrixTypeSymbol("min10float2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Min10Float, 2, 4);
-            Min10Float3x1 = new IntrinsicMatrixTypeSymbol("min10float3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Min10Float, 3, 1);
-            Min10Float3x2 = new IntrinsicMatrixTypeSymbol("min10float3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Min10Float, 3, 2);
-            Min10Float3x3 = new IntrinsicMatrixTypeSymbol("min10float3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Min10Float, 3, 3);
-            Min10Float3x4 = new IntrinsicMatrixTypeSymbol("min10float3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Min10Float, 3, 4);
-            Min10Float4x1 = new IntrinsicMatrixTypeSymbol("min10float4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Min10Float, 4, 1);
-            Min10Float4x2 = new IntrinsicMatrixTypeSymbol("min10float4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Min10Float, 4, 2);
-            Min10Float4x3 = new IntrinsicMatrixTypeSymbol("min10float4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Min10Float, 4, 3);
-            Min10Float4x4 = new IntrinsicMatrixTypeSymbol("min10float4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Min10Float, 4, 4);
-            Min16Int1x1 = new IntrinsicMatrixTypeSymbol("min16int1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Min16Int, 1, 1);
-            Min16Int1x2 = new IntrinsicMatrixTypeSymbol("min16int1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Min16Int, 1, 2);
-            Min16Int1x3 = new IntrinsicMatrixTypeSymbol("min16int1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Min16Int, 1, 3);
-            Min16Int1x4 = new IntrinsicMatrixTypeSymbol("min16int1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Min16Int, 1, 4);
-            Min16Int2x1 = new IntrinsicMatrixTypeSymbol("min16int2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Min16Int, 2, 1);
-            Min16Int2x2 = new IntrinsicMatrixTypeSymbol("min16int2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Min16Int, 2, 2);
-            Min16Int2x3 = new IntrinsicMatrixTypeSymbol("min16int2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Min16Int, 2, 3);
-            Min16Int2x4 = new IntrinsicMatrixTypeSymbol("min16int2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Min16Int, 2, 4);
-            Min16Int3x1 = new IntrinsicMatrixTypeSymbol("min16int3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Min16Int, 3, 1);
-            Min16Int3x2 = new IntrinsicMatrixTypeSymbol("min16int3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Min16Int, 3, 2);
-            Min16Int3x3 = new IntrinsicMatrixTypeSymbol("min16int3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Min16Int, 3, 3);
-            Min16Int3x4 = new IntrinsicMatrixTypeSymbol("min16int3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Min16Int, 3, 4);
-            Min16Int4x1 = new IntrinsicMatrixTypeSymbol("min16int4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Min16Int, 4, 1);
-            Min16Int4x2 = new IntrinsicMatrixTypeSymbol("min16int4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Min16Int, 4, 2);
-            Min16Int4x3 = new IntrinsicMatrixTypeSymbol("min16int4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Min16Int, 4, 3);
-            Min16Int4x4 = new IntrinsicMatrixTypeSymbol("min16int4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Min16Int, 4, 4);
-            Min12Int1x1 = new IntrinsicMatrixTypeSymbol("min12int1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Min12Int, 1, 1);
-            Min12Int1x2 = new IntrinsicMatrixTypeSymbol("min12int1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Min12Int, 1, 2);
-            Min12Int1x3 = new IntrinsicMatrixTypeSymbol("min12int1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Min12Int, 1, 3);
-            Min12Int1x4 = new IntrinsicMatrixTypeSymbol("min12int1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Min12Int, 1, 4);
-            Min12Int2x1 = new IntrinsicMatrixTypeSymbol("min12int2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Min12Int, 2, 1);
-            Min12Int2x2 = new IntrinsicMatrixTypeSymbol("min12int2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Min12Int, 2, 2);
-            Min12Int2x3 = new IntrinsicMatrixTypeSymbol("min12int2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Min12Int, 2, 3);
-            Min12Int2x4 = new IntrinsicMatrixTypeSymbol("min12int2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Min12Int, 2, 4);
-            Min12Int3x1 = new IntrinsicMatrixTypeSymbol("min12int3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Min12Int, 3, 1);
-            Min12Int3x2 = new IntrinsicMatrixTypeSymbol("min12int3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Min12Int, 3, 2);
-            Min12Int3x3 = new IntrinsicMatrixTypeSymbol("min12int3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Min12Int, 3, 3);
-            Min12Int3x4 = new IntrinsicMatrixTypeSymbol("min12int3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Min12Int, 3, 4);
-            Min12Int4x1 = new IntrinsicMatrixTypeSymbol("min12int4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Min12Int, 4, 1);
-            Min12Int4x2 = new IntrinsicMatrixTypeSymbol("min12int4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Min12Int, 4, 2);
-            Min12Int4x3 = new IntrinsicMatrixTypeSymbol("min12int4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Min12Int, 4, 3);
-            Min12Int4x4 = new IntrinsicMatrixTypeSymbol("min12int4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Min12Int, 4, 4);
-            Min16Uint1x1 = new IntrinsicMatrixTypeSymbol("min16uint1x1", "Represents a matrix containing 1 row and 1 column.", ScalarType.Min16Uint, 1, 1);
-            Min16Uint1x2 = new IntrinsicMatrixTypeSymbol("min16uint1x2", "Represents a matrix containing 1 row and 2 columns.", ScalarType.Min16Uint, 1, 2);
-            Min16Uint1x3 = new IntrinsicMatrixTypeSymbol("min16uint1x3", "Represents a matrix containing 1 row and 3 columns.", ScalarType.Min16Uint, 1, 3);
-            Min16Uint1x4 = new IntrinsicMatrixTypeSymbol("min16uint1x4", "Represents a matrix containing 1 row and 4 columns.", ScalarType.Min16Uint, 1, 4);
-            Min16Uint2x1 = new IntrinsicMatrixTypeSymbol("min16uint2x1", "Represents a matrix containing 2 rows and 1 column.", ScalarType.Min16Uint, 2, 1);
-            Min16Uint2x2 = new IntrinsicMatrixTypeSymbol("min16uint2x2", "Represents a matrix containing 2 rows and 2 columns.", ScalarType.Min16Uint, 2, 2);
-            Min16Uint2x3 = new IntrinsicMatrixTypeSymbol("min16uint2x3", "Represents a matrix containing 2 rows and 3 columns.", ScalarType.Min16Uint, 2, 3);
-            Min16Uint2x4 = new IntrinsicMatrixTypeSymbol("min16uint2x4", "Represents a matrix containing 2 rows and 4 columns.", ScalarType.Min16Uint, 2, 4);
-            Min16Uint3x1 = new IntrinsicMatrixTypeSymbol("min16uint3x1", "Represents a matrix containing 3 rows and 1 column.", ScalarType.Min16Uint, 3, 1);
-            Min16Uint3x2 = new IntrinsicMatrixTypeSymbol("min16uint3x2", "Represents a matrix containing 3 rows and 2 columns.", ScalarType.Min16Uint, 3, 2);
-            Min16Uint3x3 = new IntrinsicMatrixTypeSymbol("min16uint3x3", "Represents a matrix containing 3 rows and 3 columns.", ScalarType.Min16Uint, 3, 3);
-            Min16Uint3x4 = new IntrinsicMatrixTypeSymbol("min16uint3x4", "Represents a matrix containing 3 rows and 4 columns.", ScalarType.Min16Uint, 3, 4);
-            Min16Uint4x1 = new IntrinsicMatrixTypeSymbol("min16uint4x1", "Represents a matrix containing 4 rows and 1 column.", ScalarType.Min16Uint, 4, 1);
-            Min16Uint4x2 = new IntrinsicMatrixTypeSymbol("min16uint4x2", "Represents a matrix containing 4 rows and 2 columns.", ScalarType.Min16Uint, 4, 2);
-            Min16Uint4x3 = new IntrinsicMatrixTypeSymbol("min16uint4x3", "Represents a matrix containing 4 rows and 3 columns.", ScalarType.Min16Uint, 4, 3);
-            Min16Uint4x4 = new IntrinsicMatrixTypeSymbol("min16uint4x4", "Represents a matrix containing 4 rows and 4 columns.", ScalarType.Min16Uint, 4, 4);
+            Float2x2 = new IntrinsicMatrixTypeSymbol("mat2x2", "Represents a matrix containing 2 columns 2 rows.", ScalarType.Float, 2, 2);
+            FloatMat2 = new IntrinsicMatrixTypeSymbol("mat2", "Represents a matrix containing 2 columns 2 rows.", ScalarType.Float, 2, 2);
+            Float2x3 = new IntrinsicMatrixTypeSymbol("mat2x3", "Represents a matrix containing 2 columns 3 rows.", ScalarType.Float, 2, 3);
+            Float2x4 = new IntrinsicMatrixTypeSymbol("mat2x4", "Represents a matrix containing 2 columns 4 rows.", ScalarType.Float, 2, 4);
+            Float3x2 = new IntrinsicMatrixTypeSymbol("mat3x2", "Represents a matrix containing 3 columns 2 rows.", ScalarType.Float, 3, 2);
+            Float3x3 = new IntrinsicMatrixTypeSymbol("mat3x3", "Represents a matrix containing 3 columns 3 rows.", ScalarType.Float, 3, 3);
+            FloatMat3 = new IntrinsicMatrixTypeSymbol("mat3", "Represents a matrix containing 3 columns 3 rows.", ScalarType.Float, 3, 3);
+            Float3x4 = new IntrinsicMatrixTypeSymbol("mat3x4", "Represents a matrix containing 3 columns 4 rows.", ScalarType.Float, 3, 4);
+            Float4x2 = new IntrinsicMatrixTypeSymbol("mat4x2", "Represents a matrix containing 4 columns 2 rows.", ScalarType.Float, 4, 2);
+            Float4x3 = new IntrinsicMatrixTypeSymbol("mat4x3", "Represents a matrix containing 4 columns 3 rows.", ScalarType.Float, 4, 3);
+            Float4x4 = new IntrinsicMatrixTypeSymbol("mat4x4", "Represents a matrix containing 4 columns 4 rows.", ScalarType.Float, 4, 4);
+            FloatMat4 = new IntrinsicMatrixTypeSymbol("mat4", "Represents a matrix containing 4 columns 4 rows.", ScalarType.Float, 4, 4);
+            DoubleMat2 = new IntrinsicMatrixTypeSymbol("dmat2", "Represents a matrix containing 2 columns 2 rows.", ScalarType.Double, 2, 2);
+            Double2x2 = new IntrinsicMatrixTypeSymbol("dmat2x2", "Represents a matrix containing 2 columns 2 rows.", ScalarType.Double, 2, 2);
+            Double2x3 = new IntrinsicMatrixTypeSymbol("dmat2x3", "Represents a matrix containing 2 columns 3 rows.", ScalarType.Double, 2, 3);
+            Double2x4 = new IntrinsicMatrixTypeSymbol("dmat2x4", "Represents a matrix containing 2 columns 4 rows.", ScalarType.Double, 2, 4);
+            Double3x2 = new IntrinsicMatrixTypeSymbol("dmat3x2", "Represents a matrix containing 3 columns 2 rows.", ScalarType.Double, 3, 2);
+            DoubleMat3 = new IntrinsicMatrixTypeSymbol("dmat3", "Represents a matrix containing 3 columns 3 rows.", ScalarType.Double, 3, 3);
+            Double3x3 = new IntrinsicMatrixTypeSymbol("dmat3x3", "Represents a matrix containing 3 columns 3 rows.", ScalarType.Double, 3, 3);
+            Double3x4 = new IntrinsicMatrixTypeSymbol("dmat3x4", "Represents a matrix containing 3 columns 4 rows.", ScalarType.Double, 3, 4);
+            Double4x2 = new IntrinsicMatrixTypeSymbol("dmat4x2", "Represents a matrix containing 4 columns 2 rows.", ScalarType.Double, 4, 2);
+            Double4x3 = new IntrinsicMatrixTypeSymbol("dmat4x3", "Represents a matrix containing 4 columns 3 rows.", ScalarType.Double, 4, 3);
+            DoubleMat4 = new IntrinsicMatrixTypeSymbol("dmat4", "Represents a matrix containing 4 columns 4 rows.", ScalarType.Double, 4, 4);
+            Double4x4 = new IntrinsicMatrixTypeSymbol("dmat4x4", "Represents a matrix containing 4 columns 4 rows.", ScalarType.Double, 4, 4);
 
-            Bool1x1.AddMembers(CreateMatrixTypeMembers(Bool1x1, Bool1, Bool2, Bool3, Bool4));
-            Bool1x2.AddMembers(CreateMatrixTypeMembers(Bool1x2, Bool1, Bool2, Bool3, Bool4));
-            Bool1x3.AddMembers(CreateMatrixTypeMembers(Bool1x3, Bool1, Bool2, Bool3, Bool4));
-            Bool1x4.AddMembers(CreateMatrixTypeMembers(Bool1x4, Bool1, Bool2, Bool3, Bool4));
-            Bool2x1.AddMembers(CreateMatrixTypeMembers(Bool2x1, Bool1, Bool2, Bool3, Bool4));
-            Bool2x2.AddMembers(CreateMatrixTypeMembers(Bool2x2, Bool1, Bool2, Bool3, Bool4));
-            Bool2x3.AddMembers(CreateMatrixTypeMembers(Bool2x3, Bool1, Bool2, Bool3, Bool4));
-            Bool2x4.AddMembers(CreateMatrixTypeMembers(Bool2x4, Bool1, Bool2, Bool3, Bool4));
-            Bool3x1.AddMembers(CreateMatrixTypeMembers(Bool3x1, Bool1, Bool2, Bool3, Bool4));
-            Bool3x2.AddMembers(CreateMatrixTypeMembers(Bool3x2, Bool1, Bool2, Bool3, Bool4));
-            Bool3x3.AddMembers(CreateMatrixTypeMembers(Bool3x3, Bool1, Bool2, Bool3, Bool4));
-            Bool3x4.AddMembers(CreateMatrixTypeMembers(Bool3x4, Bool1, Bool2, Bool3, Bool4));
-            Bool4x1.AddMembers(CreateMatrixTypeMembers(Bool4x1, Bool1, Bool2, Bool3, Bool4));
-            Bool4x2.AddMembers(CreateMatrixTypeMembers(Bool4x2, Bool1, Bool2, Bool3, Bool4));
-            Bool4x3.AddMembers(CreateMatrixTypeMembers(Bool4x3, Bool1, Bool2, Bool3, Bool4));
-            Bool4x4.AddMembers(CreateMatrixTypeMembers(Bool4x4, Bool1, Bool2, Bool3, Bool4));
-            Int1x1.AddMembers(CreateMatrixTypeMembers(Int1x1, Int1, Int2, Int3, Int4));
-            Int1x2.AddMembers(CreateMatrixTypeMembers(Int1x2, Int1, Int2, Int3, Int4));
-            Int1x3.AddMembers(CreateMatrixTypeMembers(Int1x3, Int1, Int2, Int3, Int4));
-            Int1x4.AddMembers(CreateMatrixTypeMembers(Int1x4, Int1, Int2, Int3, Int4));
-            Int2x1.AddMembers(CreateMatrixTypeMembers(Int2x1, Int1, Int2, Int3, Int4));
-            Int2x2.AddMembers(CreateMatrixTypeMembers(Int2x2, Int1, Int2, Int3, Int4));
-            Int2x3.AddMembers(CreateMatrixTypeMembers(Int2x3, Int1, Int2, Int3, Int4));
-            Int2x4.AddMembers(CreateMatrixTypeMembers(Int2x4, Int1, Int2, Int3, Int4));
-            Int3x1.AddMembers(CreateMatrixTypeMembers(Int3x1, Int1, Int2, Int3, Int4));
-            Int3x2.AddMembers(CreateMatrixTypeMembers(Int3x2, Int1, Int2, Int3, Int4));
-            Int3x3.AddMembers(CreateMatrixTypeMembers(Int3x3, Int1, Int2, Int3, Int4));
-            Int3x4.AddMembers(CreateMatrixTypeMembers(Int3x4, Int1, Int2, Int3, Int4));
-            Int4x1.AddMembers(CreateMatrixTypeMembers(Int4x1, Int1, Int2, Int3, Int4));
-            Int4x2.AddMembers(CreateMatrixTypeMembers(Int4x2, Int1, Int2, Int3, Int4));
-            Int4x3.AddMembers(CreateMatrixTypeMembers(Int4x3, Int1, Int2, Int3, Int4));
-            Int4x4.AddMembers(CreateMatrixTypeMembers(Int4x4, Int1, Int2, Int3, Int4));
-            Uint1x1.AddMembers(CreateMatrixTypeMembers(Uint1x1, Uint1, Uint2, Uint3, Uint4));
-            Uint1x2.AddMembers(CreateMatrixTypeMembers(Uint1x2, Uint1, Uint2, Uint3, Uint4));
-            Uint1x3.AddMembers(CreateMatrixTypeMembers(Uint1x3, Uint1, Uint2, Uint3, Uint4));
-            Uint1x4.AddMembers(CreateMatrixTypeMembers(Uint1x4, Uint1, Uint2, Uint3, Uint4));
-            Uint2x1.AddMembers(CreateMatrixTypeMembers(Uint2x1, Uint1, Uint2, Uint3, Uint4));
-            Uint2x2.AddMembers(CreateMatrixTypeMembers(Uint2x2, Uint1, Uint2, Uint3, Uint4));
-            Uint2x3.AddMembers(CreateMatrixTypeMembers(Uint2x3, Uint1, Uint2, Uint3, Uint4));
-            Uint2x4.AddMembers(CreateMatrixTypeMembers(Uint2x4, Uint1, Uint2, Uint3, Uint4));
-            Uint3x1.AddMembers(CreateMatrixTypeMembers(Uint3x1, Uint1, Uint2, Uint3, Uint4));
-            Uint3x2.AddMembers(CreateMatrixTypeMembers(Uint3x2, Uint1, Uint2, Uint3, Uint4));
-            Uint3x3.AddMembers(CreateMatrixTypeMembers(Uint3x3, Uint1, Uint2, Uint3, Uint4));
-            Uint3x4.AddMembers(CreateMatrixTypeMembers(Uint3x4, Uint1, Uint2, Uint3, Uint4));
-            Uint4x1.AddMembers(CreateMatrixTypeMembers(Uint4x1, Uint1, Uint2, Uint3, Uint4));
-            Uint4x2.AddMembers(CreateMatrixTypeMembers(Uint4x2, Uint1, Uint2, Uint3, Uint4));
-            Uint4x3.AddMembers(CreateMatrixTypeMembers(Uint4x3, Uint1, Uint2, Uint3, Uint4));
-            Uint4x4.AddMembers(CreateMatrixTypeMembers(Uint4x4, Uint1, Uint2, Uint3, Uint4));
-            Half1x1.AddMembers(CreateMatrixTypeMembers(Half1x1, Half1, Half2, Half3, Half4));
-            Half1x2.AddMembers(CreateMatrixTypeMembers(Half1x2, Half1, Half2, Half3, Half4));
-            Half1x3.AddMembers(CreateMatrixTypeMembers(Half1x3, Half1, Half2, Half3, Half4));
-            Half1x4.AddMembers(CreateMatrixTypeMembers(Half1x4, Half1, Half2, Half3, Half4));
-            Half2x1.AddMembers(CreateMatrixTypeMembers(Half2x1, Half1, Half2, Half3, Half4));
-            Half2x2.AddMembers(CreateMatrixTypeMembers(Half2x2, Half1, Half2, Half3, Half4));
-            Half2x3.AddMembers(CreateMatrixTypeMembers(Half2x3, Half1, Half2, Half3, Half4));
-            Half2x4.AddMembers(CreateMatrixTypeMembers(Half2x4, Half1, Half2, Half3, Half4));
-            Half3x1.AddMembers(CreateMatrixTypeMembers(Half3x1, Half1, Half2, Half3, Half4));
-            Half3x2.AddMembers(CreateMatrixTypeMembers(Half3x2, Half1, Half2, Half3, Half4));
-            Half3x3.AddMembers(CreateMatrixTypeMembers(Half3x3, Half1, Half2, Half3, Half4));
-            Half3x4.AddMembers(CreateMatrixTypeMembers(Half3x4, Half1, Half2, Half3, Half4));
-            Half4x1.AddMembers(CreateMatrixTypeMembers(Half4x1, Half1, Half2, Half3, Half4));
-            Half4x2.AddMembers(CreateMatrixTypeMembers(Half4x2, Half1, Half2, Half3, Half4));
-            Half4x3.AddMembers(CreateMatrixTypeMembers(Half4x3, Half1, Half2, Half3, Half4));
-            Half4x4.AddMembers(CreateMatrixTypeMembers(Half4x4, Half1, Half2, Half3, Half4));
-            Float1x1.AddMembers(CreateMatrixTypeMembers(Float1x1, Float1, Float2, Float3, Float4));
-            Float1x2.AddMembers(CreateMatrixTypeMembers(Float1x2, Float1, Float2, Float3, Float4));
-            Float1x3.AddMembers(CreateMatrixTypeMembers(Float1x3, Float1, Float2, Float3, Float4));
-            Float1x4.AddMembers(CreateMatrixTypeMembers(Float1x4, Float1, Float2, Float3, Float4));
-            Float2x1.AddMembers(CreateMatrixTypeMembers(Float2x1, Float1, Float2, Float3, Float4));
+            FloatMat2.AddMembers(CreateMatrixTypeMembers(Float2x2, Float1, Float2, Float3, Float4));
             Float2x2.AddMembers(CreateMatrixTypeMembers(Float2x2, Float1, Float2, Float3, Float4));
             Float2x3.AddMembers(CreateMatrixTypeMembers(Float2x3, Float1, Float2, Float3, Float4));
             Float2x4.AddMembers(CreateMatrixTypeMembers(Float2x4, Float1, Float2, Float3, Float4));
-            Float3x1.AddMembers(CreateMatrixTypeMembers(Float3x1, Float1, Float2, Float3, Float4));
             Float3x2.AddMembers(CreateMatrixTypeMembers(Float3x2, Float1, Float2, Float3, Float4));
+            FloatMat3.AddMembers(CreateMatrixTypeMembers(Float3x3, Float1, Float2, Float3, Float4));
             Float3x3.AddMembers(CreateMatrixTypeMembers(Float3x3, Float1, Float2, Float3, Float4));
             Float3x4.AddMembers(CreateMatrixTypeMembers(Float3x4, Float1, Float2, Float3, Float4));
-            Float4x1.AddMembers(CreateMatrixTypeMembers(Float4x1, Float1, Float2, Float3, Float4));
             Float4x2.AddMembers(CreateMatrixTypeMembers(Float4x2, Float1, Float2, Float3, Float4));
             Float4x3.AddMembers(CreateMatrixTypeMembers(Float4x3, Float1, Float2, Float3, Float4));
+            FloatMat4.AddMembers(CreateMatrixTypeMembers(Float4x4, Float1, Float2, Float3, Float4));
             Float4x4.AddMembers(CreateMatrixTypeMembers(Float4x4, Float1, Float2, Float3, Float4));
-            Double1x1.AddMembers(CreateMatrixTypeMembers(Double1x1, Double1, Double2, Double3, Double4));
-            Double1x2.AddMembers(CreateMatrixTypeMembers(Double1x2, Double1, Double2, Double3, Double4));
-            Double1x3.AddMembers(CreateMatrixTypeMembers(Double1x3, Double1, Double2, Double3, Double4));
-            Double1x4.AddMembers(CreateMatrixTypeMembers(Double1x4, Double1, Double2, Double3, Double4));
-            Double2x1.AddMembers(CreateMatrixTypeMembers(Double2x1, Double1, Double2, Double3, Double4));
+            DoubleMat2.AddMembers(CreateMatrixTypeMembers(Double2x2, Double1, Double2, Double3, Double4));
             Double2x2.AddMembers(CreateMatrixTypeMembers(Double2x2, Double1, Double2, Double3, Double4));
             Double2x3.AddMembers(CreateMatrixTypeMembers(Double2x3, Double1, Double2, Double3, Double4));
             Double2x4.AddMembers(CreateMatrixTypeMembers(Double2x4, Double1, Double2, Double3, Double4));
-            Double3x1.AddMembers(CreateMatrixTypeMembers(Double3x1, Double1, Double2, Double3, Double4));
             Double3x2.AddMembers(CreateMatrixTypeMembers(Double3x2, Double1, Double2, Double3, Double4));
+            DoubleMat3.AddMembers(CreateMatrixTypeMembers(Double3x3, Double1, Double2, Double3, Double4));
             Double3x3.AddMembers(CreateMatrixTypeMembers(Double3x3, Double1, Double2, Double3, Double4));
             Double3x4.AddMembers(CreateMatrixTypeMembers(Double3x4, Double1, Double2, Double3, Double4));
-            Double4x1.AddMembers(CreateMatrixTypeMembers(Double4x1, Double1, Double2, Double3, Double4));
             Double4x2.AddMembers(CreateMatrixTypeMembers(Double4x2, Double1, Double2, Double3, Double4));
             Double4x3.AddMembers(CreateMatrixTypeMembers(Double4x3, Double1, Double2, Double3, Double4));
+            DoubleMat4.AddMembers(CreateMatrixTypeMembers(Double4x4, Double1, Double2, Double3, Double4));
             Double4x4.AddMembers(CreateMatrixTypeMembers(Double4x4, Double1, Double2, Double3, Double4));
-            Min16Float1x1.AddMembers(CreateMatrixTypeMembers(Min16Float1x1, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float1x2.AddMembers(CreateMatrixTypeMembers(Min16Float1x2, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float1x3.AddMembers(CreateMatrixTypeMembers(Min16Float1x3, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float1x4.AddMembers(CreateMatrixTypeMembers(Min16Float1x4, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float2x1.AddMembers(CreateMatrixTypeMembers(Min16Float2x1, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float2x2.AddMembers(CreateMatrixTypeMembers(Min16Float2x2, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float2x3.AddMembers(CreateMatrixTypeMembers(Min16Float2x3, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float2x4.AddMembers(CreateMatrixTypeMembers(Min16Float2x4, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float3x1.AddMembers(CreateMatrixTypeMembers(Min16Float3x1, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float3x2.AddMembers(CreateMatrixTypeMembers(Min16Float3x2, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float3x3.AddMembers(CreateMatrixTypeMembers(Min16Float3x3, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float3x4.AddMembers(CreateMatrixTypeMembers(Min16Float3x4, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float4x1.AddMembers(CreateMatrixTypeMembers(Min16Float4x1, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float4x2.AddMembers(CreateMatrixTypeMembers(Min16Float4x2, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float4x3.AddMembers(CreateMatrixTypeMembers(Min16Float4x3, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min16Float4x4.AddMembers(CreateMatrixTypeMembers(Min16Float4x4, Min16Float1, Min16Float2, Min16Float3, Min16Float4));
-            Min10Float1x1.AddMembers(CreateMatrixTypeMembers(Min10Float1x1, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float1x2.AddMembers(CreateMatrixTypeMembers(Min10Float1x2, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float1x3.AddMembers(CreateMatrixTypeMembers(Min10Float1x3, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float1x4.AddMembers(CreateMatrixTypeMembers(Min10Float1x4, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float2x1.AddMembers(CreateMatrixTypeMembers(Min10Float2x1, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float2x2.AddMembers(CreateMatrixTypeMembers(Min10Float2x2, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float2x3.AddMembers(CreateMatrixTypeMembers(Min10Float2x3, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float2x4.AddMembers(CreateMatrixTypeMembers(Min10Float2x4, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float3x1.AddMembers(CreateMatrixTypeMembers(Min10Float3x1, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float3x2.AddMembers(CreateMatrixTypeMembers(Min10Float3x2, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float3x3.AddMembers(CreateMatrixTypeMembers(Min10Float3x3, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float3x4.AddMembers(CreateMatrixTypeMembers(Min10Float3x4, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float4x1.AddMembers(CreateMatrixTypeMembers(Min10Float4x1, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float4x2.AddMembers(CreateMatrixTypeMembers(Min10Float4x2, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float4x3.AddMembers(CreateMatrixTypeMembers(Min10Float4x3, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min10Float4x4.AddMembers(CreateMatrixTypeMembers(Min10Float4x4, Min10Float1, Min10Float2, Min10Float3, Min10Float4));
-            Min16Int1x1.AddMembers(CreateMatrixTypeMembers(Min16Int1x1, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int1x2.AddMembers(CreateMatrixTypeMembers(Min16Int1x2, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int1x3.AddMembers(CreateMatrixTypeMembers(Min16Int1x3, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int1x4.AddMembers(CreateMatrixTypeMembers(Min16Int1x4, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int2x1.AddMembers(CreateMatrixTypeMembers(Min16Int2x1, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int2x2.AddMembers(CreateMatrixTypeMembers(Min16Int2x2, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int2x3.AddMembers(CreateMatrixTypeMembers(Min16Int2x3, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int2x4.AddMembers(CreateMatrixTypeMembers(Min16Int2x4, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int3x1.AddMembers(CreateMatrixTypeMembers(Min16Int3x1, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int3x2.AddMembers(CreateMatrixTypeMembers(Min16Int3x2, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int3x3.AddMembers(CreateMatrixTypeMembers(Min16Int3x3, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int3x4.AddMembers(CreateMatrixTypeMembers(Min16Int3x4, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int4x1.AddMembers(CreateMatrixTypeMembers(Min16Int4x1, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int4x2.AddMembers(CreateMatrixTypeMembers(Min16Int4x2, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int4x3.AddMembers(CreateMatrixTypeMembers(Min16Int4x3, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min16Int4x4.AddMembers(CreateMatrixTypeMembers(Min16Int4x4, Min16Int1, Min16Int2, Min16Int3, Min16Int4));
-            Min12Int1x1.AddMembers(CreateMatrixTypeMembers(Min12Int1x1, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int1x2.AddMembers(CreateMatrixTypeMembers(Min12Int1x2, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int1x3.AddMembers(CreateMatrixTypeMembers(Min12Int1x3, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int1x4.AddMembers(CreateMatrixTypeMembers(Min12Int1x4, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int2x1.AddMembers(CreateMatrixTypeMembers(Min12Int2x1, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int2x2.AddMembers(CreateMatrixTypeMembers(Min12Int2x2, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int2x3.AddMembers(CreateMatrixTypeMembers(Min12Int2x3, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int2x4.AddMembers(CreateMatrixTypeMembers(Min12Int2x4, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int3x1.AddMembers(CreateMatrixTypeMembers(Min12Int3x1, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int3x2.AddMembers(CreateMatrixTypeMembers(Min12Int3x2, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int3x3.AddMembers(CreateMatrixTypeMembers(Min12Int3x3, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int3x4.AddMembers(CreateMatrixTypeMembers(Min12Int3x4, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int4x1.AddMembers(CreateMatrixTypeMembers(Min12Int4x1, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int4x2.AddMembers(CreateMatrixTypeMembers(Min12Int4x2, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int4x3.AddMembers(CreateMatrixTypeMembers(Min12Int4x3, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min12Int4x4.AddMembers(CreateMatrixTypeMembers(Min12Int4x4, Min12Int1, Min12Int2, Min12Int3, Min12Int4));
-            Min16Uint1x1.AddMembers(CreateMatrixTypeMembers(Min16Uint1x1, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint1x2.AddMembers(CreateMatrixTypeMembers(Min16Uint1x2, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint1x3.AddMembers(CreateMatrixTypeMembers(Min16Uint1x3, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint1x4.AddMembers(CreateMatrixTypeMembers(Min16Uint1x4, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint2x1.AddMembers(CreateMatrixTypeMembers(Min16Uint2x1, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint2x2.AddMembers(CreateMatrixTypeMembers(Min16Uint2x2, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint2x3.AddMembers(CreateMatrixTypeMembers(Min16Uint2x3, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint2x4.AddMembers(CreateMatrixTypeMembers(Min16Uint2x4, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint3x1.AddMembers(CreateMatrixTypeMembers(Min16Uint3x1, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint3x2.AddMembers(CreateMatrixTypeMembers(Min16Uint3x2, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint3x3.AddMembers(CreateMatrixTypeMembers(Min16Uint3x3, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint3x4.AddMembers(CreateMatrixTypeMembers(Min16Uint3x4, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint4x1.AddMembers(CreateMatrixTypeMembers(Min16Uint4x1, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint4x2.AddMembers(CreateMatrixTypeMembers(Min16Uint4x2, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint4x3.AddMembers(CreateMatrixTypeMembers(Min16Uint4x3, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
-            Min16Uint4x4.AddMembers(CreateMatrixTypeMembers(Min16Uint4x4, Min16Uint1, Min16Uint2, Min16Uint3, Min16Uint4));
 
             AllScalarTypes = new[]
             {
                 Bool,
                 Uint,
                 Int,
-                Half,
                 Float,
-                Double,
-                Min16Float,
-                Min10Float,
-                Min16Int,
-                Min12Int,
-                Min16Uint
+                Double
             };
 
             AllBoolVectorTypes = new[]
@@ -842,14 +389,6 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
                 Uint4
             };
 
-            AllHalfVectorTypes = new[]
-            {
-                Half1,
-                Half2,
-                Half3,
-                Half4
-            };
-
             AllFloatVectorTypes = new[]
             {
                 Float1,
@@ -866,310 +405,91 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
                 Double4
             };
 
-            AllMin16FloatVectorTypes = new[]
+            AllFloatDoubleVectorTypes = new[]
             {
-                Min16Float1,
-                Min16Float2,
-                Min16Float3,
-                Min16Float4
-            };
-
-            AllMin10FloatVectorTypes = new[]
-            {
-                Min10Float1,
-                Min10Float2,
-                Min10Float3,
-                Min10Float4
-            };
-
-            AllMin16IntVectorTypes = new[]
-            {
-                Min16Int1,
-                Min16Int2,
-                Min16Int3,
-                Min16Int4
-            };
-
-            AllMin12IntVectorTypes = new[]
-            {
-                Min12Int1,
-                Min12Int2,
-                Min12Int3,
-                Min12Int4
-            };
-
-            AllMin16UintVectorTypes = new[]
-            {
-                Min16Uint1,
-                Min16Uint2,
-                Min16Uint3,
-                Min16Uint4
+                Float1,
+                Float2,
+                Float3,
+                Float4,
+                Double1,
+                Double2,
+                Double3,
+                Double4
             };
 
             AllVectorTypes = AllBoolVectorTypes
                 .Union(AllIntVectorTypes)
                 .Union(AllUintVectorTypes)
-                .Union(AllHalfVectorTypes)
                 .Union(AllFloatVectorTypes)
                 .Union(AllDoubleVectorTypes)
-                .Union(AllMin16FloatVectorTypes)
-                .Union(AllMin10FloatVectorTypes)
-                .Union(AllMin16IntVectorTypes)
-                .Union(AllMin12IntVectorTypes)
-                .Union(AllMin16UintVectorTypes)
                 .ToArray();
-
-            AllBoolMatrixTypes = new[]
-            {
-                Bool1x1,
-                Bool1x2,
-                Bool1x3,
-                Bool1x4,
-                Bool2x1,
-                Bool2x2,
-                Bool2x3,
-                Bool2x4,
-                Bool3x1,
-                Bool3x2,
-                Bool3x3,
-                Bool3x4,
-                Bool4x1,
-                Bool4x2,
-                Bool4x3,
-                Bool4x4
-            };
-
-            AllIntMatrixTypes = new[]
-            {
-                Int1x1,
-                Int1x2,
-                Int1x3,
-                Int1x4,
-                Int2x1,
-                Int2x2,
-                Int2x3,
-                Int2x4,
-                Int3x1,
-                Int3x2,
-                Int3x3,
-                Int3x4,
-                Int4x1,
-                Int4x2,
-                Int4x3,
-                Int4x4
-            };
-
-            AllUintMatrixTypes = new[]
-            {
-                Uint1x1,
-                Uint1x2,
-                Uint1x3,
-                Uint1x4,
-                Uint2x1,
-                Uint2x2,
-                Uint2x3,
-                Uint2x4,
-                Uint3x1,
-                Uint3x2,
-                Uint3x3,
-                Uint3x4,
-                Uint4x1,
-                Uint4x2,
-                Uint4x3,
-                Uint4x4
-            };
-
-            AllHalfMatrixTypes = new[]
-            {
-                Half1x1,
-                Half1x2,
-                Half1x3,
-                Half1x4,
-                Half2x1,
-                Half2x2,
-                Half2x3,
-                Half2x4,
-                Half3x1,
-                Half3x2,
-                Half3x3,
-                Half3x4,
-                Half4x1,
-                Half4x2,
-                Half4x3,
-                Half4x4
-            };
 
             AllFloatMatrixTypes = new[]
             {
-                Float1x1,
-                Float1x2,
-                Float1x3,
-                Float1x4,
-                Float2x1,
+                FloatMat2,
                 Float2x2,
                 Float2x3,
                 Float2x4,
-                Float3x1,
+                FloatMat3,
                 Float3x2,
                 Float3x3,
                 Float3x4,
-                Float4x1,
+                FloatMat4,
                 Float4x2,
                 Float4x3,
                 Float4x4
             };
 
+            AllFloatSquareMatrixTypes = new[]
+            {
+                Float2x2,
+                Float3x3,
+                Float4x4,
+                FloatMat2,
+                FloatMat3,
+                FloatMat4
+            };
+
             AllDoubleMatrixTypes = new[]
             {
-                Double1x1,
-                Double1x2,
-                Double1x3,
-                Double1x4,
-                Double2x1,
+                DoubleMat2,
                 Double2x2,
                 Double2x3,
                 Double2x4,
-                Double3x1,
+                DoubleMat3,
                 Double3x2,
                 Double3x3,
                 Double3x4,
-                Double4x1,
+                DoubleMat4,
                 Double4x2,
                 Double4x3,
                 Double4x4
             };
 
-            AllMin16FloatMatrixTypes = new[]
+            AllDoubleSquareMatrixTypes = new[]
             {
-                Min16Float1x1,
-                Min16Float1x2,
-                Min16Float1x3,
-                Min16Float1x4,
-                Min16Float2x1,
-                Min16Float2x2,
-                Min16Float2x3,
-                Min16Float2x4,
-                Min16Float3x1,
-                Min16Float3x2,
-                Min16Float3x3,
-                Min16Float3x4,
-                Min16Float4x1,
-                Min16Float4x2,
-                Min16Float4x3,
-                Min16Float4x4
+                Double2x2,
+                Double3x3,
+                Double4x4,
+                DoubleMat2,
+                DoubleMat3,
+                DoubleMat4
             };
 
-            AllMin10FloatMatrixTypes = new[]
-            {
-                Min10Float1x1,
-                Min10Float1x2,
-                Min10Float1x3,
-                Min10Float1x4,
-                Min10Float2x1,
-                Min10Float2x2,
-                Min10Float2x3,
-                Min10Float2x4,
-                Min10Float3x1,
-                Min10Float3x2,
-                Min10Float3x3,
-                Min10Float3x4,
-                Min10Float4x1,
-                Min10Float4x2,
-                Min10Float4x3,
-                Min10Float4x4
-            };
-
-            AllMin16IntMatrixTypes = new[]
-            {
-                Min16Int1x1,
-                Min16Int1x2,
-                Min16Int1x3,
-                Min16Int1x4,
-                Min16Int2x1,
-                Min16Int2x2,
-                Min16Int2x3,
-                Min16Int2x4,
-                Min16Int3x1,
-                Min16Int3x2,
-                Min16Int3x3,
-                Min16Int3x4,
-                Min16Int4x1,
-                Min16Int4x2,
-                Min16Int4x3,
-                Min16Int4x4
-            };
-
-            AllMin12IntMatrixTypes = new[]
-            {
-                    Min12Int1x1,
-                    Min12Int1x2,
-                    Min12Int1x3,
-                    Min12Int1x4,
-                    Min12Int2x1,
-                    Min12Int2x2,
-                    Min12Int2x3,
-                    Min12Int2x4,
-                    Min12Int3x1,
-                    Min12Int3x2,
-                    Min12Int3x3,
-                    Min12Int3x4,
-                    Min12Int4x1,
-                    Min12Int4x2,
-                    Min12Int4x3,
-                    Min12Int4x4
-            };
-
-            AllMin16UintMatrixTypes = new[]
-            {
-                    Min16Uint1x1,
-                    Min16Uint1x2,
-                    Min16Uint1x3,
-                    Min16Uint1x4,
-                    Min16Uint2x1,
-                    Min16Uint2x2,
-                    Min16Uint2x3,
-                    Min16Uint2x4,
-                    Min16Uint3x1,
-                    Min16Uint3x2,
-                    Min16Uint3x3,
-                    Min16Uint3x4,
-                    Min16Uint4x1,
-                    Min16Uint4x2,
-                    Min16Uint4x3,
-                    Min16Uint4x4
-            };
-
-            AllMatrixTypes = AllBoolMatrixTypes
-                .Union(AllIntMatrixTypes)
-                .Union(AllUintMatrixTypes)
-                .Union(AllHalfMatrixTypes)
-                .Union(AllFloatMatrixTypes)
+            AllMatrixTypes = AllFloatMatrixTypes
                 .Union(AllDoubleMatrixTypes)
-                .Union(AllMin16FloatMatrixTypes)
-                .Union(AllMin10FloatMatrixTypes)
-                .Union(AllMin16IntMatrixTypes)
-                .Union(AllMin12IntMatrixTypes)
-                .Union(AllMin16UintMatrixTypes)
                 .ToArray();
 
             AllBoolTypes = new IntrinsicNumericTypeSymbol[] { Bool }
                 .Union(AllBoolVectorTypes)
-                .Union(AllBoolMatrixTypes)
                 .ToArray();
 
             AllIntTypes = new IntrinsicNumericTypeSymbol[] { Int }
                 .Union(AllIntVectorTypes)
-                .Union(AllIntMatrixTypes)
                 .ToArray();
 
             AllUintTypes = new IntrinsicNumericTypeSymbol[] { Uint }
                 .Union(AllUintVectorTypes)
-                .Union(AllUintMatrixTypes)
-                .ToArray();
-
-            AllHalfTypes = new IntrinsicNumericTypeSymbol[] { Half }
-                .Union(AllHalfVectorTypes)
-                .Union(AllHalfMatrixTypes)
                 .ToArray();
 
             AllFloatTypes = new IntrinsicNumericTypeSymbol[] { Float }
@@ -1182,49 +502,15 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
                 .Union(AllDoubleMatrixTypes)
                 .ToArray();
 
-            AllMin16FloatTypes = new IntrinsicNumericTypeSymbol[] { Min16Float }
-                .Union(AllMin16FloatVectorTypes)
-                .Union(AllMin16FloatMatrixTypes)
-                .ToArray();
-
-            AllMin10FloatTypes = new IntrinsicNumericTypeSymbol[] { Min10Float }
-                .Union(AllMin10FloatVectorTypes)
-                .Union(AllMin10FloatMatrixTypes)
-                .ToArray();
-
-            AllMin16IntTypes = new IntrinsicNumericTypeSymbol[] { Min16Int }
-                .Union(AllMin16IntVectorTypes)
-                .Union(AllMin16IntMatrixTypes)
-                .ToArray();
-
-            AllMin12IntTypes = new IntrinsicNumericTypeSymbol[] { Min12Int }
-                .Union(AllMin12IntVectorTypes)
-                .Union(AllMin12IntMatrixTypes)
-                .ToArray();
-
-            AllMin16UintTypes = new IntrinsicNumericTypeSymbol[] { Min16Uint }
-                .Union(AllMin16UintVectorTypes)
-                .Union(AllMin16UintMatrixTypes)
-                .ToArray();
-
             AllIntegralTypes = AllBoolTypes
                 .Union(AllIntTypes)
                 .Union(AllUintTypes)
-                .Union(AllMin16IntTypes)
-                .Union(AllMin12IntTypes)
-                .Union(AllMin16UintTypes)
                 .ToArray();
 
             AllNumericNonBoolTypes = AllIntTypes
                 .Union(AllUintTypes)
-                .Union(AllHalfTypes)
                 .Union(AllFloatTypes)
                 .Union(AllDoubleTypes)
-                .Union(AllMin16FloatTypes)
-                .Union(AllMin10FloatTypes)
-                .Union(AllMin16IntTypes)
-                .Union(AllMin12IntTypes)
-                .Union(AllMin16UintTypes)
                 .ToArray();
 
             AllNumericTypes = AllScalarTypes
@@ -1233,45 +519,172 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
                 .Union(AllMatrixTypes)
                 .ToArray();
 
-            Sampler = new IntrinsicObjectTypeSymbol("sampler", "", PredefinedObjectType.Sampler);
-            Sampler1D = new IntrinsicObjectTypeSymbol("sampler1D", "", PredefinedObjectType.Sampler1D);
-            Sampler2D = new IntrinsicObjectTypeSymbol("sampler2D", "", PredefinedObjectType.Sampler2D);
-            Sampler3D = new IntrinsicObjectTypeSymbol("sampler3D", "", PredefinedObjectType.Sampler3D);
-            SamplerCube = new IntrinsicObjectTypeSymbol("samplerCUBE", "", PredefinedObjectType.SamplerCube);
-            SamplerState = new IntrinsicObjectTypeSymbol("SamplerState", "", PredefinedObjectType.SamplerState);
-            SamplerComparisonState = new IntrinsicObjectTypeSymbol("SamplerComparisonState", "", PredefinedObjectType.SamplerComparisonState);
 
-            LegacyTexture = new IntrinsicObjectTypeSymbol("texture", "", PredefinedObjectType.Texture);
+            texture1D = new IntrinsicObjectTypeSymbol("texture1D", "", PredefinedObjectType.texture1D);
+            itexture1D = new IntrinsicObjectTypeSymbol("itexture1D", "", PredefinedObjectType.itexture1D);
+            utexture1D = new IntrinsicObjectTypeSymbol("utexture1D", "", PredefinedObjectType.utexture1D);
+            image1D = new IntrinsicObjectTypeSymbol("image1D", "", PredefinedObjectType.image1D);
+            iimage1D = new IntrinsicObjectTypeSymbol("iimage1D", "", PredefinedObjectType.iimage1D);
+            uimage1D = new IntrinsicObjectTypeSymbol("uimage1D", "", PredefinedObjectType.uimage1D);
+            texture1DArray = new IntrinsicObjectTypeSymbol("texture1DArray", "", PredefinedObjectType.texture1DArray);
+            itexture1DArray = new IntrinsicObjectTypeSymbol("itexture1DArray", "", PredefinedObjectType.itexture1DArray);
+            utexture1DArray = new IntrinsicObjectTypeSymbol("utexture1DArray", "", PredefinedObjectType.utexture1DArray);
+            image1DArray = new IntrinsicObjectTypeSymbol("image1DArray", "", PredefinedObjectType.image1DArray);
+            iimage1DArray = new IntrinsicObjectTypeSymbol("iimage1DArray", "", PredefinedObjectType.iimage1DArray);
+            uimage1DArray = new IntrinsicObjectTypeSymbol("uimage1DArray", "", PredefinedObjectType.uimage1DArray);
+            texture2D = new IntrinsicObjectTypeSymbol("texture2D", "", PredefinedObjectType.texture2D);
+            itexture2D = new IntrinsicObjectTypeSymbol("itexture2D", "", PredefinedObjectType.itexture2D);
+            utexture2D = new IntrinsicObjectTypeSymbol("utexture2D", "", PredefinedObjectType.utexture2D);
+            image2D = new IntrinsicObjectTypeSymbol("image2D", "", PredefinedObjectType.image2D);
+            iimage2D = new IntrinsicObjectTypeSymbol("iimage2D", "", PredefinedObjectType.iimage2D);
+            uimage2D = new IntrinsicObjectTypeSymbol("uimage2D", "", PredefinedObjectType.uimage2D);
+            image2DRect = new IntrinsicObjectTypeSymbol("image2DRect", "", PredefinedObjectType.image2DRect);
+            iimage2DRect = new IntrinsicObjectTypeSymbol("iimage2DRect", "", PredefinedObjectType.iimage2DRect);
+            uimage2DRect = new IntrinsicObjectTypeSymbol("uimage2DRect", "", PredefinedObjectType.uimage2DRect);
+            subpassInput = new IntrinsicObjectTypeSymbol("subpassInput", "", PredefinedObjectType.subpassInput);
+            subpassInputMS = new IntrinsicObjectTypeSymbol("subpassInputMS", "", PredefinedObjectType.subpassInputMS);
+            isubpassInput = new IntrinsicObjectTypeSymbol("isubpassInput", "", PredefinedObjectType.isubpassInput);
+            isubpassInputMS = new IntrinsicObjectTypeSymbol("isubpassInputMS", "", PredefinedObjectType.isubpassInputMS);
+            usubpassInput = new IntrinsicObjectTypeSymbol("usubpassInput", "", PredefinedObjectType.usubpassInput);
+            usubpassInputMS = new IntrinsicObjectTypeSymbol("usubpassInputMS", "", PredefinedObjectType.usubpassInputMS);
+            texture2DArray = new IntrinsicObjectTypeSymbol("texture2DArray", "", PredefinedObjectType.texture2DArray);
+            itexture2DArray = new IntrinsicObjectTypeSymbol("itexture2DArray", "", PredefinedObjectType.itexture2DArray);
+            utexture2DArray = new IntrinsicObjectTypeSymbol("utexture2DArray", "", PredefinedObjectType.utexture2DArray);
+            image2DArray = new IntrinsicObjectTypeSymbol("image2DArray", "", PredefinedObjectType.image2DArray);
+            iimage2DArray = new IntrinsicObjectTypeSymbol("iimage2DArray", "", PredefinedObjectType.iimage2DArray);
+            uimage2DArray = new IntrinsicObjectTypeSymbol("uimage2DArray", "", PredefinedObjectType.uimage2DArray);
+            texture2DMS = new IntrinsicObjectTypeSymbol("texture2DMS", "", PredefinedObjectType.texture2DMS);
+            itexture2DMS = new IntrinsicObjectTypeSymbol("itexture2DMS", "", PredefinedObjectType.itexture2DMS);
+            utexture2DMS = new IntrinsicObjectTypeSymbol("utexture2DMS", "", PredefinedObjectType.utexture2DMS);
+            image2DMS = new IntrinsicObjectTypeSymbol("image2DMS", "", PredefinedObjectType.image2DMS);
+            iimage2DMS = new IntrinsicObjectTypeSymbol("iimage2DMS", "", PredefinedObjectType.iimage2DMS);
+            uimage2DMS = new IntrinsicObjectTypeSymbol("uimage2DMS", "", PredefinedObjectType.uimage2DMS);
+            texture2DMSArray = new IntrinsicObjectTypeSymbol("texture2DMSArray", "", PredefinedObjectType.texture2DMSArray);
+            itexture2DMSArray = new IntrinsicObjectTypeSymbol("itexture2DMSArray", "", PredefinedObjectType.itexture2DMSArray);
+            utexture2DMSArray = new IntrinsicObjectTypeSymbol("utexture2DMSArray", "", PredefinedObjectType.utexture2DMSArray);
+            image2DMSArray = new IntrinsicObjectTypeSymbol("image2DMSArray", "", PredefinedObjectType.image2DMSArray);
+            iimage2DMSArray = new IntrinsicObjectTypeSymbol("iimage2DMSArray", "", PredefinedObjectType.iimage2DMSArray);
+            uimage2DMSArray = new IntrinsicObjectTypeSymbol("uimage2DMSArray", "", PredefinedObjectType.uimage2DMSArray);
+            texture3D = new IntrinsicObjectTypeSymbol("texture3D", "", PredefinedObjectType.texture3D);
+            itexture3D = new IntrinsicObjectTypeSymbol("itexture3D", "", PredefinedObjectType.itexture3D);
+            utexture3D = new IntrinsicObjectTypeSymbol("utexture3D", "", PredefinedObjectType.utexture3D);
+            image3D = new IntrinsicObjectTypeSymbol("image3D", "", PredefinedObjectType.image3D);
+            iimage3D = new IntrinsicObjectTypeSymbol("iimage3D", "", PredefinedObjectType.iimage3D);
+            uimage3D = new IntrinsicObjectTypeSymbol("uimage3D", "", PredefinedObjectType.uimage3D);
+            textureCube = new IntrinsicObjectTypeSymbol("textureCube", "", PredefinedObjectType.textureCube);
+            itextureCube = new IntrinsicObjectTypeSymbol("itextureCube", "", PredefinedObjectType.itextureCube);
+            utextureCube = new IntrinsicObjectTypeSymbol("utextureCube", "", PredefinedObjectType.utextureCube);
+            imageCube = new IntrinsicObjectTypeSymbol("imageCube", "", PredefinedObjectType.imageCube);
+            iimageCube = new IntrinsicObjectTypeSymbol("iimageCube", "", PredefinedObjectType.iimageCube);
+            uimageCube = new IntrinsicObjectTypeSymbol("uimageCube", "", PredefinedObjectType.uimageCube);
+            textureCubeArray = new IntrinsicObjectTypeSymbol("textureCubeArray", "", PredefinedObjectType.textureCubeArray);
+            itextureCubeArray = new IntrinsicObjectTypeSymbol("itextureCubeArray", "", PredefinedObjectType.itextureCubeArray);
+            utextureCubeArray = new IntrinsicObjectTypeSymbol("utextureCubeArray", "", PredefinedObjectType.utextureCubeArray);
+            imageCubeArray = new IntrinsicObjectTypeSymbol("imageCubeArray", "", PredefinedObjectType.imageCubeArray);
+            iimageCubeArray = new IntrinsicObjectTypeSymbol("iimageCubeArray", "", PredefinedObjectType.iimageCubeArray);
+            uimageCubeArray = new IntrinsicObjectTypeSymbol("uimageCubeArray", "", PredefinedObjectType.uimageCubeArray);
 
-            BlendState = new IntrinsicObjectTypeSymbol("BlendState", "", PredefinedObjectType.BlendState);
-            DepthStencilState = new IntrinsicObjectTypeSymbol("DepthStencilState", "", PredefinedObjectType.DepthStencilState);
-            RasterizerState = new IntrinsicObjectTypeSymbol("RasterizerState", "", PredefinedObjectType.RasterizerState);
+            sampler = new IntrinsicObjectTypeSymbol("sampler", "", PredefinedObjectType.sampler);
+            samplerShadow = new IntrinsicObjectTypeSymbol("samplerShadow", "", PredefinedObjectType.samplerShadow);
+            samplerBuffer = new IntrinsicObjectTypeSymbol("samplerBuffer", "", PredefinedObjectType.samplerBuffer);
+            isamplerBuffer = new IntrinsicObjectTypeSymbol("isamplerBuffer", "", PredefinedObjectType.isamplerBuffer);
+            usamplerBuffer = new IntrinsicObjectTypeSymbol("usamplerBuffer", "", PredefinedObjectType.usamplerBuffer);
+            sampler1D = new IntrinsicObjectTypeSymbol("sampler1D", "", PredefinedObjectType.sampler1D);
+            sampler1DArray = new IntrinsicObjectTypeSymbol("sampler1DArray", "", PredefinedObjectType.sampler1DArray);
+            sampler1DShadow = new IntrinsicObjectTypeSymbol("sampler1DShadow", "", PredefinedObjectType.sampler1DShadow);
+            sampler1DArrayShadow = new IntrinsicObjectTypeSymbol("sampler1DArrayShadow", "", PredefinedObjectType.sampler1DArrayShadow);
+            isampler1D = new IntrinsicObjectTypeSymbol("isampler1D", "", PredefinedObjectType.isampler1D);
+            isampler1DArray = new IntrinsicObjectTypeSymbol("isampler1DArray", "", PredefinedObjectType.isampler1DArray);
+            usampler1D = new IntrinsicObjectTypeSymbol("usampler1D", "", PredefinedObjectType.usampler1D);
+            usampler1DArray = new IntrinsicObjectTypeSymbol("usampler1DArray", "", PredefinedObjectType.usampler1DArray);
+            sampler2D = new IntrinsicObjectTypeSymbol("sampler2D", "", PredefinedObjectType.sampler2D);
+            sampler2DArray = new IntrinsicObjectTypeSymbol("sampler2DArray", "", PredefinedObjectType.sampler2DArray);
+            sampler2DShadow = new IntrinsicObjectTypeSymbol("sampler2DShadow", "", PredefinedObjectType.sampler2DShadow);
+            sampler2DArrayShadow = new IntrinsicObjectTypeSymbol("sampler2DArrayShadow", "", PredefinedObjectType.sampler2DArrayShadow);
+            sampler2DRect = new IntrinsicObjectTypeSymbol("sampler2DRect", "", PredefinedObjectType.sampler2DRect);
+            sampler2DRectShadow = new IntrinsicObjectTypeSymbol("sampler2DRectShadow", "", PredefinedObjectType.sampler2DRectShadow);
+            sampler2DMS = new IntrinsicObjectTypeSymbol("sampler2DMS", "", PredefinedObjectType.sampler2DMS);
+            sampler2DMSArray = new IntrinsicObjectTypeSymbol("sampler2DMSArray", "", PredefinedObjectType.sampler2DMSArray);
+            isampler2D = new IntrinsicObjectTypeSymbol("isampler2D", "", PredefinedObjectType.isampler2D);
+            isampler2DArray = new IntrinsicObjectTypeSymbol("isampler2DArray", "", PredefinedObjectType.isampler2DArray);
+            isampler2DRect = new IntrinsicObjectTypeSymbol("isampler2DRect", "", PredefinedObjectType.isampler2DRect);
+            isampler2DMS = new IntrinsicObjectTypeSymbol("isampler2DMS", "", PredefinedObjectType.isampler2DMS);
+            isampler2DMSArray = new IntrinsicObjectTypeSymbol("isampler2DMSArray", "", PredefinedObjectType.isampler2DMSArray);
+            usampler2D = new IntrinsicObjectTypeSymbol("usampler2D", "", PredefinedObjectType.usampler2D);
+            usampler2DArray = new IntrinsicObjectTypeSymbol("usampler2DArray", "", PredefinedObjectType.usampler2DArray);
+            usampler2DRect = new IntrinsicObjectTypeSymbol("usampler2DRect", "", PredefinedObjectType.usampler2DRect);
+            usampler2DMS = new IntrinsicObjectTypeSymbol("usampler2DMS", "", PredefinedObjectType.usampler2DMS);
+            usampler2DMSArray = new IntrinsicObjectTypeSymbol("usampler2DMSArray", "", PredefinedObjectType.usampler2DMSArray);
+            sampler3D = new IntrinsicObjectTypeSymbol("sampler3D", "", PredefinedObjectType.sampler3D);
+            isampler3D = new IntrinsicObjectTypeSymbol("isampler3D", "", PredefinedObjectType.isampler3D);
+            usampler3D = new IntrinsicObjectTypeSymbol("usampler3D", "", PredefinedObjectType.usampler3D);
+            samplerCube = new IntrinsicObjectTypeSymbol("samplerCube", "", PredefinedObjectType.samplerCube);
+            samplerCubeArray = new IntrinsicObjectTypeSymbol("samplerCubeArray", "", PredefinedObjectType.samplerCubeArray);
+            samplerCubeShadow = new IntrinsicObjectTypeSymbol("samplerCubeShadow", "", PredefinedObjectType.samplerCubeShadow);
+            samplerCubeArrayShadow = new IntrinsicObjectTypeSymbol("samplerCubeArrayShadow", "", PredefinedObjectType.samplerCubeArrayShadow);
+            isamplerCube = new IntrinsicObjectTypeSymbol("isamplerCube", "", PredefinedObjectType.isamplerCube);
+            isamplerCubeArray = new IntrinsicObjectTypeSymbol("isamplerCubeArray", "", PredefinedObjectType.isamplerCubeArray);
+            usamplerCube = new IntrinsicObjectTypeSymbol("usamplerCube", "", PredefinedObjectType.usamplerCube);
+            usamplerCubeArray = new IntrinsicObjectTypeSymbol("usamplerCubeArray", "", PredefinedObjectType.usamplerCubeArray);
 
-            GeometryShader = new IntrinsicObjectTypeSymbol("GeometryShader", "", PredefinedObjectType.GeometryShader);
-            PixelShader = new IntrinsicObjectTypeSymbol("PixelShader", "", PredefinedObjectType.PixelShader);
-            VertexShader = new IntrinsicObjectTypeSymbol("VertexShader", "", PredefinedObjectType.VertexShader);
+            buffer = new IntrinsicObjectTypeSymbol("buffer", "", PredefinedObjectType.buffer);
 
-            ByteAddressBuffer = CreatePredefinedObjectType("ByteAddressBuffer",
-                "A read-only buffer that is indexed in bytes.",
-                PredefinedObjectType.ByteAddressBuffer,
-                CreateByteAddressBufferMethods);
+            AllImage1DTypes = new[] { image1D, iimage1D, uimage1D };
+            AllImage1DArrayTypes = new[] { image1DArray, iimage1DArray, uimage1DArray };
+            AllImage2DTypes = new[] { image2D, iimage2D, uimage2D };
+            AllImage2DArrayTypes = new[] { image2DArray, iimage2DArray, uimage2DArray };
+            AllImage2DRectTypes = new[] { image2DRect, iimage2DRect, uimage2DRect };
+            AllImage2DMSTypes = new[] { image2DMS, iimage2DMS, uimage2DMS };
+            AllImage2DMSArrayTypes = new[] { image2DMSArray, iimage2DMSArray, uimage2DMSArray };
+            AllImage3DTypes = new[] { image3D, iimage3D, uimage3D };
+            AllImageCubeTypes = new[] { imageCube, iimageCube, uimageCube };
+            AllImageCubeArrayTypes = new[] { imageCubeArray, iimageCubeArray, uimageCubeArray };
 
-            RWByteAddressBuffer = CreatePredefinedObjectType("RWByteAddressBuffer",
-                "A read/write buffer that indexes in bytes.",
-                PredefinedObjectType.RWByteAddressBuffer,
-                CreateRWByteAddressBufferMethods);
+            AllSampler1DTypes = new[] { sampler1D, isampler1D, usampler1D };
+            AllSampler1DArrayTypes = new[] { sampler1DArray, isampler1DArray, usampler1DArray };
+            AllSampler2DTypes = new[] { sampler2D, isampler2D, usampler2D };
+            AllSampler2DArrayTypes = new[] { sampler2DArray, isampler2DArray, usampler2DArray };
+            AllSampler2DRectTypes = new[] { sampler2DRect, isampler2DRect, usampler2DRect };
+            AllSampler2DMSTypes = new[] { sampler2DMS, isampler2DMS, usampler2DMS };
+            AllSampler2DMSArrayTypes = new[] { sampler2DMSArray, isampler2DMSArray, usampler2DMSArray };
+            AllSampler3DTypes = new[] { sampler3D, isampler3D, usampler3D };
+            AllSamplerCubeTypes = new[] { samplerCube, isamplerCube, usamplerCube };
+            AllSamplerCubeArrayTypes = new[] { samplerCubeArray, isamplerCubeArray, usamplerCubeArray };
 
-            RasterizerOrderedByteAddressBuffer = CreatePredefinedObjectType("RasterizerOrderedByteAddressBuffer",
-                "A rasterizer ordered read/write buffer that indexes in bytes.",
-                PredefinedObjectType.RasterizerOrderedByteAddressBuffer,
-                CreateRWByteAddressBufferMethods);
+            AllSamplerWithSize1DTypes = AllSampler1DTypes
+                .Union(new[] { sampler1DShadow })
+                .ToArray();
+            AllSamplerWithSize2DTypes = AllSampler2DTypes
+                .Union(AllSampler1DArrayTypes)
+                .Union(AllSampler2DRectTypes)
+                .Union(AllSampler2DMSTypes)
+                .Union(AllSamplerCubeTypes)
+                .Union(new[] { sampler2DShadow, sampler1DArrayShadow })
+                .ToArray();
+            AllSamplerWithSize3DTypes = AllSampler3DTypes
+                .Union(AllSampler2DArrayTypes)
+                .Union(AllSampler2DMSArrayTypes)
+                .Union(AllSamplerCubeArrayTypes)
+                .Union(new[] { sampler2DArrayShadow })
+                .ToArray();
+
+            AllSamplerTypes = AllSamplerWithSize1DTypes.Union(AllSamplerWithSize2DTypes).Union(AllSamplerWithSize3DTypes).ToArray();
+
+            AllTexture1DTypes = new[] { texture1D, itexture1D, utexture1D };
+            AllTexture1DArrayTypes = new[] { texture1DArray, itexture1DArray, utexture1DArray };
+            AllTexture2DTypes = new[] { texture2D, itexture2D, utexture2D };
+            AllTexture2DArrayTypes = new[] { texture2DArray, itexture2DArray, utexture2DArray };
+            AllTexture2DMSTypes = new[] { texture2DMS, itexture2DMS, utexture2DMS };
+            AllTexture2DMSArrayTypes = new[] { texture2DMSArray, itexture2DMSArray, utexture2DMSArray };
+            AllTexture3DTypes = new[] { texture3D, itexture3D, utexture3D };
+            AllTextureCubeTypes = new[] { textureCube, itextureCube, utextureCube };
+            AllTextureCubeArrayTypes = new[] { textureCubeArray, itextureCubeArray, utextureCubeArray };
 
             AllTypes = AllNumericTypes
                 .Cast<TypeSymbol>()
-                .Union(new[] { Sampler, Sampler1D, Sampler2D, Sampler3D, SamplerCube, SamplerState, SamplerComparisonState, LegacyTexture })
-                .Union(new[] { BlendState, DepthStencilState, RasterizerState })
-                .Union(new[] { GeometryShader, PixelShader, VertexShader })
-                .Union(new[] { ByteAddressBuffer, RWByteAddressBuffer, RasterizerOrderedByteAddressBuffer })
+                .Union(new[] { texture1D, itexture1D, utexture1D, image1D, iimage1D, uimage1D, texture1DArray, itexture1DArray, utexture1DArray, image1DArray, iimage1DArray, uimage1DArray, texture2D, itexture2D, utexture2D, image2D, iimage2D, uimage2D, image2DRect, iimage2DRect, uimage2DRect, subpassInput, subpassInputMS, isubpassInput, isubpassInputMS, usubpassInput, usubpassInputMS, texture2DArray, itexture2DArray, utexture2DArray, image2DArray, iimage2DArray, uimage2DArray, texture2DMS, itexture2DMS, utexture2DMS, image2DMS, iimage2DMS, uimage2DMS, texture2DMSArray, itexture2DMSArray, utexture2DMSArray, image2DMSArray, iimage2DMSArray, uimage2DMSArray, texture3D, itexture3D, utexture3D, image3D, iimage3D, uimage3D, textureCube, itextureCube, utextureCube, imageCube, iimageCube, uimageCube, textureCubeArray, itextureCubeArray, utextureCubeArray, imageCubeArray, iimageCubeArray })
+                .Union(new[] { sampler, samplerShadow, samplerBuffer, isamplerBuffer, usamplerBuffer, sampler1D, sampler1DArray, sampler1DShadow, sampler1DArrayShadow, isampler1D, isampler1DArray, usampler1D, usampler1DArray, sampler2D, sampler2DArray, sampler2DShadow, sampler2DArrayShadow, sampler2DRect, sampler2DRectShadow, sampler2DMS, sampler2DMSArray, isampler2D, isampler2DArray, isampler2DRect, isampler2DMS, isampler2DMSArray, usampler2D, usampler2DArray, usampler2DRect, usampler2DMS, usampler2DMSArray, sampler3D, isampler3D, usampler3D, samplerCube, samplerCubeArray, samplerCubeShadow, samplerCubeArrayShadow, isamplerCube, isamplerCubeArray, usamplerCube, usamplerCubeArray })
+                .Union(new[] { buffer })
                 .ToArray();
         }
 
@@ -1454,1122 +867,12 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Symbols
             return AllMatrixTypes[(((int)scalarType - 1) * 16) + ((numRows - 1) * 4) + (numCols - 1)];
         }
 
-        public static IntrinsicObjectTypeSymbol CreateRWTextureType(PredefinedObjectType textureType, TypeSymbol valueType, ScalarType scalarType)
-        {
-            string name, documentation;
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.RWBuffer:
-                    name = "RWBuffer";
-                    documentation = "A read-write buffer type";
-                    break;
-                case PredefinedObjectType.RWTexture1D:
-                    name = "RWTexture1D";
-                    documentation = "A read-write texture type";
-                    break;
-                case PredefinedObjectType.RWTexture1DArray:
-                    name = "RWTexture1DArray";
-                    documentation = "An array of read-write 1D textures";
-                    break;
-                case PredefinedObjectType.RWTexture2D:
-                    name = "RWTexture2D";
-                    documentation = "A read-write 2D texture type";
-                    break;
-                case PredefinedObjectType.RWTexture2DArray:
-                    name = "RWTexture2DArray";
-                    documentation = "An array of read-write 2D textures";
-                    break;
-                case PredefinedObjectType.RWTexture3D:
-                    name = "RWTexture3D";
-                    documentation = "A read-write 3D texture type";
-                    break;
-                case PredefinedObjectType.RasterizerOrderedBuffer:
-                    name = "RasterizerOrderedBuffer";
-                    documentation = "A read-write buffer type";
-                    break;
-                case PredefinedObjectType.RasterizerOrderedTexture1D:
-                    name = "RasterizerOrderedTexture1D";
-                    documentation = "A read-write texture type";
-                    break;
-                case PredefinedObjectType.RasterizerOrderedTexture1DArray:
-                    name = "RasterizerOrderedTexture1DArray";
-                    documentation = "An array of read-write 1D textures";
-                    break;
-                case PredefinedObjectType.RasterizerOrderedTexture2D:
-                    name = "RasterizerOrderedTexture2D";
-                    documentation = "A read-write 2D texture type";
-                    break;
-                case PredefinedObjectType.RasterizerOrderedTexture2DArray:
-                    name = "RasterizerOrderedTexture2DArray";
-                    documentation = "An array of read-write 2D textures";
-                    break;
-                case PredefinedObjectType.RasterizerOrderedTexture3D:
-                    name = "RasterizerOrderedTexture3D";
-                    documentation = "A read-write 3D texture type";
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
-            return CreatePredefinedObjectType(name, documentation, textureType, t => CreateRWTextureMethods(textureType, t, valueType, scalarType));
-        }
-
-        private static IEnumerable<Symbol> CreateRWTextureMethods(PredefinedObjectType textureType, TypeSymbol parent, TypeSymbol valueType, ScalarType scalarType)
-        {
-            yield return CreateTextureGetDimensionsMethod(parent, textureType, Uint);
-            yield return CreateTextureGetDimensionsMethod(parent, textureType, Float);
-
-            var intLocationType = GetTextureIntLocationType(textureType);
-
-            yield return new FunctionSymbol("Load", "Reads texel data without any filtering or sampling.", parent,
-                valueType, m => new[]
-                {
-                    new ParameterSymbol("location", "The texture coordinates", m, intLocationType)
-                });
-            yield return new FunctionSymbol("Load", "Reads texel data without any filtering or sampling.", parent,
-                valueType, m => new[]
-                {
-                    new ParameterSymbol("location", "The texture coordinates", m, intLocationType),
-                    new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                });
-
-            var indexType = GetTextureIndexType(textureType);
-            yield return new IndexerSymbol("[]", "Returns a resource variable.", parent, indexType, valueType, false);
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateTextureType(PredefinedObjectType textureType, TypeSymbol valueType, ScalarType scalarType)
-        {
-            string name, documentation;
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                    name = "Buffer";
-                    documentation = "A buffer type";
-                    break;
-                case PredefinedObjectType.Texture1D:
-                    name = "Texture1D";
-                    documentation = "A 1D texture type";
-                    break;
-                case PredefinedObjectType.Texture1DArray:
-                    name = "Texture1DArray";
-                    documentation = "An array of 1D textures";
-                    break;
-                case PredefinedObjectType.Texture2D:
-                    name = "Texture2D";
-                    documentation = "A 2D texture type";
-                    break;
-                case PredefinedObjectType.Texture2DArray:
-                    name = "Texture2DArray";
-                    documentation = "An array of 2D textures";
-                    break;
-                case PredefinedObjectType.Texture3D:
-                    name = "Texture3D";
-                    documentation = "A 3D texture type";
-                    break;
-                case PredefinedObjectType.TextureCube:
-                    name = "TextureCube";
-                    documentation = "A cube texture type";
-                    break;
-                case PredefinedObjectType.TextureCubeArray:
-                    name = "TextureCubeArray";
-                    documentation = "An array of cube textures";
-                    break;
-                case PredefinedObjectType.Texture2DMS:
-                    name = "Texture2DMS";
-                    documentation = "A 2D multisampled texture type";
-                    break;
-                case PredefinedObjectType.Texture2DMSArray:
-                    name = "Texture2DMSArray";
-                    documentation = "An array of 2D multisampled textures";
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-
-            return CreatePredefinedObjectType(name, documentation, textureType, t => CreateTextureMethods(textureType, t, valueType, scalarType));
-        }
-
-        private static IEnumerable<Symbol> CreateTextureMethods(PredefinedObjectType textureType, TypeSymbol parent, TypeSymbol valueType, ScalarType scalarType)
-        {
-            TypeSymbol locationType = null;
-            switch (textureType)
-            {
-                case PredefinedObjectType.Texture1D:
-                    locationType = Float;
-                    break;
-                case PredefinedObjectType.Texture1DArray:
-                case PredefinedObjectType.Texture2D:
-                    locationType = Float2;
-                    break;
-                case PredefinedObjectType.Texture2DArray:
-                case PredefinedObjectType.Texture3D:
-                case PredefinedObjectType.TextureCube:
-                    locationType = Float3;
-                    break;
-                case PredefinedObjectType.TextureCubeArray:
-                    locationType = Float4;
-                    break;
-            }
-
-            TypeSymbol offsetType = null;
-            switch (textureType)
-            {
-                case PredefinedObjectType.Texture1D:
-                case PredefinedObjectType.Texture1DArray:
-                    offsetType = Int;
-                    break;
-                case PredefinedObjectType.Texture2D:
-                case PredefinedObjectType.Texture2DArray:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    offsetType = Int2;
-                    break;
-                case PredefinedObjectType.Texture3D:
-                    offsetType = Int3;
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    break;
-                default:
-                    TypeSymbol vectorType;
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture1D:
-                        case PredefinedObjectType.Texture1DArray:
-                            vectorType = Float1;
-                            break;
-                        case PredefinedObjectType.Texture2D:
-                        case PredefinedObjectType.Texture2DArray:
-                            vectorType = Float2;
-                            break;
-                        case PredefinedObjectType.Texture3D:
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            vectorType = Float3;
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
-                    }
-                    yield return new FunctionSymbol("CalculateLevelOfDetail", "Calculates the level of detail.", parent,
-                        Float, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("x", "The linear interpolation value, which is a floating-point number between 0.0 and 1.0 inclusive.", m, vectorType)
-                        });
-                    yield return new FunctionSymbol("CalculateLevelOfDetailUnclamped", "Calculates the LOD without clamping the result.", parent,
-                        Float, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("x", "The linear interpolation value, which is a floating-point number between 0.0 and 1.0 inclusive.", m, vectorType)
-                        });
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Texture2D:
-                case PredefinedObjectType.Texture2DArray:
-                case PredefinedObjectType.TextureCube:
-                case PredefinedObjectType.TextureCubeArray:
-                    yield return new FunctionSymbol("Gather", "Gets the four samples (red component only) that would be used for bilinear interpolation when sampling a texture.", parent,
-                        GetVectorType(scalarType, 4), m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType)
-                        });
-                    foreach (var method in CreateTextureGatherComponentMethods(parent, scalarType, "Alpha", locationType, offsetType))
-                        yield return method;
-                    foreach (var method in CreateTextureGatherComponentMethods(parent, scalarType, "Red", locationType, offsetType))
-                        yield return method;
-                    foreach (var method in CreateTextureGatherComponentMethods(parent, scalarType, "Green", locationType, offsetType))
-                        yield return method;
-                    foreach (var method in CreateTextureGatherComponentMethods(parent, scalarType, "Blue", locationType, offsetType))
-                        yield return method;
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Texture2D:
-                case PredefinedObjectType.Texture2DArray:
-                    yield return new FunctionSymbol("Gather", "Gets the four samples (red component only) that would be used for bilinear interpolation when sampling a texture.", parent,
-                        GetVectorType(scalarType, 4), m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                            new ParameterSymbol("offset", "An optional texture coordinate offset, which can be used for any texture-object types. The offset is applied to the location before sampling.", m, offsetType)
-                        });
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                    yield return new FunctionSymbol("GetDimensions", "Gets the length of the buffer.", parent,
-                        Void, m => new[]
-                        {
-                            new ParameterSymbol("dim", "The length, in bytes, of the buffer.", m, Uint, ParameterDirection.Out)
-                        });
-                    break;
-                default:
-                    yield return CreateTextureGetDimensionsWithMipLevelMethod(parent, textureType, Uint);
-                    yield return CreateTextureGetDimensionsWithMipLevelMethod(parent, textureType, Float);
-                    yield return CreateTextureGetDimensionsMethod(parent, textureType, Uint);
-                    yield return CreateTextureGetDimensionsMethod(parent, textureType, Float);
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    yield return new FunctionSymbol("GetSamplePosition", "Gets the position of the specified sample.", parent,
-                        Float2, m => new[]
-                        {
-                            new ParameterSymbol("sampleIndex", "The zero-based sample index.", m, Int)
-                        });
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.TextureCube:
-                case PredefinedObjectType.TextureCubeArray:
-                    break;
-                default:
-                    var intLocationType = GetTextureIntLocationType(textureType);
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture2DMS:
-                        case PredefinedObjectType.Texture2DMSArray:
-                            yield return new FunctionSymbol("Load", "Reads texel data without any filtering or sampling.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("location", "The texture coordinates; the last component specifies the mipmap level. This method uses a 0-based coordinate system and not a 0.0-1.0 UV system. ", m, intLocationType),
-                                    new ParameterSymbol("sampleIndex", "A sampling index.", m, Int),
-                                });
-                            yield return new FunctionSymbol("Load", "Reads texel data without any filtering or sampling.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("location", "The texture coordinates; the last component specifies the mipmap level. This method uses a 0-based coordinate system and not a 0.0-1.0 UV system.", m, intLocationType),
-                                    new ParameterSymbol("sampleIndex", "A sampling index.", m, Int),
-                                    new ParameterSymbol("offset", "An offset applied to the texture coordinates before sampling.", m, offsetType)
-                                });
-                            break;
-                        default:
-                            yield return new FunctionSymbol("Load", "Reads texel data without any filtering or sampling.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("location", "The texture coordinates; the last component specifies the mipmap level. This method uses a 0-based coordinate system and not a 0.0-1.0 UV system. ", m, intLocationType)
-                                });
-                            if (offsetType != null)
-                                yield return new FunctionSymbol("Load", "Reads texel data without any filtering or sampling.", parent,
-                                    valueType, m => new[]
-                                    {
-                                        new ParameterSymbol("location", "The texture coordinates; the last component specifies the mipmap level. This method uses a 0-based coordinate system and not a 0.0-1.0 UV system.", m, intLocationType),
-                                        new ParameterSymbol("offset", "An offset applied to the texture coordinates before sampling.", m, offsetType)
-                                    });
-                            break;
-                    }
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    break;
-                default:
-                    yield return new FunctionSymbol("Sample", "Samples a texture.", parent,
-                        valueType, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType)
-                        });
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            break;
-                        default:
-                            yield return new FunctionSymbol("Sample", "Samples a texture.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                                    new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                                    new ParameterSymbol("offset", "A texture coordinate offset, which can be used for any texture-object type; the offset is applied to the location before sampling. Use an offset only at an integer miplevel; otherwise, you may get results that do not translate well to hardware.", m, offsetType)
-                                });
-                            break;
-                    }
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    break;
-                default:
-                    yield return new FunctionSymbol("SampleBias", "Samples a texture, after applying the input bias to the mipmap level.", parent,
-                        valueType, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                            new ParameterSymbol("bias", "The bias value, which is a floating-point number between 0.0 and 1.0 inclusive, is applied to a mip level before sampling.", m, Float)
-                        });
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            break;
-                        default:
-                            yield return new FunctionSymbol("SampleBias", "Samples a texture, after applying the input bias to the mipmap level.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                                    new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                                    new ParameterSymbol("bias", "The bias value, which is a floating-point number between 0.0 and 1.0 inclusive, is applied to a mip level before sampling.", m, Float),
-                                    new ParameterSymbol("offset", "A texture coordinate offset, which can be used for any texture-object type; the offset is applied to the location before sampling. Use an offset only at an integer miplevel; otherwise, you may get results that do not translate well to hardware.", m, offsetType)
-                                });
-                            break;
-                    }
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                case PredefinedObjectType.Texture3D:
-                    break;
-                default:
-                    yield return new FunctionSymbol("SampleCmp", "Samples a texture and compares a single component against the specified comparison value.", parent,
-                        valueType, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler-comparison state, which is the sampler state plus a comparison state (a comparison function and a comparison filter)", m, SamplerComparisonState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                            new ParameterSymbol("compareValue", "A floating-point value to use as a comparison value.", m, Float)
-                        });
-                    yield return new FunctionSymbol("SampleCmpLevelZero", "Samples a texture on mipmap level 0 only and compares a single component against the specified comparison value.", parent,
-                        valueType, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler-comparison state, which is the sampler state plus a comparison state (a comparison function and a comparison filter)", m, SamplerComparisonState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                            new ParameterSymbol("compareValue", "A floating-point value to use as a comparison value.", m, Float)
-                        });
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            break;
-                        default:
-                            yield return new FunctionSymbol("SampleCmp", "Samples a texture and compares a single component against the specified comparison value.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("samplerState", "A sampler-comparison state, which is the sampler state plus a comparison state (a comparison function and a comparison filter)", m, SamplerComparisonState),
-                                    new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                                    new ParameterSymbol("compareValue", "A floating-point value to use as a comparison value.", m, Float),
-                                    new ParameterSymbol("offset", "A texture coordinate offset, which can be used for any texture-object type; the offset is applied to the location before sampling. Use an offset only at an integer miplevel; otherwise, you may get results that do not translate well to hardware.", m, offsetType)
-                                });
-                            yield return new FunctionSymbol("SampleCmpLevelZero", "Samples a texture on mipmap level 0 only and compares a single component against the specified comparison value.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("samplerState", "A sampler-comparison state, which is the sampler state plus a comparison state (a comparison function and a comparison filter)", m, SamplerComparisonState),
-                                    new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                                    new ParameterSymbol("compareValue", "A floating-point value to use as a comparison value.", m, Float),
-                                    new ParameterSymbol("offset", "A texture coordinate offset, which can be used for any texture-object type; the offset is applied to the location before sampling. Use an offset only at an integer miplevel; otherwise, you may get results that do not translate well to hardware.", m, offsetType)
-                                });
-                            break;
-                    }
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    break;
-                default:
-                    TypeSymbol ddType;
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture1D:
-                        case PredefinedObjectType.Texture1DArray:
-                            ddType = Float;
-                            break;
-                        case PredefinedObjectType.Texture2D:
-                        case PredefinedObjectType.Texture2DArray:
-                            ddType = Float2;
-                            break;
-                        case PredefinedObjectType.Texture3D:
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            ddType = Float3;
-                            break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
-                    }
-                    yield return new FunctionSymbol("SampleGrad", "Samples a texture using a gradient to influence the way the sample location is calculated.", parent,
-                        valueType, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                            new ParameterSymbol("ddx", "The rate of change of the surface geometry in the x direction.", m, ddType),
-                            new ParameterSymbol("ddy", "The rate of change of the surface geometry in the y direction.", m, ddType)
-                        });
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            break;
-                        default:
-                            yield return new FunctionSymbol("SampleGrad", "Samples a texture using a gradient to influence the way the sample location is calculated.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                                    new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                                    new ParameterSymbol("ddx", "The rate of change of the surface geometry in the x direction.", m, ddType),
-                                    new ParameterSymbol("ddy", "The rate of change of the surface geometry in the y direction.", m, ddType),
-                                    new ParameterSymbol("offset", "A texture coordinate offset, which can be used for any texture-object type; the offset is applied to the location before sampling. Use an offset only at an integer miplevel; otherwise, you may get results that do not translate well to hardware.", m, offsetType)
-                                });
-                            break;
-                    }
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.Texture2DMS:
-                case PredefinedObjectType.Texture2DMSArray:
-                    break;
-                default:
-                    yield return new FunctionSymbol("SampleLevel", "Samples a texture using a mipmap-level offset.", parent,
-                        valueType, m => new[]
-                        {
-                            new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                            new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                            new ParameterSymbol("lod", "A number that specifies the mipmap level. If the value is ≤ 0, the zero'th (biggest map) is used. The fractional value (if supplied) is used to interpolate between two mipmap levels.", m, Float)
-                        });
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            break;
-                        default:
-                            yield return new FunctionSymbol("SampleLevel", "Samples a texture using a mipmap-level offset.", parent,
-                                valueType, m => new[]
-                                {
-                                    new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                                    new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                                    new ParameterSymbol("lod", "A number that specifies the mipmap level. If the value is ≤ 0, the zero'th (biggest map) is used. The fractional value (if supplied) is used to interpolate between two mipmap levels.", m, Float),
-                                    new ParameterSymbol("offset", "A texture coordinate offset, which can be used for any texture-object type; the offset is applied to the location before sampling. Use an offset only at an integer miplevel; otherwise, you may get results that do not translate well to hardware.", m, offsetType)
-                                });
-                            break;
-                    }
-                    break;
-            }
-
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                    yield return new IndexerSymbol("[]", "", parent, Uint, valueType);
-                    break;
-                case PredefinedObjectType.Texture2D:
-                    yield return new IndexerSymbol("[]", "", parent, Uint2, valueType);
-                    break;
-            }
-        }
-
-        private static TypeSymbol GetTextureIntLocationType(PredefinedObjectType textureType)
-        {
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.RWBuffer:
-                case PredefinedObjectType.RasterizerOrderedBuffer:
-                    return Int;
-                case PredefinedObjectType.Texture1D:
-                case PredefinedObjectType.RWTexture1D:
-                case PredefinedObjectType.RasterizerOrderedTexture1D:
-                case PredefinedObjectType.Texture2DMS:
-                    return Int2;
-                case PredefinedObjectType.Texture1DArray:
-                case PredefinedObjectType.RWTexture1DArray:
-                case PredefinedObjectType.RasterizerOrderedTexture1DArray:
-                case PredefinedObjectType.Texture2D:
-                case PredefinedObjectType.RWTexture2D:
-                case PredefinedObjectType.RasterizerOrderedTexture2D:
-                case PredefinedObjectType.Texture2DMSArray:
-                    return Int3;
-                case PredefinedObjectType.Texture2DArray:
-                case PredefinedObjectType.RWTexture2DArray:
-                case PredefinedObjectType.RasterizerOrderedTexture2DArray:
-                case PredefinedObjectType.Texture3D:
-                case PredefinedObjectType.RWTexture3D:
-                case PredefinedObjectType.RasterizerOrderedTexture3D:
-                    return Int4;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
-
-        private static TypeSymbol GetTextureIndexType(PredefinedObjectType textureType)
-        {
-            switch (textureType)
-            {
-                case PredefinedObjectType.Buffer:
-                case PredefinedObjectType.RWBuffer:
-                case PredefinedObjectType.RasterizerOrderedBuffer:
-                case PredefinedObjectType.Texture1D:
-                case PredefinedObjectType.RWTexture1D:
-                case PredefinedObjectType.RasterizerOrderedTexture1D:
-                    return Uint;
-                case PredefinedObjectType.Texture1DArray:
-                case PredefinedObjectType.RWTexture1DArray:
-                case PredefinedObjectType.RasterizerOrderedTexture1DArray:
-                case PredefinedObjectType.Texture2D:
-                case PredefinedObjectType.RWTexture2D:
-                case PredefinedObjectType.RasterizerOrderedTexture2D:
-                    return Uint2;
-                case PredefinedObjectType.Texture2DArray:
-                case PredefinedObjectType.RWTexture2DArray:
-                case PredefinedObjectType.RasterizerOrderedTexture2DArray:
-                case PredefinedObjectType.Texture3D:
-                case PredefinedObjectType.RWTexture3D:
-                case PredefinedObjectType.RasterizerOrderedTexture3D:
-                    return Uint3;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
-        }
-
-        private static IEnumerable<FunctionSymbol> CreateTextureGatherComponentMethods(Symbol parent, ScalarType scalarType, string componentName, TypeSymbol locationType, TypeSymbol offsetType)
-        {
-            var componentNameLower = componentName.ToLower();
-
-            if (offsetType != null)
-            {
-                yield return new FunctionSymbol($"Gather{componentName}", $"Samples a texture and returns the {componentNameLower} component.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType)
-                    });
-                yield return new FunctionSymbol($"Gather{componentName}", $"Samples a texture and returns the {componentNameLower} component.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("offset", "An offset that is applied to the texture coordinate before sampling.", m, offsetType)
-                    });
-                yield return new FunctionSymbol($"Gather{componentName}", $"Samples a texture and returns the {componentNameLower} component.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("offset1", "The first offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset2", "The second offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset3", "The third offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset4", "The fourth offset component applied to the texture coordinates before sampling.", m, offsetType)
-                    });
-                yield return new FunctionSymbol($"Gather{componentName}", $"Samples a texture and returns the {componentNameLower} component along with status about the operation.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("offset", "An offset that is applied to the texture coordinate before sampling.", m, offsetType),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    });
-                yield return new FunctionSymbol($"Gather{componentName}", $"Samples a texture and returns the {componentNameLower} component along with status about the operation.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("offset1", "The first offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset2", "The second offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset3", "The third offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset4", "The fourth offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    });
-            }
-            else
-            {
-                yield return new FunctionSymbol($"Gather{componentName}", $"Samples a texture and returns the {componentNameLower} component.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    });
-            }
-
-            if (offsetType != null)
-            {
-                yield return new FunctionSymbol($"GatherCmp{componentName}", $"Samples a texture, tests the samples against a compare value, and returns the {componentNameLower} component.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerComparisonState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("compareValue", "A value to compare each against each sampled value.", m, Float),
-                        new ParameterSymbol("offset", "An offset that is applied to the texture coordinate before sampling.", m, offsetType)
-                    });
-                yield return new FunctionSymbol($"GatherCmp{componentName}", $"Samples a texture, tests the samples against a compare value, and returns the {componentNameLower} component.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerComparisonState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("compareValue", "A value to compare each against each sampled value.", m, Float),
-                        new ParameterSymbol("offset1", "The first offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset2", "The second offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset3", "The third offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset4", "The fourth offset component applied to the texture coordinates before sampling.", m, offsetType)
-                    });
-                yield return new FunctionSymbol($"GatherCmp{componentName}", $"Samples a texture, tests the samples against a compare value, and returns the {componentNameLower} component along with status about the operation.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerComparisonState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("compareValue", "A value to compare each against each sampled value.", m, Float),
-                        new ParameterSymbol("offset", "An offset that is applied to the texture coordinate before sampling.", m, offsetType),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    });
-                yield return new FunctionSymbol($"GatherCmp{componentName}", $"Samples a texture, tests the samples against a compare value, and returns the {componentNameLower} component along with status about the operation.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerComparisonState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("compareValue", "A value to compare each against each sampled value.", m, Float),
-                        new ParameterSymbol("offset1", "The first offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset2", "The second offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset3", "The third offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("offset4", "The fourth offset component applied to the texture coordinates before sampling.", m, offsetType),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    });
-            }
-            else
-            {
-                yield return new FunctionSymbol($"GatherCmp{componentName}", $"Samples a texture, tests the samples against a compare value, and returns the {componentNameLower} component.", parent,
-                    GetVectorType(scalarType, 4), m => new[]
-                    {
-                        new ParameterSymbol("samplerState", "A sampler state.", m, SamplerComparisonState),
-                        new ParameterSymbol("location", "The texture coordinates.", m, locationType),
-                        new ParameterSymbol("compareValue", "A value to compare each against each sampled value.", m, Float),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    });
-            }
-        }
-
-        private static FunctionSymbol CreateTextureGetDimensionsWithMipLevelMethod(TypeSymbol parent, PredefinedObjectType textureType, TypeSymbol parameterType)
-        {
-            return new FunctionSymbol("GetDimensions", "Gets texture size information.", parent,
-                Void, m =>
-                {
-                    var result = new List<ParameterSymbol>();
-                    result.Add(new ParameterSymbol("mipLevel", "A zero-based index that identifies the mipmap level.", m, Uint));
-                    result.Add(new ParameterSymbol("width", "The texture width, in texels.", m, parameterType, ParameterDirection.Out));
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture2D:
-                        case PredefinedObjectType.Texture2DArray:
-                        case PredefinedObjectType.Texture3D:
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                            result.Add(new ParameterSymbol("height", "The texture height, in texels.", m, parameterType, ParameterDirection.Out));
-                            break;
-                    }
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture3D:
-                            result.Add(new ParameterSymbol("depth", "The texture depth, in texels.", m, parameterType, ParameterDirection.Out));
-                            break;
-                    }
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture1DArray:
-                        case PredefinedObjectType.Texture2DArray:
-                        case PredefinedObjectType.TextureCubeArray:
-                            result.Add(new ParameterSymbol("elements", "The number of elements in an array.", m, parameterType, ParameterDirection.Out));
-                            break;
-                    }
-                    result.Add(new ParameterSymbol("numberOfLevels", "The number of mipmap levels.", m, parameterType, ParameterDirection.Out));
-                    return result;
-                });
-        }
-
-        private static FunctionSymbol CreateTextureGetDimensionsMethod(TypeSymbol parent, PredefinedObjectType textureType, TypeSymbol parameterType)
-        {
-            return new FunctionSymbol("GetDimensions", "Gets texture size information.", parent,
-                Void, m =>
-                {
-                    var result = new List<ParameterSymbol>();
-                    result.Add(new ParameterSymbol("width", "The texture width, in texels.", m, parameterType, ParameterDirection.Out));
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture2D:
-                        case PredefinedObjectType.Texture2DArray:
-                        case PredefinedObjectType.Texture3D:
-                        case PredefinedObjectType.TextureCube:
-                        case PredefinedObjectType.TextureCubeArray:
-                        case PredefinedObjectType.RWTexture2D:
-                        case PredefinedObjectType.RWTexture2DArray:
-                        case PredefinedObjectType.RWTexture3D:
-                        case PredefinedObjectType.RasterizerOrderedTexture2D:
-                        case PredefinedObjectType.RasterizerOrderedTexture2DArray:
-                        case PredefinedObjectType.RasterizerOrderedTexture3D:
-                            result.Add(new ParameterSymbol("height", "The texture height, in texels.", m, parameterType, ParameterDirection.Out));
-                            break;
-                    }
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture3D:
-                        case PredefinedObjectType.RWTexture3D:
-                        case PredefinedObjectType.RasterizerOrderedTexture3D:
-                            result.Add(new ParameterSymbol("depth", "The texture depth, in texels.", m, parameterType, ParameterDirection.Out));
-                            break;
-                    }
-                    switch (textureType)
-                    {
-                        case PredefinedObjectType.Texture1DArray:
-                        case PredefinedObjectType.Texture2DArray:
-                        case PredefinedObjectType.TextureCubeArray:
-                        case PredefinedObjectType.RWTexture1DArray:
-                        case PredefinedObjectType.RWTexture2DArray:
-                        case PredefinedObjectType.RasterizerOrderedTexture1DArray:
-                        case PredefinedObjectType.RasterizerOrderedTexture2DArray:
-                            result.Add(new ParameterSymbol("elements", "The number of elements in an array.", m, parameterType, ParameterDirection.Out));
-                            break;
-                    }
-                    return result;
-                });
-        }
 
         private static IntrinsicObjectTypeSymbol CreatePredefinedObjectType(string name, string documentation, PredefinedObjectType predefinedObjectType, Func<TypeSymbol, IEnumerable<Symbol>> membersCallback)
         {
             var result = new IntrinsicObjectTypeSymbol(name, documentation, predefinedObjectType);
             result.AddMembers(membersCallback(result));
             return result;
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateAppendStructuredBufferType(TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType("AppendStructuredBuffer",
-                "Output buffer that appears as a stream the shader may append to. Only structured buffers can take T types that are structures.",
-                PredefinedObjectType.AppendStructuredBuffer,
-                t => new[]
-                {
-                    new FunctionSymbol("Append", "Appends a value to the end of the buffer.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("value", "The input value.", m, valueType)
-                        }),
-                    new FunctionSymbol("GetDimensions", "Gets the resource dimensions.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("numStructs", "The number of structures.", m, Uint, ParameterDirection.Out),
-                            new ParameterSymbol("stride", "The number of bytes in each element.", m, Uint, ParameterDirection.Out)
-                        })
-                });
-        }
-
-        public static readonly IntrinsicObjectTypeSymbol ByteAddressBuffer;
-        public static readonly IntrinsicObjectTypeSymbol RWByteAddressBuffer;
-        public static readonly IntrinsicObjectTypeSymbol RasterizerOrderedByteAddressBuffer;
-
-        private static FunctionSymbol[] CreateRWByteAddressBufferMethods(TypeSymbol t)
-        {
-            return CreateByteAddressBufferMethods(t)
-                .Union(new[]
-                {
-                    new FunctionSymbol("InterlockedAdd", "Adds the value, atomically.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-                    new FunctionSymbol("InterlockedAnd", "Ands the value, atomically.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-                    new FunctionSymbol("InterlockedCompareExchange", "Compares the input to the comparison value and exchanges the result, atomically.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("compareValue", "The comparison value.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-                    new FunctionSymbol("InterlockedCompareStore", "Compares the input to the comparison value, atomically.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("compareValue", "The comparison value.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint)
-                        }),
-                    new FunctionSymbol("InterlockedExchange", "Exchanges a value, atomically.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-                    new FunctionSymbol("InterlockedMax", "Finds the maximum value, atomically.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-                    new FunctionSymbol("InterlockedMin", "Finds the minimum value, atomically.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-                    new FunctionSymbol("InterlockedOr", "Performs an atomic OR on the value.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-                    new FunctionSymbol("InterlockedXor", "Performs an atomic XOR on the value.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("dest", "The destination address.", m, Uint),
-                            new ParameterSymbol("value", "The input value.", m, Uint),
-                            new ParameterSymbol("originalValue", "The original value.", m, Uint, ParameterDirection.Out)
-                        }),
-
-                    new FunctionSymbol("Store", "Sets one value.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("address", "The input address in bytes, which must be a multiple of 4.", m, Uint),
-                            new ParameterSymbol("value", "One input value.", m, Uint)
-                        }),
-                    new FunctionSymbol("Store2", "Sets two values.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("address", "The input address in bytes, which must be a multiple of 4.", m, Uint),
-                            new ParameterSymbol("value", "Two input values.", m, Uint2)
-                        }),
-                    new FunctionSymbol("Store3", "Sets three values.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("address", "The input address in bytes, which must be a multiple of 4.", m, Uint),
-                            new ParameterSymbol("value", "Three input values.", m, Uint3)
-                        }),
-                    new FunctionSymbol("Store4", "Sets four values.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("address", "The input address in bytes, which must be a multiple of 4.", m, Uint),
-                            new ParameterSymbol("value", "Four input values.", m, Uint4)
-                        }),
-                })
-                .ToArray();
-        }
-
-        private static FunctionSymbol[] CreateByteAddressBufferMethods(TypeSymbol t)
-        {
-            return new[]
-            {
-                new FunctionSymbol("GetDimensions", "Gets the resource dimensions.", t, Void,
-                    m => new[]
-                    {
-                        new ParameterSymbol("dim", "The length, in bytes, of the buffer.", m, Uint, ParameterDirection.Out)
-                    }),
-                new FunctionSymbol("Load", "Gets one value and the status of the operation from a read-only buffer indexed in bytes.", t, Uint,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    }),
-                new FunctionSymbol("Load", "Gets one value from a read-only buffer indexed in bytes.", t, Uint,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int)
-                    }),
-                new FunctionSymbol("Load2", "Gets two values and the status of the operation from a read-only buffer indexed in bytes.", t, Uint2,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    }),
-                new FunctionSymbol("Load2", "Gets two values from a read-only buffer indexed in bytes.", t, Uint2,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int)
-                    }),
-                new FunctionSymbol("Load3", "Gets three values and the status of the operation from a read-only buffer indexed in bytes.", t, Uint3,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    }),
-                new FunctionSymbol("Load3", "Gets three values from a read-only buffer indexed in bytes.", t, Uint3,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int)
-                    }),
-                new FunctionSymbol("Load4", "Gets four values and the status of the operation from a read-only buffer indexed in bytes.", t, Uint4,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    }),
-                new FunctionSymbol("Load4", "Gets four values from a read-only buffer indexed in bytes.", t, Uint4,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The input address in bytes, which must be a multiple of 4.", m, Int)
-                    })
-            };
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateConsumeStructuredBufferType(TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType("ConsumeStructuredBuffer",
-                "An input buffer that appears as a stream the shader may pull values from. Only structured buffers can take T types that are structures.",
-                PredefinedObjectType.ConsumeStructuredBuffer,
-                t => new[]
-                {
-                    new FunctionSymbol("Consume", "Removes a value from the end of the buffer.", t, valueType,
-                        m => Enumerable.Empty<ParameterSymbol>()),
-                    new FunctionSymbol("GetDimensions", "Gets the resource dimensions.", t, Void,
-                        m => new[]
-                        {
-                            new ParameterSymbol("numStructs", "The number of structures.", m, Uint, ParameterDirection.Out),
-                            new ParameterSymbol("stride", "The number of bytes in each element.", m, Uint, ParameterDirection.Out)
-                        })
-                });
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateStructuredBufferType(TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType("StructuredBuffer",
-                "A read-only buffer, which can take a T type that is a structure.",
-                PredefinedObjectType.StructuredBuffer,
-                t => CreateStructuredBufferMethods(t, valueType)
-                    .Union(new Symbol[]
-                    {
-                        new IndexerSymbol("[]", "Returns a read-only resource variable of a StructuredBuffer.", t, Uint, valueType)
-                    }));
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateRWStructuredBufferType(TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType("RWStructuredBuffer",
-                "A read/write buffer, which can take a T type that is a structure.",
-                PredefinedObjectType.RWStructuredBuffer,
-                t => CreateRWStructuredBufferMethods(t, valueType));
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateRasterizerOrderedStructuredBufferType(TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType("RasterizerOrderedStructuredBuffer",
-                "A rasterizer ordered read/write buffer, which can take a T type that is a structure.",
-                PredefinedObjectType.RasterizerOrderedStructuredBuffer,
-                t => CreateRWStructuredBufferMethods(t, valueType));
-        }
-
-        private static Symbol[] CreateRWStructuredBufferMethods(TypeSymbol t, TypeSymbol valueType)
-        {
-            return CreateStructuredBufferMethods(t, valueType)
-                .Union(new Symbol[]
-                {
-                    new IndexerSymbol("[]", "Returns a resource variable.", t, Uint, valueType, false),
-                    new FunctionSymbol("DecrementCounter", "Decrements the object's hidden counter.", t, Uint),
-                    new FunctionSymbol("IncrementCounter", "Increments the object's hidden counter.", t, Uint)
-                })
-                .ToArray();
-        }
-
-        private static Symbol[] CreateStructuredBufferMethods(TypeSymbol t, TypeSymbol valueType)
-        {
-            return new Symbol[]
-            {
-                new FunctionSymbol("GetDimensions", "Gets the resource dimensions.", t, Void,
-                    m => new[]
-                    {
-                        new ParameterSymbol("numStructs", "The number of structures.", m, Uint, ParameterDirection.Out),
-                        new ParameterSymbol("stride", "The number of bytes in each element.", m, Uint, ParameterDirection.Out)
-                    }),
-                new FunctionSymbol("Load", "Reads buffer data and returns status about the operation.", t, valueType,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The location of the buffer.", m, Int),
-                        new ParameterSymbol("status", "The status of the operation.", m, Uint, ParameterDirection.Out)
-                    }),
-                new FunctionSymbol("Load", "Reads buffer data.", t, valueType,
-                    m => new[]
-                    {
-                        new ParameterSymbol("location", "The location of the buffer.", m, Int)
-                    }),
-            };
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateInputPatchType(TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType("InputPatch",
-                "Represents an array of control points that are available to the hull shader as inputs.",
-                PredefinedObjectType.InputPatch,
-                t => new Symbol[]
-                {
-                    new IndexerSymbol("[]", "Returns the nth control point in the patch.", t, Uint, valueType),
-                    new FieldSymbol("Length", "The number of control points.", t, Uint)
-                });
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateOutputPatchType(TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType("OutputPatch",
-                "Represents an array of output control points that are available to the hull shader's patch-constant function as well as the domain shader.",
-                PredefinedObjectType.OutputPatch,
-                t => new Symbol[]
-                {
-                    new IndexerSymbol("[]", "Returns the nth control point in the patch.", t, Uint, valueType)
-                });
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateStreamOutputType(PredefinedObjectType type, TypeSymbol valueType)
-        {
-            return CreatePredefinedObjectType(type.ToString(),
-                "A stream-output object is a templated object that streams data out of the geometry-shader stage.",
-                type,
-                t => new Symbol[]
-                {
-                    new FunctionSymbol("Append", "Append geometry-shader-output data to an existing stream.", t, valueType,
-                        m => new[]
-                        {
-                            new ParameterSymbol("data", "The geometry-shader-output data to be appended.", m, valueType)
-                        }),
-                    new FunctionSymbol("RestartStrip", "Ends the current primitive strip and starts a new strip. If the current strip does not have enough vertices emitted to fill the primitive topology, the incomplete primitive at the end will be discarded.", t, Void)
-                });
-        }
-
-        public static IntrinsicObjectTypeSymbol CreateConstantBufferType(TypeSymbol valueType)
-        {
-            var fields = (valueType.Kind == SymbolKind.Struct)
-                ? ((StructSymbol)valueType).Members
-                : ImmutableArray<Symbol>.Empty;
-            return CreatePredefinedObjectType("ConstantBuffer", "",
-                PredefinedObjectType.ConstantBuffer,
-                t => fields);
         }
     }
 }

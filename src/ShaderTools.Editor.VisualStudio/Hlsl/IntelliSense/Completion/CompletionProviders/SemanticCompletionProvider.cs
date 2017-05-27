@@ -59,17 +59,17 @@ namespace ShaderTools.Editor.VisualStudio.Hlsl.IntelliSense.Completion.Completio
             if (Contains(structName, "hs") || Contains(structName, "hullshader"))
             {
                 if (Contains(structName, "in") || Contains(structName, "input"))
-                    return SemanticUsages.HullShaderInput;
+                    return SemanticUsages.TessControlShaderInput;
                 if (Contains(structName, "out") || Contains(structName, "output"))
-                    return SemanticUsages.HullShaderOutput;
+                    return SemanticUsages.TessControlShaderOutput;
             }
 
             if (Contains(structName, "ds") || Contains(structName, "domainshader"))
             {
                 if (Contains(structName, "in") || Contains(structName, "input"))
-                    return SemanticUsages.DomainShaderInput;
+                    return SemanticUsages.TessEvalShaderInput;
                 if (Contains(structName, "out") || Contains(structName, "output"))
-                    return SemanticUsages.DomainShaderOutput;
+                    return SemanticUsages.TessEvalShaderOutput;
             }
 
             if (Contains(structName, "ps") || Contains(structName, "pixelshader"))

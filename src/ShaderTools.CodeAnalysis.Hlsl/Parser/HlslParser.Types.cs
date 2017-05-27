@@ -46,70 +46,113 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Parser
             switch (token.Kind)
             {
                 case SyntaxKind.BufferKeyword:
-                case SyntaxKind.RasterizerOrderedBufferKeyword:
-                case SyntaxKind.RWBufferKeyword:
                     return ParseBufferType(token);
-                case SyntaxKind.ByteAddressBufferKeyword:
-                case SyntaxKind.RasterizerOrderedByteAddressBufferKeyword:
-                case SyntaxKind.RWByteAddressBufferKeyword:
-                case SyntaxKind.RasterizerStateKeyword:
-                case SyntaxKind.BlendStateKeyword:
-                case SyntaxKind.DepthStencilStateKeyword:
-                case SyntaxKind.Texture2DLegacyKeyword:
-                case SyntaxKind.TextureCubeLegacyKeyword:
                 case SyntaxKind.SamplerKeyword:
+                case SyntaxKind.SamplerShadowKeyword:
+                case SyntaxKind.SamplerBufferKeyword:
+                case SyntaxKind.IsamplerBufferKeyword:
+                case SyntaxKind.UsamplerBufferKeyword:
                 case SyntaxKind.Sampler1DKeyword:
+                case SyntaxKind.Sampler1DArrayKeyword:
+                case SyntaxKind.Sampler1DShadowKeyword:
+                case SyntaxKind.Sampler1DArrayShadowKeyword:
+                case SyntaxKind.Isampler1DKeyword:
+                case SyntaxKind.Isampler1DArrayKeyword:
+                case SyntaxKind.Usampler1DKeyword:
+                case SyntaxKind.Usampler1DArrayKeyword:
                 case SyntaxKind.Sampler2DKeyword:
+                case SyntaxKind.Sampler2DArrayKeyword:
+                case SyntaxKind.Sampler2DShadowKeyword:
+                case SyntaxKind.Sampler2DArrayShadowKeyword:
+                case SyntaxKind.Sampler2DRectKeyword:
+                case SyntaxKind.Sampler2DRectShadowKeyword:
+                case SyntaxKind.Sampler2DMSKeyword:
+                case SyntaxKind.Sampler2DMSArrayKeyword:
+                case SyntaxKind.Isampler2DKeyword:
+                case SyntaxKind.Isampler2DArrayKeyword:
+                case SyntaxKind.Isampler2DRectKeyword:
+                case SyntaxKind.Isampler2DMSKeyword:
+                case SyntaxKind.Isampler2DMSArrayKeyword:
+                case SyntaxKind.Usampler2DKeyword:
+                case SyntaxKind.Usampler2DArrayKeyword:
+                case SyntaxKind.Usampler2DRectKeyword:
+                case SyntaxKind.Usampler2DMSKeyword:
+                case SyntaxKind.Usampler2DMSArrayKeyword:
                 case SyntaxKind.Sampler3DKeyword:
+                case SyntaxKind.Isampler3DKeyword:
+                case SyntaxKind.Usampler3DKeyword:
                 case SyntaxKind.SamplerCubeKeyword:
-                case SyntaxKind.SamplerStateKeyword:
-                case SyntaxKind.SamplerComparisonStateKeyword:
-                    return new PredefinedObjectTypeSyntax(token, null);
-                case SyntaxKind.InputPatchKeyword:
-                case SyntaxKind.OutputPatchKeyword:
-                    return ParsePatchType(token);
-                case SyntaxKind.PointStreamKeyword:
-                case SyntaxKind.LineStreamKeyword:
-                case SyntaxKind.TriangleStreamKeyword:
-                    return ParseStreamOutputType(token);
-                case SyntaxKind.AppendStructuredBufferKeyword:
-                case SyntaxKind.ConsumeStructuredBufferKeyword:
-                case SyntaxKind.RasterizerOrderedStructuredBufferKeyword:
-                case SyntaxKind.RWStructuredBufferKeyword:
-                case SyntaxKind.StructuredBufferKeyword:
-                    return ParseStructuredBufferType(token);
-                case SyntaxKind.RasterizerOrderedTexture1DKeyword:
-                case SyntaxKind.RasterizerOrderedTexture1DArrayKeyword:
-                case SyntaxKind.RasterizerOrderedTexture2DKeyword:
-                case SyntaxKind.RasterizerOrderedTexture2DArrayKeyword:
-                case SyntaxKind.RasterizerOrderedTexture3DKeyword:
-                case SyntaxKind.RWTexture1DKeyword:
-                case SyntaxKind.RWTexture1DArrayKeyword:
-                case SyntaxKind.RWTexture2DKeyword:
-                case SyntaxKind.RWTexture2DArrayKeyword:
-                case SyntaxKind.RWTexture3DKeyword:
+                case SyntaxKind.SamplerCubeArrayKeyword:
+                case SyntaxKind.SamplerCubeShadowKeyword:
+                case SyntaxKind.SamplerCubeArrayShadowKeyword:
+                case SyntaxKind.IsamplerCubeKeyword:
+                case SyntaxKind.IsamplerCubeArrayKeyword:
+                case SyntaxKind.UsamplerCubeKeyword:
+                case SyntaxKind.UsamplerCubeArrayKeyword:
                 case SyntaxKind.Texture1DKeyword:
+                case SyntaxKind.Itexture1DKeyword:
+                case SyntaxKind.Utexture1DKeyword:
+                case SyntaxKind.Image1DKeyword:
+                case SyntaxKind.Iimage1DKeyword:
+                case SyntaxKind.Uimage1DKeyword:
                 case SyntaxKind.Texture1DArrayKeyword:
+                case SyntaxKind.Itexture1DArrayKeyword:
+                case SyntaxKind.Utexture1DArrayKeyword:
+                case SyntaxKind.Image1DArrayKeyword:
+                case SyntaxKind.Iimage1DArrayKeyword:
+                case SyntaxKind.Uimage1DArrayKeyword:
                 case SyntaxKind.Texture2DKeyword:
+                case SyntaxKind.Itexture2DKeyword:
+                case SyntaxKind.Utexture2DKeyword:
+                case SyntaxKind.Image2DKeyword:
+                case SyntaxKind.Iimage2DKeyword:
+                case SyntaxKind.Uimage2DKeyword:
+                case SyntaxKind.Image2DRectKeyword:
+                case SyntaxKind.Iimage2DRectKeyword:
+                case SyntaxKind.Uimage2DRectKeyword:
+                case SyntaxKind.SubpassInputKeyword:
+                case SyntaxKind.SubpassInputMSKeyword:
+                case SyntaxKind.IsubpassInputKeyword:
+                case SyntaxKind.IsubpassInputMSKeyword:
+                case SyntaxKind.UsubpassInputKeyword:
+                case SyntaxKind.UsubpassInputMSKeyword:
                 case SyntaxKind.Texture2DArrayKeyword:
-                case SyntaxKind.Texture3DKeyword:
-                case SyntaxKind.TextureCubeKeyword:
-                case SyntaxKind.TextureCubeArrayKeyword:
-                    return ParseTextureType(token);
+                case SyntaxKind.Itexture2DArrayKeyword:
+                case SyntaxKind.Utexture2DArrayKeyword:
+                case SyntaxKind.Image2DArrayKeyword:
+                case SyntaxKind.Iimage2DArrayKeyword:
+                case SyntaxKind.Uimage2DArrayKeyword:
                 case SyntaxKind.Texture2DMSKeyword:
+                case SyntaxKind.Itexture2DMSKeyword:
+                case SyntaxKind.Utexture2DMSKeyword:
+                case SyntaxKind.Image2DMSKeyword:
+                case SyntaxKind.Iimage2DMSKeyword:
+                case SyntaxKind.Uimage2DMSKeyword:
                 case SyntaxKind.Texture2DMSArrayKeyword:
-                    return ParseMultisampledTextureType(token);
-            }
-
-            switch (token.ContextualKind)
-            {
-                case SyntaxKind.TextureKeyword:
-                case SyntaxKind.GeometryShaderKeyword:
-                case SyntaxKind.PixelShaderKeyword:
-                case SyntaxKind.VertexShaderKeyword:
-                    return new PredefinedObjectTypeSyntax(token.WithKind(token.ContextualKind), null);
-                case SyntaxKind.ConstantBufferKeyword:
-                    return ParseTemplatedConstantBufferType(token);
+                case SyntaxKind.Itexture2DMSArrayKeyword:
+                case SyntaxKind.Utexture2DMSArrayKeyword:
+                case SyntaxKind.Image2DMSArrayKeyword:
+                case SyntaxKind.Iimage2DMSArrayKeyword:
+                case SyntaxKind.Uimage2DMSArrayKeyword:
+                case SyntaxKind.Texture3DKeyword:
+                case SyntaxKind.Itexture3DKeyword:
+                case SyntaxKind.Utexture3DKeyword:
+                case SyntaxKind.Image3DKeyword:
+                case SyntaxKind.Iimage3DKeyword:
+                case SyntaxKind.Uimage3DKeyword:
+                case SyntaxKind.TextureCubeKeyword:
+                case SyntaxKind.ItextureCubeKeyword:
+                case SyntaxKind.UtextureCubeKeyword:
+                case SyntaxKind.ImageCubeKeyword:
+                case SyntaxKind.IimageCubeKeyword:
+                case SyntaxKind.UimageCubeKeyword:
+                case SyntaxKind.TextureCubeArrayKeyword:
+                case SyntaxKind.ItextureCubeArrayKeyword:
+                case SyntaxKind.UtextureCubeArrayKeyword:
+                case SyntaxKind.ImageCubeArrayKeyword:
+                case SyntaxKind.IimageCubeArrayKeyword:
+                case SyntaxKind.UimageCubeArrayKeyword:
+                    return new PredefinedObjectTypeSyntax(token, null);
             }
 
             TemplateArgumentListSyntax templateArgumentList = null;
@@ -125,114 +168,6 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Parser
             var greaterThan = Match(SyntaxKind.GreaterThanToken);
             var typeArgumentList = new TemplateArgumentListSyntax(lessThan,
                 new SeparatedSyntaxList<ExpressionSyntax>(new List<SyntaxNodeBase> { scalarOrVectorType }),
-                greaterThan);
-            return new PredefinedObjectTypeSyntax(token, typeArgumentList);
-        }
-
-        private PredefinedObjectTypeSyntax ParsePatchType(SyntaxToken token)
-        {
-            var lessThan = Match(SyntaxKind.LessThanToken);
-            var userDefinedType = ParseIdentifier();
-            var comma = Match(SyntaxKind.CommaToken);
-
-            ExpressionSyntax controlPoints;
-            try
-            {
-                CommaIsSeparatorStack.Push(true);
-                _greaterThanTokenIsNotOperator = true;
-                controlPoints = ParseExpression();
-            }
-            finally
-            {
-                _greaterThanTokenIsNotOperator = false;
-                CommaIsSeparatorStack.Pop();
-            }
-
-            var greaterThan = Match(SyntaxKind.GreaterThanToken);
-            var typeArgumentList = new TemplateArgumentListSyntax(lessThan,
-                new SeparatedSyntaxList<ExpressionSyntax>(new List<SyntaxNodeBase> { userDefinedType, comma, controlPoints }),
-                greaterThan);
-            return new PredefinedObjectTypeSyntax(token, typeArgumentList);
-        }
-
-        private PredefinedObjectTypeSyntax ParseStreamOutputType(SyntaxToken token)
-        {
-            var lessThan = Match(SyntaxKind.LessThanToken);
-            var type = ParseType(false);
-            var greaterThan = Match(SyntaxKind.GreaterThanToken);
-            var typeArgumentList = new TemplateArgumentListSyntax(lessThan,
-                new SeparatedSyntaxList<ExpressionSyntax>(new List<SyntaxNodeBase> { type }),
-                greaterThan);
-            return new PredefinedObjectTypeSyntax(token, typeArgumentList);
-        }
-
-        private PredefinedObjectTypeSyntax ParseStructuredBufferType(SyntaxToken token)
-        {
-            var lessThan = Match(SyntaxKind.LessThanToken);
-            var type = ParseScalarOrVectorOrMatrixOrUserDefinedType();
-            var greaterThan = Match(SyntaxKind.GreaterThanToken);
-            var typeArgumentList = new TemplateArgumentListSyntax(lessThan,
-                new SeparatedSyntaxList<ExpressionSyntax>(new List<SyntaxNodeBase> { type }),
-                greaterThan);
-            return new PredefinedObjectTypeSyntax(token, typeArgumentList);
-        }
-
-        private PredefinedObjectTypeSyntax ParseTemplatedConstantBufferType(SyntaxToken token)
-        {
-            var lessThan = Match(SyntaxKind.LessThanToken);
-            var type = ParseScalarOrVectorOrUserDefinedType();
-            var greaterThan = Match(SyntaxKind.GreaterThanToken);
-            var typeArgumentList = new TemplateArgumentListSyntax(lessThan,
-                new SeparatedSyntaxList<ExpressionSyntax>(new List<SyntaxNodeBase> { type }),
-                greaterThan);
-            return new PredefinedObjectTypeSyntax(token, typeArgumentList);
-        }
-
-        private PredefinedObjectTypeSyntax ParseTextureType(SyntaxToken token)
-        {
-            TemplateArgumentListSyntax templateArgumentList = null;
-            if (Current.Kind == SyntaxKind.LessThanToken)
-            {
-                var lessThan = Match(SyntaxKind.LessThanToken);
-                var type = ParseScalarOrVectorType();
-                var greaterThan = Match(SyntaxKind.GreaterThanToken);
-                templateArgumentList = new TemplateArgumentListSyntax(lessThan,
-                    new SeparatedSyntaxList<ExpressionSyntax>(new List<SyntaxNodeBase> { type }),
-                    greaterThan);
-            }
-            return new PredefinedObjectTypeSyntax(token, templateArgumentList);
-        }
-
-        private PredefinedObjectTypeSyntax ParseMultisampledTextureType(SyntaxToken token)
-        {
-            var lessThan = Match(SyntaxKind.LessThanToken);
-            var type = ParseScalarOrVectorType();
-
-            var arguments = new List<SyntaxNodeBase> { type };
-            if (Current.Kind == SyntaxKind.CommaToken)
-            {
-                var comma = Match(SyntaxKind.CommaToken);
-
-                ExpressionSyntax samples;
-                try
-                {
-                    CommaIsSeparatorStack.Push(true);
-                    _greaterThanTokenIsNotOperator = true;
-                    samples = ParseExpression();
-                }
-                finally
-                {
-                    _greaterThanTokenIsNotOperator = false;
-                    CommaIsSeparatorStack.Pop();
-                }
-
-                arguments.Add(comma);
-                arguments.Add(samples);
-            }
-
-            var greaterThan = Match(SyntaxKind.GreaterThanToken);
-            var typeArgumentList = new TemplateArgumentListSyntax(lessThan,
-                new SeparatedSyntaxList<ExpressionSyntax>(arguments),
                 greaterThan);
             return new PredefinedObjectTypeSyntax(token, typeArgumentList);
         }
