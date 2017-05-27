@@ -1662,56 +1662,16 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
 
             switch (text)
             {
-                case "AppendStructuredBuffer":
-                    return SyntaxKind.AppendStructuredBufferKeyword;
-                case "BlendState":
-                    return SyntaxKind.BlendStateKeyword;
                 case "bool":
                     return SyntaxKind.BoolKeyword;
-                case "bool1":
-                    return SyntaxKind.Bool1Keyword;
-                case "bool2":
+                case "bvec2":
                     return SyntaxKind.Bool2Keyword;
-                case "bool3":
+                case "bvec3":
                     return SyntaxKind.Bool3Keyword;
-                case "bool4":
+                case "bvec4":
                     return SyntaxKind.Bool4Keyword;
-                case "bool1x1":
-                    return SyntaxKind.Bool1x1Keyword;
-                case "bool1x2":
-                    return SyntaxKind.Bool1x2Keyword;
-                case "bool1x3":
-                    return SyntaxKind.Bool1x3Keyword;
-                case "bool1x4":
-                    return SyntaxKind.Bool1x4Keyword;
-                case "bool2x1":
-                    return SyntaxKind.Bool2x1Keyword;
-                case "bool2x2":
-                    return SyntaxKind.Bool2x2Keyword;
-                case "bool2x3":
-                    return SyntaxKind.Bool2x3Keyword;
-                case "bool2x4":
-                    return SyntaxKind.Bool2x4Keyword;
-                case "bool3x1":
-                    return SyntaxKind.Bool3x1Keyword;
-                case "bool3x2":
-                    return SyntaxKind.Bool3x2Keyword;
-                case "bool3x3":
-                    return SyntaxKind.Bool3x3Keyword;
-                case "bool3x4":
-                    return SyntaxKind.Bool3x4Keyword;
-                case "bool4x1":
-                    return SyntaxKind.Bool4x1Keyword;
-                case "bool4x2":
-                    return SyntaxKind.Bool4x2Keyword;
-                case "bool4x3":
-                    return SyntaxKind.Bool4x3Keyword;
-                case "bool4x4":
-                    return SyntaxKind.Bool4x4Keyword;
-                case "Buffer":
+                case "buffer":
                     return SyntaxKind.BufferKeyword;
-                case "ByteAddressBuffer":
-                    return SyntaxKind.ByteAddressBufferKeyword;
                 case "break":
                     return SyntaxKind.BreakKeyword;
                 case "case":
@@ -1728,59 +1688,39 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
                     return SyntaxKind.CompileKeyword;
                 case "const":
                     return SyntaxKind.ConstKeyword;
-                case "ConsumeStructuredBuffer":
-                    return SyntaxKind.ConsumeStructuredBufferKeyword;
                 case "continue":
                     return SyntaxKind.ContinueKeyword;
                 case "default":
                     return SyntaxKind.DefaultKeyword;
-                case "DepthStencilState":
-                    return SyntaxKind.DepthStencilStateKeyword;
                 case "discard":
                     return SyntaxKind.DiscardKeyword;
                 case "do":
                     return SyntaxKind.DoKeyword;
                 case "double":
                     return SyntaxKind.DoubleKeyword;
-                case "double1":
-                    return SyntaxKind.Double1Keyword;
-                case "double2":
+                case "dvec2":
                     return SyntaxKind.Double2Keyword;
-                case "double3":
+                case "dvec3":
                     return SyntaxKind.Double3Keyword;
-                case "double4":
+                case "dvec4":
                     return SyntaxKind.Double4Keyword;
-                case "double1x1":
-                    return SyntaxKind.Double1x1Keyword;
-                case "double1x2":
-                    return SyntaxKind.Double1x2Keyword;
-                case "double1x3":
-                    return SyntaxKind.Double1x3Keyword;
-                case "double1x4":
-                    return SyntaxKind.Double1x4Keyword;
-                case "double2x1":
-                    return SyntaxKind.Double2x1Keyword;
-                case "double2x2":
+                case "dmat2x2":
                     return SyntaxKind.Double2x2Keyword;
-                case "double2x3":
+                case "dmat2x3":
                     return SyntaxKind.Double2x3Keyword;
-                case "double2x4":
+                case "dmat2x4":
                     return SyntaxKind.Double2x4Keyword;
-                case "double3x1":
-                    return SyntaxKind.Double3x1Keyword;
-                case "double3x2":
+                case "dmat3x2":
                     return SyntaxKind.Double3x2Keyword;
-                case "double3x3":
+                case "dmat3x3":
                     return SyntaxKind.Double3x3Keyword;
-                case "double3x4":
+                case "dmat3x4":
                     return SyntaxKind.Double3x4Keyword;
-                case "double4x1":
-                    return SyntaxKind.Double4x1Keyword;
-                case "double4x2":
+                case "dmat4x2":
                     return SyntaxKind.Double4x2Keyword;
-                case "double4x3":
+                case "dmat4x3":
                     return SyntaxKind.Double4x3Keyword;
-                case "double4x4":
+                case "dmat4x4":
                     return SyntaxKind.Double4x4Keyword;
                 case "else":
                     return SyntaxKind.ElseKeyword;
@@ -1790,94 +1730,36 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
                     return SyntaxKind.ExternKeyword;
                 case "float":
                     return SyntaxKind.FloatKeyword;
-                case "float1":
-                    return SyntaxKind.Float1Keyword;
-                case "float2":
+                case "vec2":
                     return SyntaxKind.Float2Keyword;
-                case "float3":
+                case "vec3":
                     return SyntaxKind.Float3Keyword;
-                case "float4":
+                case "vec4":
                     return SyntaxKind.Float4Keyword;
-                case "float1x1":
-                    return SyntaxKind.Float1x1Keyword;
-                case "float1x2":
-                    return SyntaxKind.Float1x2Keyword;
-                case "float1x3":
-                    return SyntaxKind.Float1x3Keyword;
-                case "float1x4":
-                    return SyntaxKind.Float1x4Keyword;
-                case "float2x1":
-                    return SyntaxKind.Float2x1Keyword;
-                case "float2x2":
+                case "mat2x2":
                     return SyntaxKind.Float2x2Keyword;
-                case "float2x3":
+                case "mat2x3":
                     return SyntaxKind.Float2x3Keyword;
-                case "float2x4":
+                case "mat2x4":
                     return SyntaxKind.Float2x4Keyword;
-                case "float3x1":
-                    return SyntaxKind.Float3x1Keyword;
-                case "float3x2":
+                case "mat3x2":
                     return SyntaxKind.Float3x2Keyword;
-                case "float3x3":
+                case "mat3x3":
                     return SyntaxKind.Float3x3Keyword;
-                case "float3x4":
+                case "mat3x4":
                     return SyntaxKind.Float3x4Keyword;
-                case "float4x1":
-                    return SyntaxKind.Float4x1Keyword;
-                case "float4x2":
+                case "mat4x2":
                     return SyntaxKind.Float4x2Keyword;
-                case "float4x3":
+                case "mat4x3":
                     return SyntaxKind.Float4x3Keyword;
-                case "float4x4":
+                case "mat4x4":
                     return SyntaxKind.Float4x4Keyword;
                 case "for":
                     return SyntaxKind.ForKeyword;
-                case "globallycoherent":
+                case "restrict":
                     return SyntaxKind.GloballycoherentKeyword;
                 case "groupshared":
                     return SyntaxKind.GroupsharedKeyword;
-                case "half":
-                    return SyntaxKind.HalfKeyword;
-                case "half1":
-                    return SyntaxKind.Half1Keyword;
-                case "half2":
-                    return SyntaxKind.Half2Keyword;
-                case "half3":
-                    return SyntaxKind.Half3Keyword;
-                case "half4":
-                    return SyntaxKind.Half4Keyword;
-                case "half1x1":
-                    return SyntaxKind.Half1x1Keyword;
-                case "half1x2":
-                    return SyntaxKind.Half1x2Keyword;
-                case "half1x3":
-                    return SyntaxKind.Half1x3Keyword;
-                case "half1x4":
-                    return SyntaxKind.Half1x4Keyword;
-                case "half2x1":
-                    return SyntaxKind.Half2x1Keyword;
-                case "half2x2":
-                    return SyntaxKind.Half2x2Keyword;
-                case "half2x3":
-                    return SyntaxKind.Half2x3Keyword;
-                case "half2x4":
-                    return SyntaxKind.Half2x4Keyword;
-                case "half3x1":
-                    return SyntaxKind.Half3x1Keyword;
-                case "half3x2":
-                    return SyntaxKind.Half3x2Keyword;
-                case "half3x3":
-                    return SyntaxKind.Half3x3Keyword;
-                case "half3x4":
-                    return SyntaxKind.Half3x4Keyword;
-                case "half4x1":
-                    return SyntaxKind.Half4x1Keyword;
-                case "half4x2":
-                    return SyntaxKind.Half4x2Keyword;
-                case "half4x3":
-                    return SyntaxKind.Half4x3Keyword;
-                case "half4x4":
-                    return SyntaxKind.Half4x4Keyword;
                 case "if":
                     return SyntaxKind.IfKeyword;
                 case "in":
@@ -1886,271 +1768,19 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
                     return SyntaxKind.InlineKeyword;
                 case "inout":
                     return SyntaxKind.InoutKeyword;
-                case "InputPatch":
-                    return SyntaxKind.InputPatchKeyword;
                 case "int":
                     return SyntaxKind.IntKeyword;
-                case "int1":
-                    return SyntaxKind.Int1Keyword;
-                case "int2":
+                case "ivec2":
                     return SyntaxKind.Int2Keyword;
-                case "int3":
+                case "ivec3":
                     return SyntaxKind.Int3Keyword;
-                case "int4":
+                case "ivec4":
                     return SyntaxKind.Int4Keyword;
-                case "int1x1":
-                    return SyntaxKind.Int1x1Keyword;
-                case "int1x2":
-                    return SyntaxKind.Int1x2Keyword;
-                case "int1x3":
-                    return SyntaxKind.Int1x3Keyword;
-                case "int1x4":
-                    return SyntaxKind.Int1x4Keyword;
-                case "int2x1":
-                    return SyntaxKind.Int2x1Keyword;
-                case "int2x2":
-                    return SyntaxKind.Int2x2Keyword;
-                case "int2x3":
-                    return SyntaxKind.Int2x3Keyword;
-                case "int2x4":
-                    return SyntaxKind.Int2x4Keyword;
-                case "int3x1":
-                    return SyntaxKind.Int3x1Keyword;
-                case "int3x2":
-                    return SyntaxKind.Int3x2Keyword;
-                case "int3x3":
-                    return SyntaxKind.Int3x3Keyword;
-                case "int3x4":
-                    return SyntaxKind.Int3x4Keyword;
-                case "int4x1":
-                    return SyntaxKind.Int4x1Keyword;
-                case "int4x2":
-                    return SyntaxKind.Int4x2Keyword;
-                case "int4x3":
-                    return SyntaxKind.Int4x3Keyword;
-                case "int4x4":
-                    return SyntaxKind.Int4x4Keyword;
-                case "interface":
-                    return SyntaxKind.InterfaceKeyword;
-                case "lineadj":
-                    return SyntaxKind.LineAdjKeyword;
                 case "linear":
                     return SyntaxKind.LinearKeyword;
-                case "LineStream":
-                    return SyntaxKind.LineStreamKeyword;
-                case "Matrix":
-                case "matrix":
-                    return SyntaxKind.MatrixKeyword;
-                case "min10float":
-                    return SyntaxKind.Min10FloatKeyword;
-                case "min10float1":
-                    return SyntaxKind.Min10Float1Keyword;
-                case "min10float2":
-                    return SyntaxKind.Min10Float2Keyword;
-                case "min10float3":
-                    return SyntaxKind.Min10Float3Keyword;
-                case "min10float4":
-                    return SyntaxKind.Min10Float4Keyword;
-                case "min10float1x1":
-                    return SyntaxKind.Min10Float1x1Keyword;
-                case "min10float1x2":
-                    return SyntaxKind.Min10Float1x2Keyword;
-                case "min10float1x3":
-                    return SyntaxKind.Min10Float1x3Keyword;
-                case "min10float1x4":
-                    return SyntaxKind.Min10Float1x4Keyword;
-                case "min10float2x1":
-                    return SyntaxKind.Min10Float2x1Keyword;
-                case "min10float2x2":
-                    return SyntaxKind.Min10Float2x2Keyword;
-                case "min10float2x3":
-                    return SyntaxKind.Min10Float2x3Keyword;
-                case "min10float2x4":
-                    return SyntaxKind.Min10Float2x4Keyword;
-                case "min10float3x1":
-                    return SyntaxKind.Min10Float3x1Keyword;
-                case "min10float3x2":
-                    return SyntaxKind.Min10Float3x2Keyword;
-                case "min10float3x3":
-                    return SyntaxKind.Min10Float3x3Keyword;
-                case "min10float3x4":
-                    return SyntaxKind.Min10Float3x4Keyword;
-                case "min10float4x1":
-                    return SyntaxKind.Min10Float4x1Keyword;
-                case "min10float4x2":
-                    return SyntaxKind.Min10Float4x2Keyword;
-                case "min10float4x3":
-                    return SyntaxKind.Min10Float4x3Keyword;
-                case "min10float4x4":
-                    return SyntaxKind.Min10Float4x4Keyword;
-                case "min12int":
-                    return SyntaxKind.Min12IntKeyword;
-                case "min12int1":
-                    return SyntaxKind.Min12Int1Keyword;
-                case "min12int2":
-                    return SyntaxKind.Min12Int2Keyword;
-                case "min12int3":
-                    return SyntaxKind.Min12Int3Keyword;
-                case "min12int4":
-                    return SyntaxKind.Min12Int4Keyword;
-                case "min12int1x1":
-                    return SyntaxKind.Min12Int1x1Keyword;
-                case "min12int1x2":
-                    return SyntaxKind.Min12Int1x2Keyword;
-                case "min12int1x3":
-                    return SyntaxKind.Min12Int1x3Keyword;
-                case "min12int1x4":
-                    return SyntaxKind.Min12Int1x4Keyword;
-                case "min12int2x1":
-                    return SyntaxKind.Min12Int2x1Keyword;
-                case "min12int2x2":
-                    return SyntaxKind.Min12Int2x2Keyword;
-                case "min12int2x3":
-                    return SyntaxKind.Min12Int2x3Keyword;
-                case "min12int2x4":
-                    return SyntaxKind.Min12Int2x4Keyword;
-                case "min12int3x1":
-                    return SyntaxKind.Min12Int3x1Keyword;
-                case "min12int3x2":
-                    return SyntaxKind.Min12Int3x2Keyword;
-                case "min12int3x3":
-                    return SyntaxKind.Min12Int3x3Keyword;
-                case "min12int3x4":
-                    return SyntaxKind.Min12Int3x4Keyword;
-                case "min12int4x1":
-                    return SyntaxKind.Min12Int4x1Keyword;
-                case "min12int4x2":
-                    return SyntaxKind.Min12Int4x2Keyword;
-                case "min12int4x3":
-                    return SyntaxKind.Min12Int4x3Keyword;
-                case "min12int4x4":
-                    return SyntaxKind.Min12Int4x4Keyword;
-                case "min16float":
-                    return SyntaxKind.Min16FloatKeyword;
-                case "min16float1":
-                    return SyntaxKind.Min16Float1Keyword;
-                case "min16float2":
-                    return SyntaxKind.Min16Float2Keyword;
-                case "min16float3":
-                    return SyntaxKind.Min16Float3Keyword;
-                case "min16float4":
-                    return SyntaxKind.Min16Float4Keyword;
-                case "min16float1x1":
-                    return SyntaxKind.Min16Float1x1Keyword;
-                case "min16float1x2":
-                    return SyntaxKind.Min16Float1x2Keyword;
-                case "min16float1x3":
-                    return SyntaxKind.Min16Float1x3Keyword;
-                case "min16float1x4":
-                    return SyntaxKind.Min16Float1x4Keyword;
-                case "min16float2x1":
-                    return SyntaxKind.Min16Float2x1Keyword;
-                case "min16float2x2":
-                    return SyntaxKind.Min16Float2x2Keyword;
-                case "min16float2x3":
-                    return SyntaxKind.Min16Float2x3Keyword;
-                case "min16float2x4":
-                    return SyntaxKind.Min16Float2x4Keyword;
-                case "min16float3x1":
-                    return SyntaxKind.Min16Float3x1Keyword;
-                case "min16float3x2":
-                    return SyntaxKind.Min16Float3x2Keyword;
-                case "min16float3x3":
-                    return SyntaxKind.Min16Float3x3Keyword;
-                case "min16float3x4":
-                    return SyntaxKind.Min16Float3x4Keyword;
-                case "min16float4x1":
-                    return SyntaxKind.Min16Float4x1Keyword;
-                case "min16float4x2":
-                    return SyntaxKind.Min16Float4x2Keyword;
-                case "min16float4x3":
-                    return SyntaxKind.Min16Float4x3Keyword;
-                case "min16float4x4":
-                    return SyntaxKind.Min16Float4x4Keyword;
-                case "min16int":
-                    return SyntaxKind.Min16IntKeyword;
-                case "min16int1":
-                    return SyntaxKind.Min16Int1Keyword;
-                case "min16int2":
-                    return SyntaxKind.Min16Int2Keyword;
-                case "min16int3":
-                    return SyntaxKind.Min16Int3Keyword;
-                case "min16int4":
-                    return SyntaxKind.Min16Int4Keyword;
-                case "min16int1x1":
-                    return SyntaxKind.Min16Int1x1Keyword;
-                case "min16int1x2":
-                    return SyntaxKind.Min16Int1x2Keyword;
-                case "min16int1x3":
-                    return SyntaxKind.Min16Int1x3Keyword;
-                case "min16int1x4":
-                    return SyntaxKind.Min16Int1x4Keyword;
-                case "min16int2x1":
-                    return SyntaxKind.Min16Int2x1Keyword;
-                case "min16int2x2":
-                    return SyntaxKind.Min16Int2x2Keyword;
-                case "min16int2x3":
-                    return SyntaxKind.Min16Int2x3Keyword;
-                case "min16int2x4":
-                    return SyntaxKind.Min16Int2x4Keyword;
-                case "min16int3x1":
-                    return SyntaxKind.Min16Int3x1Keyword;
-                case "min16int3x2":
-                    return SyntaxKind.Min16Int3x2Keyword;
-                case "min16int3x3":
-                    return SyntaxKind.Min16Int3x3Keyword;
-                case "min16int3x4":
-                    return SyntaxKind.Min16Int3x4Keyword;
-                case "min16int4x1":
-                    return SyntaxKind.Min16Int4x1Keyword;
-                case "min16int4x2":
-                    return SyntaxKind.Min16Int4x2Keyword;
-                case "min16int4x3":
-                    return SyntaxKind.Min16Int4x3Keyword;
-                case "min16int4x4":
-                    return SyntaxKind.Min16Int4x4Keyword;
-                case "min16uint":
-                    return SyntaxKind.Min16UintKeyword;
-                case "min16uint1":
-                    return SyntaxKind.Min16Uint1Keyword;
-                case "min16uint2":
-                    return SyntaxKind.Min16Uint2Keyword;
-                case "min16uint3":
-                    return SyntaxKind.Min16Uint3Keyword;
-                case "min16uint4":
-                    return SyntaxKind.Min16Uint4Keyword;
-                case "min16uint1x1":
-                    return SyntaxKind.Min16Uint1x1Keyword;
-                case "min16uint1x2":
-                    return SyntaxKind.Min16Uint1x2Keyword;
-                case "min16uint1x3":
-                    return SyntaxKind.Min16Uint1x3Keyword;
-                case "min16uint1x4":
-                    return SyntaxKind.Min16Uint1x4Keyword;
-                case "min16uint2x1":
-                    return SyntaxKind.Min16Uint2x1Keyword;
-                case "min16uint2x2":
-                    return SyntaxKind.Min16Uint2x2Keyword;
-                case "min16uint2x3":
-                    return SyntaxKind.Min16Uint2x3Keyword;
-                case "min16uint2x4":
-                    return SyntaxKind.Min16Uint2x4Keyword;
-                case "min16uint3x1":
-                    return SyntaxKind.Min16Uint3x1Keyword;
-                case "min16uint3x2":
-                    return SyntaxKind.Min16Uint3x2Keyword;
-                case "min16uint3x3":
-                    return SyntaxKind.Min16Uint3x3Keyword;
-                case "min16uint3x4":
-                    return SyntaxKind.Min16Uint3x4Keyword;
-                case "min16uint4x1":
-                    return SyntaxKind.Min16Uint4x1Keyword;
-                case "min16uint4x2":
-                    return SyntaxKind.Min16Uint4x2Keyword;
-                case "min16uint4x3":
-                    return SyntaxKind.Min16Uint4x3Keyword;
-                case "min16uint4x4":
-                    return SyntaxKind.Min16Uint4x4Keyword;
+                case "layout":
+                case "location":
+                    return SyntaxKind.RegisterLocation;
                 case "namespace":
                     return SyntaxKind.NamespaceKeyword;
                 case "nointerpolation":
@@ -2159,75 +1789,67 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
                     return SyntaxKind.NoperspectiveKeyword;
                 case "out":
                     return SyntaxKind.OutKeyword;
-                case "OutputPatch":
-                    return SyntaxKind.OutputPatchKeyword;
                 case "packoffset":
                     return SyntaxKind.PackoffsetKeyword;
                 case "pass":
-                case "Pass":
                     return SyntaxKind.PassKeyword;
                 case "point":
                     return SyntaxKind.PointKeyword;
-                case "PointStream":
-                    return SyntaxKind.PointStreamKeyword;
                 case "precise":
                     return SyntaxKind.PreciseKeyword;
-                case "RasterizerOrderedBuffer":
-                    return SyntaxKind.RasterizerOrderedBufferKeyword;
-                case "RasterizerOrderedByteAddressBuffer":
-                    return SyntaxKind.RasterizerOrderedByteAddressBufferKeyword;
-                case "RasterizerOrderedStructuredBuffer":
-                    return SyntaxKind.RasterizerOrderedStructuredBufferKeyword;
-                case "RasterizerOrderedTexture1D":
-                    return SyntaxKind.RasterizerOrderedTexture1DKeyword;
-                case "RasterizerOrderedTexture1DArray":
-                    return SyntaxKind.RasterizerOrderedTexture1DArrayKeyword;
-                case "RasterizerOrderedTexture2D":
-                    return SyntaxKind.RasterizerOrderedTexture2DKeyword;
-                case "RasterizerOrderedTexture2DArray":
-                    return SyntaxKind.RasterizerOrderedTexture2DArrayKeyword;
-                case "RasterizerOrderedTexture3D":
-                    return SyntaxKind.RasterizerOrderedTexture3DKeyword;
-                case "RasterizerState":
-                    return SyntaxKind.RasterizerStateKeyword;
                 case "register":
                     return SyntaxKind.RegisterKeyword;
                 case "return":
                     return SyntaxKind.ReturnKeyword;
                 case "row_major":
                     return SyntaxKind.RowMajorKeyword;
-                case "RWBuffer":
-                    return SyntaxKind.RWBufferKeyword;
-                case "RWByteAddressBuffer":
-                    return SyntaxKind.RWByteAddressBufferKeyword;
-                case "RWStructuredBuffer":
-                    return SyntaxKind.RWStructuredBufferKeyword;
-                case "RWTexture1D":
-                    return SyntaxKind.RWTexture1DKeyword;
-                case "RWTexture1DArray":
-                    return SyntaxKind.RWTexture1DArrayKeyword;
-                case "RWTexture2D":
-                    return SyntaxKind.RWTexture2DKeyword;
-                case "RWTexture2DArray":
-                    return SyntaxKind.RWTexture2DArrayKeyword;
-                case "RWTexture3D":
-                    return SyntaxKind.RWTexture3DKeyword;
                 case "sampler":
+                case "samplerShadow":
+                case "samplerBuffer":
+                case "isamplerBuffer":
+                case "usamplerBuffer":
                     return SyntaxKind.SamplerKeyword;
                 case "sampler1D":
+                case "sampler1DArray":
+                case "sampler1DShadow":
+                case "sampler1DArrayShadow":
+                case "isampler1D":
+                case "isampler1DArray":
+                case "usampler1D":
+                case "usampler1DArray":
                     return SyntaxKind.Sampler1DKeyword;
                 case "sampler2D":
+                case "sampler2DArray":
+                case "sampler2DShadow":
+                case "sampler2DArrayShadow":
+                case "sampler2DRect":
+                case "sampler2DRectShadow":
+                case "sampler2DMS":
+                case "sampler2DMSArray":
+                case "isampler2D":
+                case "isampler2DArray":
+                case "isampler2DRect":
+                case "isampler2DMS":
+                case "isampler2DMSArray":
+                case "usampler2D":
+                case "usampler2DArray":
+                case "usampler2DRect":
+                case "usampler2DMS":
+                case "usampler2DMSArray":
                     return SyntaxKind.Sampler2DKeyword;
                 case "sampler3D":
+                case "isampler3D":
+                case "usampler3D":
                     return SyntaxKind.Sampler3DKeyword;
-                case "samplerCUBE":
+                case "samplerCube":
+                case "samplerCubeArray":
+                case "samplerCubeShadow":
+                case "samplerCubeArrayShadow":
+                case "isamplerCube":
+                case "isamplerCubeArray":
+                case "usamplerCube":
+                case "usamplerCubeArray":
                     return SyntaxKind.SamplerCubeKeyword;
-                case "SamplerComparisonState":
-                    return SyntaxKind.SamplerComparisonStateKeyword;
-                case "SamplerState":
-                    return SyntaxKind.SamplerStateKeyword;
-                case "sampler_state":
-                    return SyntaxKind.SamplerStateLegacyKeyword;
                 case "shared":
                     return SyntaxKind.SharedKeyword;
                 case "snorm":
@@ -2238,47 +1860,89 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
                     return SyntaxKind.StringKeyword;
                 case "struct":
                     return SyntaxKind.StructKeyword;
-                case "StructuredBuffer":
-                    return SyntaxKind.StructuredBufferKeyword;
                 case "switch":
                     return SyntaxKind.SwitchKeyword;
                 case "tbuffer":
+                case "imageBuffer":
+                case "iimageBuffer":
+                case "uimageBuffer":
                     return SyntaxKind.TBufferKeyword;
-                case "technique":
-                case "Technique":
-                    return SyntaxKind.TechniqueKeyword;
-                case "technique10":
-                    return SyntaxKind.Technique10Keyword;
-                case "technique11":
-                    return SyntaxKind.Technique11Keyword;
-                case "texture2D":
-                    return SyntaxKind.Texture2DLegacyKeyword;
-                case "textureCUBE":
-                    return SyntaxKind.TextureCubeLegacyKeyword;
-                case "Texture1D":
+                case "texture1D":
+                case "itexture1D":
+                case "utexture1D":
+                case "image1D":
+                case "iimage1D":
+                case "uimage1D":
                     return SyntaxKind.Texture1DKeyword;
-                case "Texture1DArray":
+                case "texture1DArray":
+                case "itexture1DArray":
+                case "utexture1DArray":
+                case "image1DArray":
+                case "iimage1DArray":
+                case "uimage1DArray":
                     return SyntaxKind.Texture1DArrayKeyword;
-                case "Texture2D":
+                case "texture2D":
+                case "itexture2D":
+                case "utexture2D":
+                case "image2D":
+                case "iimage2D":
+                case "uimage2D":
+                case "image2DRect":
+                case "iimage2DRect":
+                case "uimage2DRect":
+                case "subpassInput":
+                case "subpassInputMS":
+                case "isubpassInput":
+                case "isubpassInputMS":
+                case "usubpassInput":
+                case "usubpassInputMS":
                     return SyntaxKind.Texture2DKeyword;
-                case "Texture2DArray":
+                case "texture2DArray":
+                case "itexture2DArray":
+                case "utexture2DArray":
+                case "image2DArray":
+                case "iimage2DArray":
+                case "uimage2DArray":
                     return SyntaxKind.Texture2DArrayKeyword;
-                case "Texture2DMS":
+                case "texture2DMS":
+                case "itexture2DMS":
+                case "utexture2DMS":
+                case "image2DMS":
+                case "iimage2DMS":
+                case "uimage2DMS":
                     return SyntaxKind.Texture2DMSKeyword;
-                case "Texture2DMSArray":
+                case "texture2DMSArray":
+                case "itexture2DMSArray":
+                case "utexture2DMSArray":
+                case "image2DMSArray":
+                case "iimage2DMSArray":
+                case "uimage2DMSArray":
                     return SyntaxKind.Texture2DMSArrayKeyword;
-                case "Texture3D":
+                case "texture3D":
+                case "itexture3D":
+                case "utexture3D":
+                case "image3D":
+                case "iimage3D":
+                case "uimage3D":
                     return SyntaxKind.Texture3DKeyword;
-                case "TextureCube":
+                case "textureCube":
+                case "itextureCube":
+                case "utextureCube":
+                case "imageCube":
+                case "iimageCube":
+                case "uimageCube":
                     return SyntaxKind.TextureCubeKeyword;
-                case "TextureCubeArray":
+                case "textureCubeArray":
+                case "itextureCubeArray":
+                case "utextureCubeArray":
+                case "imageCubeArray":
+                case "iimageCubeArray":
+                case "uimageCubeArray":
                     return SyntaxKind.TextureCubeArrayKeyword;
                 case "triangle":
                     return SyntaxKind.TriangleKeyword;
                 case "triangleadj":
                     return SyntaxKind.TriangleAdjKeyword;
-                case "TriangleStream":
-                    return SyntaxKind.TriangleStreamKeyword;
                 case "typedef":
                     return SyntaxKind.TypedefKeyword;
                 case "uniform":
@@ -2289,50 +1953,12 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
                     return SyntaxKind.UnsignedKeyword;
                 case "uint":
                     return SyntaxKind.UintKeyword;
-                case "dword":
-                    return SyntaxKind.DwordKeyword;
-                case "uint1":
-                    return SyntaxKind.Uint1Keyword;
-                case "uint2":
+                case "uvec2":
                     return SyntaxKind.Uint2Keyword;
-                case "uint3":
+                case "uvec3":
                     return SyntaxKind.Uint3Keyword;
-                case "uint4":
+                case "uvec4":
                     return SyntaxKind.Uint4Keyword;
-                case "uint1x1":
-                    return SyntaxKind.Uint1x1Keyword;
-                case "uint1x2":
-                    return SyntaxKind.Uint1x2Keyword;
-                case "uint1x3":
-                    return SyntaxKind.Uint1x3Keyword;
-                case "uint1x4":
-                    return SyntaxKind.Uint1x4Keyword;
-                case "uint2x1":
-                    return SyntaxKind.Uint2x1Keyword;
-                case "uint2x2":
-                    return SyntaxKind.Uint2x2Keyword;
-                case "uint2x3":
-                    return SyntaxKind.Uint2x3Keyword;
-                case "uint2x4":
-                    return SyntaxKind.Uint2x4Keyword;
-                case "uint3x1":
-                    return SyntaxKind.Uint3x1Keyword;
-                case "uint3x2":
-                    return SyntaxKind.Uint3x2Keyword;
-                case "uint3x3":
-                    return SyntaxKind.Uint3x3Keyword;
-                case "uint3x4":
-                    return SyntaxKind.Uint3x4Keyword;
-                case "uint4x1":
-                    return SyntaxKind.Uint4x1Keyword;
-                case "uint4x2":
-                    return SyntaxKind.Uint4x2Keyword;
-                case "uint4x3":
-                    return SyntaxKind.Uint4x3Keyword;
-                case "uint4x4":
-                    return SyntaxKind.Uint4x4Keyword;
-                case "vector":
-                    return SyntaxKind.VectorKeyword;
                 case "volatile":
                     return SyntaxKind.VolatileKeyword;
                 case "void":
@@ -2421,6 +2047,10 @@ namespace ShaderTools.CodeAnalysis.Hlsl.Syntax
                     return SyntaxKind.PackMatrixKeyword;
                 case "warning":
                     return SyntaxKind.WarningKeyword;
+                case "type":
+                    return SyntaxKind.PragmaKeyword;
+                case "version":
+                    return SyntaxKind.PragmaKeyword;
                 default:
                     return SyntaxKind.IdentifierToken;
             }
