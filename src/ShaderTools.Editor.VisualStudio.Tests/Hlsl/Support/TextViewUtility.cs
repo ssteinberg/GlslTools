@@ -2,7 +2,7 @@ using System.ComponentModel.Composition.Hosting;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Editor;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Support
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Support
 {
     internal static class TextViewUtility
     {

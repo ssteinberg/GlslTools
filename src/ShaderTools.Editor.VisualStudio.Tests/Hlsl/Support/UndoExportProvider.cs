@@ -9,7 +9,7 @@ using Microsoft.VisualStudio.Text.Editor;
 using Microsoft.VisualStudio.Text.Operations;
 using Microsoft.VisualStudio.Utilities;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Support
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Support
 {
     // Based partly on https://github.com/jaredpar/EditorUtils/blob/master/Src/EditorUtils/EditorHostFactory.cs
 

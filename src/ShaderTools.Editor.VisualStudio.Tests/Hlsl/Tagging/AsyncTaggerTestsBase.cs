@@ -5,10 +5,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Tagging;
-using ShaderTools.Editor.VisualStudio.Tests.Hlsl.Support;
+using ShaderTools.Editor.VisualStudio.Tests.Glsl.Support;
 using Xunit;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Tagging
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Tagging
 {
 #if false
     public abstract class AsyncTaggerTestsBase : MefTestsBase

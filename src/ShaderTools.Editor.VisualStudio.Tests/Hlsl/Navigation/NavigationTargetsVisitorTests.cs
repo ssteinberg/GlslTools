@@ -1,13 +1,13 @@
 ﻿using System.Linq;
 using System.Threading;
-using ShaderTools.CodeAnalysis.Hlsl.Syntax;
+using ShaderTools.CodeAnalysis.Glsl.Syntax;
 using ShaderTools.CodeAnalysis.Text;
 using ShaderTools.Editor.VisualStudio.Core.Glyphs;
-using ShaderTools.Editor.VisualStudio.Hlsl.Navigation;
-using ShaderTools.Editor.VisualStudio.Tests.Hlsl.Support;
+using ShaderTools.Editor.VisualStudio.Glsl.Navigation;
+using ShaderTools.Editor.VisualStudio.Tests.Glsl.Support;
 using Xunit;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Navigation
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Navigation
 {
     public class NavigationTargetsVisitorTests : MefTestsBase
     {

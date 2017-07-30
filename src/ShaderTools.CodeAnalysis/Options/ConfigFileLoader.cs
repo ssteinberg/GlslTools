@@ -26,17 +26,17 @@ namespace ShaderTools.CodeAnalysis.Options
 
             // We want closer config files to take precedence over further ones.
 
-            var hlslPreprocessorDefinitions = new Dictionary<string, string>();
+            var GlslPreprocessorDefinitions = new Dictionary<string, string>();
             foreach (var configFile in configFiles.Reverse())
-                foreach (var preprocessorDefinition in configFile.HlslPreprocessorDefinitions)
-                    hlslPreprocessorDefinitions[preprocessorDefinition.Key] = preprocessorDefinition.Value;
+                foreach (var preprocessorDefinition in configFile.GlslPreprocessorDefinitions)
+                    GlslPreprocessorDefinitions[preprocessorDefinition.Key] = preprocessorDefinition.Value;
 
             return new ConfigFile
             {
-                HlslPreprocessorDefinitions = hlslPreprocessorDefinitions,
+                GlslPreprocessorDefinitions = GlslPreprocessorDefinitions,
 
-                HlslAdditionalIncludeDirectories = configFiles
-                    .SelectMany(x => x.GetAbsoluteHlslAdditionalIncludeDirectories())
+                GlslAdditionalIncludeDirectories = configFiles
+                    .SelectMany(x => x.GetAbsoluteGlslAdditionalIncludeDirectories())
                     .Distinct()
                     .ToList()
             };

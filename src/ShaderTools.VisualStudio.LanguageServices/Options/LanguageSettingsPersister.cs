@@ -55,7 +55,7 @@ namespace ShaderTools.VisualStudio.LanguageServices.Implementation.Options
             _optionService = optionService;
 
             // TODO: make this configurable
-            _languageMap = BidirectionalMap<string, Tuple<Guid>>.Empty.Add(LanguageNames.Hlsl, Tuple.Create(Guids.HlslLanguageServiceId))
+            _languageMap = BidirectionalMap<string, Tuple<Guid>>.Empty.Add(LanguageNames.Glsl, Tuple.Create(Guids.GlslLanguageServiceId))
                                                                .Add(LanguageNames.ShaderLab, Tuple.Create(Guids.ShaderLabLanguageServiceId));
 
             foreach (var languageGuid in _languageMap.Values)

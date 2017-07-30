@@ -10,7 +10,7 @@
 	#pragma vertex vert
 	#pragma fragment frag
 	#include "UnityCG.cginc"
-	#include "HLSLSupport.cginc"
+	#include "GlslSupport.cginc"
 
 	struct v2f {
 		half4 pos : SV_POSITION;

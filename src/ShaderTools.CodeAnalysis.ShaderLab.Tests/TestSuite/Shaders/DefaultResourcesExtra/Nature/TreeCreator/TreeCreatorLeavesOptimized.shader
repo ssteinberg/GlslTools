@@ -62,7 +62,7 @@ ENDCG
 		#pragma vertex vert_surf
 		#pragma fragment frag_surf
 		#pragma multi_compile_shadowcaster
-		#include "HLSLSupport.cginc"
+		#include "GlslSupport.cginc"
 		#include "UnityCG.cginc"
 		#include "Lighting.cginc"
 

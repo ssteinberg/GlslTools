@@ -1,7 +1,7 @@
 #ifndef UNITY_SHADER_VARIABLES_INCLUDED
 #define UNITY_SHADER_VARIABLES_INCLUDED
 
-#include "HLSLSupport.cginc"
+#include "GlslSupport.cginc"
 
 #if defined (DIRECTIONAL_COOKIE) || defined (DIRECTIONAL)
 #define USING_DIRECTIONAL_LIGHT

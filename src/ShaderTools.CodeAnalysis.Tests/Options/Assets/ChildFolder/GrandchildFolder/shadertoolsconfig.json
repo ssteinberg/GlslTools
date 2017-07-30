@@ -1,9 +1,9 @@
 ﻿{
-  "hlsl.preprocessorDefinitions": {
+  "Glsl.preprocessorDefinitions": {
     "MY_OTHER_DEFINE": "2"
   },
 
-  "hlsl.additionalIncludeDirectories": [
+  "Glsl.additionalIncludeDirectories": [
     "../Bar",
     "..\\Foo"
   ]

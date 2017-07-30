@@ -100,10 +100,10 @@ namespace ShaderTools.CodeAnalysis.Host.Mef
             var assemblyNames = new string[]
             {
                 "ShaderTools.CodeAnalysis.Workspaces",
-                "ShaderTools.CodeAnalysis.Hlsl.Workspaces",
+                "ShaderTools.CodeAnalysis.Glsl.Workspaces",
                 "ShaderTools.CodeAnalysis.ShaderLab.Workspaces",
                 "ShaderTools.CodeAnalysis.Features",
-                "ShaderTools.CodeAnalysis.Hlsl.Features",
+                "ShaderTools.CodeAnalysis.Glsl.Features",
                 "ShaderTools.CodeAnalysis.ShaderLab.Features"
             };
 

@@ -1,14 +1,14 @@
-#ifndef HLSL_SUPPORT_INCLUDED
-#define HLSL_SUPPORT_INCLUDED
+#ifndef Glsl_SUPPORT_INCLUDED
+#define Glsl_SUPPORT_INCLUDED
 
 // Define the underlying compiler being used
 #if defined(SHADER_TARGET_SURFACE_ANALYSIS)
 	// Cg is used for surface shader analysis step
 	#define UNITY_COMPILER_CG
 #elif defined(SHADER_API_D3D11) || defined(SHADER_API_XBOX360) || defined(SHADER_API_D3D11_9X) || defined(SHADER_API_D3D9) || defined(SHADER_API_GLES3) || defined(SHADER_API_GLCORE) || defined(SHADER_API_XBOXONE)
-	#define UNITY_COMPILER_HLSL
+	#define UNITY_COMPILER_Glsl
 #elif defined(SHADER_TARGET_GLSL) || defined(SHADER_API_WIIU)
-	#define UNITY_COMPILER_HLSL2GLSL
+	#define UNITY_COMPILER_Glsl2GLSL
 #else
 	#define UNITY_COMPILER_CG
 #endif
@@ -73,7 +73,7 @@
 
 
 // Disable warnings we aren't interested in
-#if defined(UNITY_COMPILER_HLSL)
+#if defined(UNITY_COMPILER_Glsl)
 #pragma warning (disable : 3205) // conversion of larger type to smaller
 #pragma warning (disable : 3568) // unknown pragma ignored
 #pragma warning (disable : 3571) // "pow(f,e) will not work for negative f"; however in majority of our calls to pow we know f is not negative
@@ -98,7 +98,7 @@
 #endif
  
 #if defined(SHADER_API_GLES3)
-// GLES3 and later via HLSLcc, use DX11.1 partial precision for translation
+// GLES3 and later via Glslcc, use DX11.1 partial precision for translation
 #define fixed min10float
 #define fixed2 min10float2
 #define fixed3 min10float3
@@ -179,7 +179,7 @@
 
 #if defined(SHADER_API_PSSL)
 
-	// PS4 shader compiler emulation of legacy DX9-like HLSL
+	// PS4 shader compiler emulation of legacy DX9-like Glsl
 
 #define SampleLevel SampleLOD
 #define SampleGrad SampleGradient
@@ -240,7 +240,7 @@
 	half4 tex2DprojShadow(sampler2D s, in float3 t)		{ return tex2Dproj<float>(s, t); }
 	half4 tex2DprojShadow(sampler2D s, in float4 t)		{ return tex2Dproj<float>(s, t); }
 #elif defined(SHADER_API_XBOX360)
-	// Xbox360 shader compiler emulation of some legacy DX9-like HLSL
+	// Xbox360 shader compiler emulation of some legacy DX9-like Glsl
 
 	float4 tex2Dproj(in sampler2D s, in float4 t)
 	{
@@ -303,7 +303,7 @@
 // UNITY_SAMPLE_SHADOW_PROJ samples with a projected coordinate (UV and Z divided by w).
 
 #if defined(SHADER_API_D3D11) || defined(SHADER_API_D3D11_9X) || defined(SHADER_API_GLES3) || defined(SHADER_API_GLCORE)
-	// DX11 & hlslcc platforms: built-in PCF
+	// DX11 & Glslcc platforms: built-in PCF
 	#if defined(SHADER_API_D3D11_9X)
 		// FL9.x has some bug where the runtime really wants resource & sampler to be bound to the same slot,
 		// otherwise it is skipping draw calls that use shadowmap sampling. Let's bind to #15
@@ -314,8 +314,8 @@
 	#endif
 	#define UNITY_SAMPLE_SHADOW(tex,coord) tex.SampleCmpLevelZero (sampler##tex,(coord).xy,(coord).z)
 	#define UNITY_SAMPLE_SHADOW_PROJ(tex,coord) tex.SampleCmpLevelZero (sampler##tex,(coord).xy/(coord).w,(coord).z/(coord).w)
-#elif (defined(UNITY_COMPILER_HLSL2GLSL) && (defined(SHADOWS_NATIVE) || !defined(SHADER_API_GLES))) || defined(SHADER_API_WIIU)
-	// OpenGL-like hlsl2glsl platforms: most of them always have built-in PCF
+#elif (defined(UNITY_COMPILER_Glsl2GLSL) && (defined(SHADOWS_NATIVE) || !defined(SHADER_API_GLES))) || defined(SHADER_API_WIIU)
+	// OpenGL-like Glsl2glsl platforms: most of them always have built-in PCF
 	// Exception is GLES2.0 which might not have it; so that one needs a SHADOWS_NATIVE check
 	#define UNITY_DECLARE_SHADOWMAP(tex) sampler2DShadow tex
 	#define UNITY_SAMPLE_SHADOW(tex,coord) shadow2D (tex,(coord).xyz)
@@ -323,7 +323,7 @@
 #elif defined(SHADER_API_D3D9)
 	// D3D9: Native shadow maps FOURCC "driver hack", looks just like a regular
 	// texture sample. Have to always do a projected sample
-	// so that HLSL compiler doesn't try to be too smart and mess up swizzles
+	// so that Glsl compiler doesn't try to be too smart and mess up swizzles
 	// (thinking that Z is unused).
 	#define UNITY_DECLARE_SHADOWMAP(tex) sampler2D tex
 	#define UNITY_SAMPLE_SHADOW(tex,coord) tex2Dproj (tex,float4((coord).xyz,1)).r
@@ -420,7 +420,7 @@
 
 
 
-#if defined(UNITY_COMPILER_HLSL) || defined (SHADER_TARGET_GLSL)
+#if defined(UNITY_COMPILER_Glsl) || defined (SHADER_TARGET_GLSL)
 #define FOGC FOG
 #endif
 
@@ -429,7 +429,7 @@
 #if defined(UNITY_COMPILER_CG)
 #define VFACE FACE
 #endif
-#if defined(UNITY_COMPILER_HLSL2GLSL)
+#if defined(UNITY_COMPILER_Glsl2GLSL)
 #define FACE VFACE
 #endif
 // Is VFACE affected by flipped projection?
@@ -502,8 +502,8 @@
 
 // Initialize arbitrary structure with zero values.
 // Not supported on some backends (e.g. Cg-based like PS3 and particularly with nested structs).
-// hlsl2glsl would almost support it, except with structs that have arrays -- so treat as not supported there either :(
-#if defined(UNITY_COMPILER_HLSL) || defined(SHADER_API_PSSL) || defined(SHADER_API_GLES3) || defined(SHADER_API_GLCORE)
+// Glsl2glsl would almost support it, except with structs that have arrays -- so treat as not supported there either :(
+#if defined(UNITY_COMPILER_Glsl) || defined(SHADER_API_PSSL) || defined(SHADER_API_GLES3) || defined(SHADER_API_GLCORE)
 #define UNITY_INITIALIZE_OUTPUT(type,name) name = (type)0;
 #else
 #define UNITY_INITIALIZE_OUTPUT(type,name)
@@ -573,8 +573,8 @@
 #define UNITY_ALPHA_CHANNEL a
 
 
-// HLSL attributes
-#if defined(UNITY_COMPILER_HLSL)
+// Glsl attributes
+#if defined(UNITY_COMPILER_Glsl)
 	#define UNITY_BRANCH	[branch]
 	#define UNITY_FLATTEN	[flatten]
 	#define UNITY_UNROLL	[unroll]
@@ -605,6 +605,6 @@
 
 
 
-#endif // HLSL_SUPPORT_INCLUDED
+#endif // Glsl_SUPPORT_INCLUDED
 
 

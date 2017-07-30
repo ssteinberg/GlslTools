@@ -33,5 +33,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 [assembly: InternalsVisibleTo("ShaderTools.Editor.VisualStudio")]
-[assembly: InternalsVisibleTo("ShaderTools.VisualStudio.LanguageServices.Hlsl")]
+[assembly: InternalsVisibleTo("ShaderTools.VisualStudio.LanguageServices.Glsl")]
 [assembly: InternalsVisibleTo("ShaderTools.VisualStudio.LanguageServices.ShaderLab")]

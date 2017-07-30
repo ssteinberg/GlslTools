@@ -3,20 +3,20 @@ using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Tagging;
 using Xunit;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Tagging.Classification
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Tagging.Classification
 {
 #if false
     public class SyntaxTaggerTests : AsyncTaggerTestsBase
     {
-        private readonly HlslClassificationService _hlslClassificationService;
+        private readonly GlslClassificationService _GlslClassificationService;
 
         public SyntaxTaggerTests()
         {
-            _hlslClassificationService = Container.GetExportedValue<HlslClassificationService>();
+            _GlslClassificationService = Container.GetExportedValue<GlslClassificationService>();
         }
 
         [Theory(Skip = "Need to update test")]
-        //[HlslTestSuiteData]
+        //[GlslTestSuiteData]
         public async Task CanDoTagging(string testFile)
         {
             await RunTestAsync<SyntaxTagger, IClassificationTag>(testFile, CreateTagger);
@@ -24,7 +24,7 @@ namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Tagging.Classification
 
         private SyntaxTagger CreateTagger(BackgroundParser backgroundParser, ITextBuffer textBuffer)
         {
-            return new SyntaxTagger(_hlslClassificationService, backgroundParser);
+            return new SyntaxTagger(_GlslClassificationService, backgroundParser);
         }
     }
 #endif

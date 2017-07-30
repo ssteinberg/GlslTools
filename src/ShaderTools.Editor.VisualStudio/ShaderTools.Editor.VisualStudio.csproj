@@ -53,21 +53,21 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Hlsl.EditorFeatures\ShaderTools.CodeAnalysis.Hlsl.EditorFeatures.csproj">
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Glsl.EditorFeatures\ShaderTools.CodeAnalysis.Glsl.EditorFeatures.csproj">
       <Project>{71ec216a-9c33-4b96-ac22-7167833daaed}</Project>
-      <Name>ShaderTools.CodeAnalysis.Hlsl.EditorFeatures</Name>
+      <Name>ShaderTools.CodeAnalysis.Glsl.EditorFeatures</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Hlsl.Features\ShaderTools.CodeAnalysis.Hlsl.Features.csproj">
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Glsl.Features\ShaderTools.CodeAnalysis.Glsl.Features.csproj">
       <Project>{3812db4e-ba47-4db7-9683-a4c3cc7f8c26}</Project>
-      <Name>ShaderTools.CodeAnalysis.Hlsl.Features</Name>
+      <Name>ShaderTools.CodeAnalysis.Glsl.Features</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Hlsl.Workspaces\ShaderTools.CodeAnalysis.Hlsl.Workspaces.csproj">
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Glsl.Workspaces\ShaderTools.CodeAnalysis.Glsl.Workspaces.csproj">
       <Project>{028116df-9897-45c3-911c-ac3c15e588ea}</Project>
-      <Name>ShaderTools.CodeAnalysis.Hlsl.Workspaces</Name>
+      <Name>ShaderTools.CodeAnalysis.Glsl.Workspaces</Name>
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
@@ -93,9 +93,9 @@
       <Project>{485596dc-edc9-4c95-9807-229355f4a941}</Project>
       <Name>ShaderTools.Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ShaderTools.VisualStudio.LanguageServices.Hlsl\ShaderTools.VisualStudio.LanguageServices.Hlsl.csproj">
+    <ProjectReference Include="..\ShaderTools.VisualStudio.LanguageServices.Glsl\ShaderTools.VisualStudio.LanguageServices.Glsl.csproj">
       <Project>{a963c25b-5e83-413a-9757-1259e7c11368}</Project>
-      <Name>ShaderTools.VisualStudio.LanguageServices.Hlsl</Name>
+      <Name>ShaderTools.VisualStudio.LanguageServices.Glsl</Name>
     </ProjectReference>
     <ProjectReference Include="..\ShaderTools.VisualStudio.LanguageServices.ShaderLab\ShaderTools.VisualStudio.LanguageServices.ShaderLab.csproj">
       <Project>{29f65024-2f2d-466d-98a3-4698baef7e1d}</Project>
@@ -284,8 +284,8 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Hlsl\ShaderTools.CodeAnalysis.Hlsl.csproj">
-      <Name>ShaderTools.CodeAnalysis.Hlsl</Name>
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Glsl\ShaderTools.CodeAnalysis.Glsl.csproj">
+      <Name>ShaderTools.CodeAnalysis.Glsl</Name>
     </ProjectReference>
     <ProjectReference Include="..\ShaderTools.CodeAnalysis.ShaderLab\ShaderTools.CodeAnalysis.ShaderLab.csproj">
       <Name>ShaderTools.CodeAnalysis.ShaderLab</Name>
@@ -307,64 +307,64 @@
   <ItemGroup>
     <Compile Include="Core\Navigation\CodeWindowManagerBase.cs" />
     <Compile Include="Core\LanguageInfoBase.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\IGoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\IGoToDefinitionProvider.cs" />
     <Compile Include="SetupPackage.cs" />
-    <Compile Include="Hlsl\HlslPackage.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionCommandHandlerTriggers.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionExtensions.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionItem.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionModel.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionModelManager.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionModelManagerProvider.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionProviders\CompletionProvider.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionProviders\CompletionProviderService.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionProviders\KeywordCompletionProvider.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionProviders\SemanticCompletionProvider.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionProviders\SymbolCompletionProvider.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionSource.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionSourceProvider.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\HlslCompletionSet.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionProviders\ICompletionProvider.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionCommandHandler.cs" />
-    <Compile Include="Hlsl\IntelliSense\Completion\CompletionCommandHandlerProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionCommandTarget.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\FieldAccessGoToDefinitionProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\FunctionInvocationGoToDefinitionProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\GoToDefinitionProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\IdentifierGoToDefinitionProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\GoToDefinitionProviderService.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\MacroReferenceGoToDefinitionProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\MethodInvocationGoToDefinitionProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionProviders\SymbolReferenceGoToDefinitionProvider.cs" />
-    <Compile Include="Hlsl\Navigation\GoToDefinitionTextViewCreationListener.cs" />
-    <Compile Include="Hlsl\Navigation\NavigateTo\NavigateToItemDisplay.cs" />
-    <Compile Include="Hlsl\Navigation\NavigateTo\NavigateToItemProvider.cs" />
-    <Compile Include="Hlsl\Navigation\NavigateTo\NavigateToItemProviderFactory.cs" />
-    <Compile Include="Hlsl\Navigation\NavigateTo\NavigateToVisitor.cs" />
+    <Compile Include="Glsl\GlslPackage.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionCommandHandlerTriggers.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionExtensions.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionItem.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionModel.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionModelManager.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionModelManagerProvider.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionProviders\CompletionProvider.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionProviders\CompletionProviderService.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionProviders\KeywordCompletionProvider.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionProviders\SemanticCompletionProvider.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionProviders\SymbolCompletionProvider.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionSource.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionSourceProvider.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\GlslCompletionSet.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionProviders\ICompletionProvider.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionCommandHandler.cs" />
+    <Compile Include="Glsl\IntelliSense\Completion\CompletionCommandHandlerProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionCommandTarget.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\FieldAccessGoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\FunctionInvocationGoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\GoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\IdentifierGoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\GoToDefinitionProviderService.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\MacroReferenceGoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\MethodInvocationGoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionProviders\SymbolReferenceGoToDefinitionProvider.cs" />
+    <Compile Include="Glsl\Navigation\GoToDefinitionTextViewCreationListener.cs" />
+    <Compile Include="Glsl\Navigation\NavigateTo\NavigateToItemDisplay.cs" />
+    <Compile Include="Glsl\Navigation\NavigateTo\NavigateToItemProvider.cs" />
+    <Compile Include="Glsl\Navigation\NavigateTo\NavigateToItemProviderFactory.cs" />
+    <Compile Include="Glsl\Navigation\NavigateTo\NavigateToVisitor.cs" />
     <Compile Include="Core\Navigation\NavigationExtensions.cs" />
-    <Compile Include="Hlsl\Navigation\OpenIncludeFileCommandTarget.cs" />
+    <Compile Include="Glsl\Navigation\OpenIncludeFileCommandTarget.cs" />
     <Compile Include="Core\LanguagePackageBase.cs" />
     <Compile Include="ShaderLab\ShaderLabLanguageInfo.cs" />
     <Compile Include="source.extension.cs">
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
     </Compile>
     <Compile Include="Core\Util\CommandTargetBase.cs" />
-    <Compile Include="Hlsl\Util\ContextQuery\SyntaxTokenExtensions.cs" />
-    <Compile Include="Hlsl\Util\ContextQuery\SyntaxTreeExtensions.cs" />
+    <Compile Include="Glsl\Util\ContextQuery\SyntaxTokenExtensions.cs" />
+    <Compile Include="Glsl\Util\ContextQuery\SyntaxTreeExtensions.cs" />
     <Compile Include="Core\Util\Logger.cs" />
-    <Compile Include="Hlsl\Util\SyntaxOutput\SyntaxExtensions.cs" />
-    <Compile Include="Hlsl\Util\Extensions\Extensions.cs" />
+    <Compile Include="Glsl\Util\SyntaxOutput\SyntaxExtensions.cs" />
+    <Compile Include="Glsl\Util\Extensions\Extensions.cs" />
     <Compile Include="Core\Glyphs\DispatcherGlyphService.cs" />
     <Compile Include="Core\Glyphs\Glyph.cs" />
     <Compile Include="Core\Glyphs\GlyphExtensions.cs" />
-    <Compile Include="Hlsl\HlslConstants.cs" />
-    <Compile Include="Hlsl\Navigation\CodeWindowManager.cs" />
-    <Compile Include="Hlsl\Navigation\EditorNavigationDropdownBarClient.cs" />
-    <Compile Include="Hlsl\Navigation\EditorNavigationSourceProvider.cs" />
-    <Compile Include="Hlsl\HlslLanguageInfo.cs" />
-    <Compile Include="Hlsl\Navigation\EditorNavigationSource.cs" />
-    <Compile Include="Hlsl\Navigation\EditorNavigationTarget.cs" />
-    <Compile Include="Hlsl\Navigation\NavigationTargetsVisitor.cs" />
+    <Compile Include="Glsl\GlslConstants.cs" />
+    <Compile Include="Glsl\Navigation\CodeWindowManager.cs" />
+    <Compile Include="Glsl\Navigation\EditorNavigationDropdownBarClient.cs" />
+    <Compile Include="Glsl\Navigation\EditorNavigationSourceProvider.cs" />
+    <Compile Include="Glsl\GlslLanguageInfo.cs" />
+    <Compile Include="Glsl\Navigation\EditorNavigationSource.cs" />
+    <Compile Include="Glsl\Navigation\EditorNavigationTarget.cs" />
+    <Compile Include="Glsl\Navigation\NavigationTargetsVisitor.cs" />
     <Compile Include="Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -372,7 +372,7 @@
     </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Hlsl\Util\Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Glsl\Util\Extensions\ExceptionExtensions.cs" />
     <Compile Include="Core\Util\Extensions\IVsShellExtensions.cs" />
     <Compile Include="Core\Util\Extensions\ServiceProviderExtensions.cs" />
     <Compile Include="Core\Util\Extensions\VsExtensions.cs" />

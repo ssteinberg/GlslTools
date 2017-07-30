@@ -9,7 +9,7 @@ using ShaderTools.CodeAnalysis.Editor.Shared.Utilities;
 namespace ShaderTools.CodeAnalysis.Editor.Implementation.IntelliSense.SignatureHelp.Presentation
 {
     [Export(typeof(IClassifierProvider))]
-    [ContentType(ContentTypeNames.HlslSignatureHelpContentType)]
+    [ContentType(ContentTypeNames.GlslSignatureHelpContentType)]
     [ContentType(ContentTypeNames.ShaderLabSignatureHelpContentType)]
     [ContentType(ContentTypeNames.ShaderLabProjectionSignatureHelpContentType)]
     internal class SignatureHelpClassifierProvider : IClassifierProvider

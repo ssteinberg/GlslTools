@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <RootNamespace>ShaderTools.CodeAnalysis.Glsl</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Features\ShaderTools.CodeAnalysis.Features.csproj" />
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Glsl.Workspaces\ShaderTools.CodeAnalysis.Glsl.Workspaces.csproj" />
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Glsl\ShaderTools.CodeAnalysis.Glsl.csproj" />
+    <ProjectReference Include="..\ShaderTools.CodeAnalysis.Workspaces\ShaderTools.CodeAnalysis.Workspaces.csproj" />
+  </ItemGroup>
+
+</Project>

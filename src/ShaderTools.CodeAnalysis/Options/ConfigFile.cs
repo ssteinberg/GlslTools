@@ -14,30 +14,30 @@ namespace ShaderTools.CodeAnalysis.Options
         [DataMember(Name = "root")]
         public bool Root { get; set; } = false;
 
-        [DataMember(Name = "hlsl.preprocessorDefinitions")]
-        public Dictionary<string, string> HlslPreprocessorDefinitions { get; set; } = new Dictionary<string, string>();
+        [DataMember(Name = "Glsl.preprocessorDefinitions")]
+        public Dictionary<string, string> GlslPreprocessorDefinitions { get; set; } = new Dictionary<string, string>();
 
-        [DataMember(Name = "hlsl.additionalIncludeDirectories")]
-        public List<string> HlslAdditionalIncludeDirectories { get; set; } = new List<string>();
+        [DataMember(Name = "Glsl.additionalIncludeDirectories")]
+        public List<string> GlslAdditionalIncludeDirectories { get; set; } = new List<string>();
 
         [OnDeserialized]
         private void OnDeserialized(StreamingContext c)
         {
-            if (HlslPreprocessorDefinitions == null)
-                HlslPreprocessorDefinitions = new Dictionary<string, string>();
+            if (GlslPreprocessorDefinitions == null)
+                GlslPreprocessorDefinitions = new Dictionary<string, string>();
 
-            if (HlslAdditionalIncludeDirectories == null)
-                HlslAdditionalIncludeDirectories = new List<string>();
+            if (GlslAdditionalIncludeDirectories == null)
+                GlslAdditionalIncludeDirectories = new List<string>();
         }
 
         /// <summary>
         /// Converts the (potentially) relative include directory paths to absolute directory paths.
         /// </summary>
-        internal IEnumerable<string> GetAbsoluteHlslAdditionalIncludeDirectories()
+        internal IEnumerable<string> GetAbsoluteGlslAdditionalIncludeDirectories()
         {
             string folder = Path.GetDirectoryName(FileName);
 
-            return HlslAdditionalIncludeDirectories
+            return GlslAdditionalIncludeDirectories
                 .Select(x =>
                 {
                     if (Path.IsPathRooted(x))

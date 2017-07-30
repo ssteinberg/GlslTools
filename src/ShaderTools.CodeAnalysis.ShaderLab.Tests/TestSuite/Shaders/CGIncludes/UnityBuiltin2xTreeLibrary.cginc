@@ -1,6 +1,6 @@
 // Shared tree shader functionality for Unity 2.x tree shaders
 
-#include "HLSLSupport.cginc"
+#include "GlslSupport.cginc"
 #include "UnityCG.cginc"
 #include "TerrainEngine.cginc"
 
