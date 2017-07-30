@@ -137,8 +137,8 @@ namespace ShaderTools.LanguageServer.Protocol.Server
         {
             switch (languageId)
             {
-                case "hlsl":
-                    return LanguageNames.Hlsl;
+                case "Glsl":
+                    return LanguageNames.Glsl;
 
                 case "shaderlab":
                     return LanguageNames.ShaderLab;

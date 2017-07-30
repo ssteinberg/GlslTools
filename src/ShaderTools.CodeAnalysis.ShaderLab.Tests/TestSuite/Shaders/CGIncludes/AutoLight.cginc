@@ -1,7 +1,7 @@
 #ifndef AUTOLIGHT_INCLUDED
 #define AUTOLIGHT_INCLUDED
 
-#include "HLSLSupport.cginc"
+#include "GlslSupport.cginc"
 #include "UnityShadowLibrary.cginc"
 
 #if (SHADER_TARGET < 30) || defined(SHADER_API_MOBILE)

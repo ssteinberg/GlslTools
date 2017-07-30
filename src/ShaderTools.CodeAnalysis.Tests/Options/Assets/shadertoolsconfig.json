@@ -1,11 +1,11 @@
 ﻿{
   // Not used, because ChildFolder/shadertoolsconfig.json includes root: true
 
-  "hlsl.preprocessorDefinitions": {
+  "Glsl.preprocessorDefinitions": {
     "NOT_USED": "1"
   },
 
-  "hlsl.additionalIncludeDirectories": [
+  "Glsl.additionalIncludeDirectories": [
     "Baz"
   ]
 }

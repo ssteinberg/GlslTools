@@ -38,7 +38,7 @@ Shader "Hidden/InternalSplashShadowReceiverSimple" {
 		fixed4 shadowSample1 = tex2D(unity_SplashScreenShadowTex1, input.texCoord);
 		float4 planeShadows = 0;
 
-		// HLSL thinks planeIndex is used as l-value below, and will print a non-disableable X3550 warning about forced unroll
+		// Glsl thinks planeIndex is used as l-value below, and will print a non-disableable X3550 warning about forced unroll
 		UNITY_UNROLL
 		for (int planeIndex = 0; planeIndex < 4; planeIndex++)
 		{

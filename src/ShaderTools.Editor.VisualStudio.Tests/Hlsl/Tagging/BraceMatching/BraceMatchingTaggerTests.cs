@@ -5,13 +5,13 @@ using Microsoft.VisualStudio.Text.Tagging;
 using NSubstitute;
 using Xunit;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Tagging.BraceMatching
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Tagging.BraceMatching
 {
 #if false
     public class BraceMatchingTaggerTests : AsyncTaggerTestsBase
     {
         [Theory(Skip = "Need to update test")]
-        //[HlslTestSuiteData]
+        //[GlslTestSuiteData]
         public async Task CanDoTagging(string testFile)
         {
             await RunTestAsync<BraceMatchingTagger, ITextMarkerTag>(testFile, CreateTagger);

@@ -14,7 +14,7 @@ limitations under the License.
 
 ------------
 
-HLSL Tools uses some code from NQuery vNext (https://github.com/terrajobst/nquery-vnext).
+Glsl Tools uses some code from NQuery vNext (https://github.com/terrajobst/nquery-vnext).
 
 Original license follows:
 
@@ -42,7 +42,7 @@ THE SOFTWARE.
 
 ------------
 
-HLSL Tools uses some code from Node.js Tools for Visual Studio (https://github.com/microsoft/nodejstools).
+Glsl Tools uses some code from Node.js Tools for Visual Studio (https://github.com/microsoft/nodejstools).
 
 Original license follows:
 
@@ -250,7 +250,7 @@ Original license follows:
 
 ------------
 
-HLSL Tools uses some code from Roslyn (https://github.com/dotnet/roslyn).
+Glsl Tools uses some code from Roslyn (https://github.com/dotnet/roslyn).
 
 Original license follows:
 
@@ -458,7 +458,7 @@ Original license follows:
    
 ------------
 
-HLSL Tools uses some code from ScriptSharp (https://github.com/nikhilk/scriptsharp).
+Glsl Tools uses some code from ScriptSharp (https://github.com/nikhilk/scriptsharp).
 
 Original license follows:
 

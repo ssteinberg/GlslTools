@@ -2,11 +2,11 @@
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Tagging;
-using ShaderTools.Editor.VisualStudio.Tests.Hlsl.Support;
+using ShaderTools.Editor.VisualStudio.Tests.Glsl.Support;
 using ShaderTools.Editor.VisualStudio.Tests.Support;
 using Xunit;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Tagging.Outlining
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Tagging.Outlining
 {
 #if false
     public class OutliningTaggerTests : AsyncTaggerTestsBase

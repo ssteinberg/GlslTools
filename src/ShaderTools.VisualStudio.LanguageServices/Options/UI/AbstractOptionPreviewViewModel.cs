@@ -54,7 +54,7 @@ namespace ShaderTools.VisualStudio.LanguageServices.Options.UI
             _editorOptions = _componentModel.GetService<IEditorOptionsFactoryService>();
             this.Language = language;
 
-            _contentType = _contentTypeRegistryService.GetContentType(ContentTypeNames.HlslContentType);
+            _contentType = _contentTypeRegistryService.GetContentType(ContentTypeNames.GlslContentType);
         }
 
         internal OptionSet ApplyChangedOptions(OptionSet optionSet)

@@ -2,7 +2,7 @@
   "profiles": {
     "ShaderTools.LanguageServer": {
       "commandName": "Project",
-      "commandLineArgs": "--language \"hlsl\" --logfilepath \"log.txt\""
+      "commandLineArgs": "--language \"Glsl\" --logfilepath \"log.txt\""
     }
   }
 }

@@ -21,7 +21,7 @@ CGPROGRAM
 #pragma fragment frag_surf
 #pragma multi_compile_fwdbase
 #pragma multi_compile_fog
-#include "HLSLSupport.cginc"
+#include "GlslSupport.cginc"
 #include "UnityCG.cginc"
 #include "Lighting.cginc"
 #include "AutoLight.cginc"

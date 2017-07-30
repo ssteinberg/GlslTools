@@ -34,7 +34,7 @@ inline fixed UnitySampleShadowmap (float4 shadowCoord)
 
 		#if defined (SHADOWS_NATIVE)
 			#if defined (SHADER_API_D3D9)
-				// HLSL for D3D9, when modifying the shadow UV coordinate, really wants to do
+				// Glsl for D3D9, when modifying the shadow UV coordinate, really wants to do
 				// some funky swizzles, assuming that Z coordinate is unused in texture sampling.
 				// So force it to do projective texture reads here, with .w being one.
 				float4 coord = shadowCoord / shadowCoord.w;

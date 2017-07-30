@@ -18,7 +18,7 @@ namespace ShaderTools.CodeAnalysis.Tests.Options
                     { "MY_DEFINE", "1" },
                     { "MY_OTHER_DEFINE", "2" }
                 }, 
-                configFile.HlslPreprocessorDefinitions);
+                configFile.GlslPreprocessorDefinitions);
 
             var workingDirectory = Path.GetFullPath(@"Options\Assets");
             Assert.Equal(
@@ -29,7 +29,7 @@ namespace ShaderTools.CodeAnalysis.Tests.Options
                     Path.Combine(workingDirectory, "ChildFolder"),
                     workingDirectory
                 },
-                configFile.HlslAdditionalIncludeDirectories);
+                configFile.GlslAdditionalIncludeDirectories);
         }
 
         [Fact]
@@ -37,8 +37,8 @@ namespace ShaderTools.CodeAnalysis.Tests.Options
         {
             var configFile = ConfigFileLoader.LoadAndMergeConfigFile(Path.GetFullPath(@"Options\Assets\Folder2"));
 
-            Assert.Empty(configFile.HlslPreprocessorDefinitions);
-            Assert.Empty(configFile.HlslAdditionalIncludeDirectories);
+            Assert.Empty(configFile.GlslPreprocessorDefinitions);
+            Assert.Empty(configFile.GlslAdditionalIncludeDirectories);
         }
     }
 }

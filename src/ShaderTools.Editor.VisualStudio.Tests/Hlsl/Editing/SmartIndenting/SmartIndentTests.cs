@@ -1,10 +1,10 @@
-﻿using ShaderTools.CodeAnalysis.Editor.Hlsl.SmartIndent;
+﻿using ShaderTools.CodeAnalysis.Editor.Glsl.SmartIndent;
 using ShaderTools.CodeAnalysis.Editor.Implementation.SmartIndent;
-using ShaderTools.CodeAnalysis.Hlsl.Syntax;
+using ShaderTools.CodeAnalysis.Glsl.Syntax;
 using ShaderTools.CodeAnalysis.Text;
 using Xunit;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Editing.SmartIndenting
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Editing.SmartIndenting
 {
     public class SmartIndentTests : VisualStudioTestsBase
     {
@@ -59,8 +59,8 @@ namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Editing.SmartIndenting
                 expectedIndent++;
             }
 
-            var indentationService = new HlslIndentationService();
-            var syntaxFactsService = new HlslSyntaxFactsService();
+            var indentationService = new GlslIndentationService();
+            var syntaxFactsService = new GlslSyntaxFactsService();
 
             var code = codeWithCaret.Remove(caret, 1);
             var syntaxTree = SyntaxFactory.ParseSyntaxTree(SourceText.From(code));

@@ -25,7 +25,7 @@ namespace ShaderTools.CodeAnalysis.Editor.Implementation.IntelliSense.SignatureH
         {
             _subjectBuffer = subjectBuffer;
             _typeMap = typeMap;
-            _taggedTextMappingService = PrimaryWorkspace.Workspace.Services.GetLanguageServices(LanguageNames.Hlsl).GetRequiredService<ITaggedTextMappingService>();
+            _taggedTextMappingService = PrimaryWorkspace.Workspace.Services.GetLanguageServices(LanguageNames.Glsl).GetRequiredService<ITaggedTextMappingService>();
         }
 
         public IList<ClassificationSpan> GetClassificationSpans(SnapshotSpan span)

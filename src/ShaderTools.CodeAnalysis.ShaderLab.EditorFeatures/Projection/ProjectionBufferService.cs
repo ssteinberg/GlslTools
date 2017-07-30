@@ -19,13 +19,13 @@ namespace ShaderTools.CodeAnalysis.Editor.ShaderLab.Projection
     /// Graph:
     //      View Buffer [ContentType = Projection]
     //        |      \
-    //        |    Secondary [ContentType = HLSL]
+    //        |    Secondary [ContentType = Glsl]
     //        |      /
     //       Disk Buffer [ContentType = ShaderLab]
     /// </summary>
     internal sealed class ProjectionBufferService : ForegroundThreadAffinitizedObject, IProjectionBufferService, IDisposable
     {
-        private readonly IContentType _hlslContentType;
+        private readonly IContentType _GlslContentType;
         private readonly IProjectionBufferFactoryService _projectionBufferFactoryService;
 
         private readonly IAsynchronousOperationListener _listener;
@@ -51,7 +51,7 @@ namespace ShaderTools.CodeAnalysis.Editor.ShaderLab.Projection
             _workspace.DocumentOpened += OnDocumentChanged;
             _workspace.DocumentChanged += OnDocumentChanged;
 
-            _hlslContentType = contentTypeRegistryService.GetContentType(LanguageNames.Hlsl);
+            _GlslContentType = contentTypeRegistryService.GetContentType(LanguageNames.Glsl);
 
             _workQueue = new AsynchronousSerialWorkQueue(new AsynchronousOperationListener());
         }
@@ -99,7 +99,7 @@ namespace ShaderTools.CodeAnalysis.Editor.ShaderLab.Projection
                     null,
                     new NormalizedSnapshotSpanCollection(new SnapshotSpan(snapshot, cgBlockSpan)),
                     ElisionBufferOptions.None,
-                    _hlslContentType);
+                    _GlslContentType);
 
                 dataBufferSpans.Add(elisionBuffer.CurrentSnapshot.CreateTrackingSpan(
                     0, 

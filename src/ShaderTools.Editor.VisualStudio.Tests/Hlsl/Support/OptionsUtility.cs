@@ -1,11 +1,11 @@
 ﻿using System;
-using ShaderTools.CodeAnalysis.Hlsl.Formatting;
-using ShaderTools.CodeAnalysis.Hlsl.Options;
+using ShaderTools.CodeAnalysis.Glsl.Formatting;
+using ShaderTools.CodeAnalysis.Glsl.Options;
 using ShaderTools.CodeAnalysis.Options;
 
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Support
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Support
 {
-    internal class FakeOptionsService : IHlslOptionsService
+    internal class FakeOptionsService : IGlslOptionsService
     {
         public FormattingOptions GetPrimaryWorkspaceFormattingOptions()
         {

@@ -4,7 +4,7 @@ using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
-using ShaderTools.Editor.VisualStudio.Hlsl;
+using ShaderTools.Editor.VisualStudio.Glsl;
 using ShaderTools.VisualStudio.LanguageServices;
 
 [assembly: AssemblyTitle("GLSL Tools for Visual Studio")]

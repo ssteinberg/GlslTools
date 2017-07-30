@@ -66,7 +66,7 @@ Shader "Hidden/InternalSplashShadowReceiver" {
 		int maxNumOfPlanes = 12;
 		float biasedDepth;
 		
-		// HLSL thinks planeIndex is used as l-value below, and will print a non-disableable X3550 warning about forced unroll
+		// Glsl thinks planeIndex is used as l-value below, and will print a non-disableable X3550 warning about forced unroll
 		UNITY_UNROLL
 		for (int planeIndex = 0; planeIndex < maxNumOfPlanes; ++planeIndex)
 		{

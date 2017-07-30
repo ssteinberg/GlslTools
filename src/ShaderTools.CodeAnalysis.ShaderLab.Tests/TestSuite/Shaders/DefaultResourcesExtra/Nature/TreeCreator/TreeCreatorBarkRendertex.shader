@@ -48,7 +48,7 @@ v2f vert (appdata_full v) {
 	float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
 	
 	/* We used to do a for loop and store params as a texcoord array[3].
-	 * HLSL compiler, however, unrolls this loop and opens up the uniforms
+	 * Glsl compiler, however, unrolls this loop and opens up the uniforms
 	 * into 3 separate texcoords, but doesn't do it on fragment shader.
 	 * This discrepancy causes error on iOS, so do it manually. */
 	o.params1 = CalcTreeLightingParams(v.normal, _TerrainTreeLightDirections[0], viewDir);

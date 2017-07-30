@@ -3,9 +3,9 @@
     public static class LanguageNames
     {
         /// <summary>
-        /// The common name used for the HLSL language.
+        /// The common name used for the Glsl language.
         /// </summary>
-        public const string Hlsl = "GLSL";
+        public const string Glsl = "GLSL";
 
         /// <summary>
         /// The common name used for the Unity ShaderLab language.

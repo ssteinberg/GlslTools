@@ -1,11 +1,11 @@
 ﻿{
   "root": true,
 
-  "hlsl.preprocessorDefinitions": {
+  "Glsl.preprocessorDefinitions": {
     "MY_DEFINE": "1"
   },
 
-  "hlsl.additionalIncludeDirectories": [
+  "Glsl.additionalIncludeDirectories": [
     ".",
     "..",
     "Foo"

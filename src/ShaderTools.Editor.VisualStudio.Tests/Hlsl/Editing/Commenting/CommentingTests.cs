@@ -18,13 +18,13 @@
 //*********************************************************//
 
 using Microsoft.VisualStudio.Text;
-//using ShaderTools.Editor.VisualStudio.Hlsl.Editing.Commenting;
-using ShaderTools.Editor.VisualStudio.Tests.Hlsl.Support;
+//using ShaderTools.Editor.VisualStudio.Glsl.Editing.Commenting;
+using ShaderTools.Editor.VisualStudio.Tests.Glsl.Support;
 using ShaderTools.Editor.VisualStudio.Tests.Support;
 using Xunit;
 
 #if false
-namespace ShaderTools.Editor.VisualStudio.Tests.Hlsl.Editing.Commenting
+namespace ShaderTools.Editor.VisualStudio.Tests.Glsl.Editing.Commenting
 {
     public class CommentingTests : MefTestsBase
     {

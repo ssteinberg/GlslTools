@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Microsoft.VisualStudio.Shell.Interop;
-using ShaderTools.Editor.VisualStudio.Hlsl;
+using ShaderTools.Editor.VisualStudio.Glsl;
 
 namespace ShaderTools.Editor.VisualStudio.Core.Util
 {
@@ -47,7 +47,7 @@ namespace ShaderTools.Editor.VisualStudio.Core.Util
             if (_pane == null)
                 lock (SyncRoot)
                     if (_pane == null)
-                        _pane = HlslPackage.Instance.GetOutputPane(ShaderToolsOutputWindowGuid, "GLSL Tools");
+                        _pane = GlslPackage.Instance.GetOutputPane(ShaderToolsOutputWindowGuid, "GLSL Tools");
 
             return _pane != null;
         }
