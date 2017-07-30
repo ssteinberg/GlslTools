@@ -1,8 +1,11 @@
 Adaptation of "HLSL Tools" to GLSL. 
+
+[![Build status](https://ci.appveyor.com/api/projects/status/t4y4qwmob0028vm3?svg=true)](https://ci.appveyor.com/project/ssteinberg89928/glsltools)
+
+
 All credit for the original work goes to Tim Jones.
 
 Original readme follows.
-
 
 
 # HLSL Tools for Visual Studio
